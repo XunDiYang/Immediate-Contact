@@ -26,7 +26,7 @@ public:
     bool sectionSnameUpdate(char s_name[], int s_id);
 
     // 描述：建立分组
-    bool sectionInsert(int s_id, int u_id, char *s_name);
+    bool sectionInsert( int u_id, char *s_name);
 
     // 描述：删除分组
     bool sectionDelete(int s_id);

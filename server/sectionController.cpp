@@ -86,11 +86,11 @@ bool Section::sectionSnameUpdate(char s_name[], int s_id)
 /*返回值：BOOL、是否插入成功
 /*作者：李可
 /***************************************************/
-bool Section::sectionInsert(int s_id, int u_id, char *s_name)
+bool Section::sectionInsert(int u_id, char *s_name)
 {
     int ret;
     char sql_insert[2048];
-    sprintf(sql_insert, "insert into Section (s_id,u_id,s_name) values(\'%d\', \'%d\',\'%s\')", s_id, u_id, s_name);
+    sprintf(sql_insert, "insert into section (u_id,s_name) values(\'%d\',\'%s\')",  u_id, s_name);
     if (connectSectionDatabase())
     {
         res = mysql_query(&conn_section, sql_insert);
@@ -121,7 +121,7 @@ bool Section::sectionInsert(int s_id, int u_id, char *s_name)
 
 bool Section::sectionDelete(int s_id)
 {
-    string q = "delete from Section where s_id=" + to_string(s_id);
+    string q = "delete from section where s_id=" + to_string(s_id);
     const char *query = q.c_str();
     if (connectSectionDatabase())
     {
@@ -141,3 +141,5 @@ bool Section::sectionDelete(int s_id)
     }
     return false;
 }
+
+

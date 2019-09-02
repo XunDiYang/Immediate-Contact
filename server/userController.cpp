@@ -391,4 +391,3 @@ bool User::userDelete(int u_id)
     }
     return false;
 }
-

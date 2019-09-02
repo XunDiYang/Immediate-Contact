@@ -84,8 +84,8 @@ bool Message::messageInsert(int u_id, int f_id, int m_status, int m_type, char *
 /*名称：messageDelete
 /*描述：删除消息
 /*作成日期：2019-9-1
-/*参数：参数1：参数名称 u_id、参数类型 int、输入参数、参数含义：用户id
-       参数2：参数名称 f_id、参数类型 int、输入参数、参数含义：好友id
+/*参数：参数1：参数名称 u_id、参数类型 int、输入参数、参数含义：发送者id
+       参数2：参数名称 f_id、参数类型 int、输入参数、参数含义：接收者id
        参数3：参数名称：m_time、参数类型 char *、输入参数、参数含义：消息发送的时间
 /*返回值：BOOL、是否删除成功
 /*作者：李可
@@ -114,9 +114,3 @@ bool Message::messageDelete(int u_id, int f_id, char *m_time)
     }
     return false;
 }
-
-// int main(int argc, char* argv[])
-// {
-//     Message m;
-//     // m.messageDelete()
-// }

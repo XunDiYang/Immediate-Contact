@@ -186,5 +186,5 @@ bool UserGroup::userGroupDelete(int ug_id, int g_id)
 int main(int argc, char *argv[])
 {
    UserGroup ug;
-   ug.userGroupInsert(2,1,"admin",0);
+   ug.userGroupInsert(1,1,"yyy",1);
 }
