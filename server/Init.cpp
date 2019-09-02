@@ -2,13 +2,13 @@
 // Created by changxinyu on 2019/8/31.
 //
 
-#include "server.h"
+#include "include/server.h"
 
 int listen_fd,connect_fd;
 struct sockaddr_in client,server;
 struct User client_prop[MAX_CONN];
 int send_q_head , send_q_tail;
-char send_queue[MAX_MESSAGE_COUNT];
+Message send_queue[MAX_MESSAGE_COUNT];
 static pthread_mutex_t queue_lock;
 
 int init_server()
@@ -57,12 +57,12 @@ int init_socket()
     return 1;
 }
 
-void listen_func()
+void* listen_func(void *)
 {
     printf("listening...\n");
     while(1)
     {
-        int size= sizeof(struct sockaddr_in);
+        socklen_t size= sizeof(struct sockaddr_in);
         if((connect_fd=accept(listen_fd,(struct sockaddr *)&server,&size))==-1)
         {
             printf("accept error: %s(errno: %d)\n",strerror(errno),errno);
@@ -72,6 +72,7 @@ void listen_func()
         //加入了新用户
         add_client(connect_fd, client);
     }
+    return NULL;
 }
 
 void add_client(int connect_fd, struct sockaddr_in addr) {
@@ -87,12 +88,12 @@ void add_client(int connect_fd, struct sockaddr_in addr) {
     }
     client_prop[idx].user_fd = connect_fd;
     client_prop[idx].addr = addr;
-    int tid;
+    pthread_t tid;
     pthread_create(&tid, NULL, client_thread_function, &client_prop[idx]);
     printf("created new thread for connect %s\n", inet_ntoa(addr.sin_addr));
 }
 
-void client_thread_function(void *arg) {
+void* client_thread_function(void *arg) {
     struct User * prop = (struct User *) arg;
     //when in pressure test mode, send welcome message after some command rather than automatically.
     //if(!PRESSURE_TEST)
@@ -119,8 +120,9 @@ void client_thread_function(void *arg) {
     }
     delete_client(prop);
     pthread_exit(NULL);
+    return NULL;
 }
-void send_thread_function(void *arg) {
+void* send_thread_function(void *arg) {
 	struct Message msg;
 	char send_buffer[BUFFER_SIZE];
 	while (1) {
@@ -129,15 +131,15 @@ void send_thread_function(void *arg) {
 			msg = send_queue[send_q_head];
 			send_q_head = (send_q_head + 1) % MAX_SEND_QUEUE_SIZE;
 			//判断用户是否在线
-			int fd = get_user_fd(msg.u_id); 
+			int fd = get_user_fd(msg.to_id)->user_fd; 
 			if (fd != -1) {
 				memset(send_buffer, '\0', sizeof(send_buffer));
-				strcpy(send_buffer, msg.message);
+				strcpy(send_buffer, msg.detail);
 				send(fd, send_buffer, sizeof(send_buffer), 0);
-				free(msg.message);
+				free(msg.detail);
 			}
 			else {
-				save_offline_message(msg);
+				// save_offline_message(msg);
 			}
 			pthread_mutex_unlock(&queue_lock);
 		}
@@ -148,6 +150,7 @@ void send_thread_function(void *arg) {
 		}
 
 	}
+    return NULL;
 }
 
 
@@ -163,14 +166,14 @@ User* get_user_fd(int userid) {
     if(userid == NULL) return NULL;
     int i;
     for(i = 0; i < MAX_CONN; i++) {
-        if(strcmp(userid, client_prop[i].u_id) == 0) {
+        if(userid == client_prop[i].u_id) {
             return &client_prop[i];
         }
     }
     return 0;
 }
-
-char *sock_ntop(const struct sockaddr *sa)
+/*
+char *sock_ntop(struct sockaddr *sa)
 {
     static char str[128];
     struct sockaddr_in *sin = (struct sockaddr_in *)sa;
@@ -179,14 +182,14 @@ char *sock_ntop(const struct sockaddr *sa)
     return str;
 }
 
-char *get_user_ip(char *userid)
+char *get_user_ip(int userid)
 {
-    if(userid==NULL) return -1;
+    if(userid==NULL) return NULL;
     int i;
     char *str;
     for( i = 0;i< MAX_CONN;i++){
-        if(strcmp(userid,client_prop[i].u_id) == 0){
+        if(userid == client_prop[i].u_id){
             return sock_ntop(&client_prop[i].addr);
         }
     }
-}
+}*/

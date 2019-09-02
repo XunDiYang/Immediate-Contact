@@ -1,4 +1,4 @@
-#include "server.h"
+#include "include/server.h"
 
 /*
 void save_offline_message(struct Message msg) {
@@ -19,7 +19,7 @@ void save_offline_message(struct Message msg) {
 	sprintf(sqlcmd, "insert into offlinemsg values(\'%s\', \'%s\')", msg.username, msg.message);
 	sqlite3_exec(db, sqlcmd, NULL, NULL, NULL);
 	*/
-}
+// }
 
 /*
 

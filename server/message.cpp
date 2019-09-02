@@ -59,7 +59,7 @@ bool Message::messageInsert(int u_id, int f_id, int m_status, int m_type, char *
     char sql_insert1[2048];
     char sql_insert2[2048];
     sprintf(sql_insert1, "insert into message (u_id,f_id,owner,m_status,m_type,detail) values (\'%d\', \'%d\',\'%d\',\'%d\',\'%d\',\'%s\')", u_id, f_id, u_id, 1, m_type, detail);
-    sprintf(sql_insert2, "insert into message (u_id,f_id,owner,m_status,m_type,detail) values (\'%d\', \'%d\',\'%d\',\'%d\',\'%d\',\'%s\')", f_id, u_id, f_id, m_status, m_type, detail);
+    sprintf(sql_insert2, "insert into message (u_id,f_id,owner,m_status,m_type,detail) values (\'%d\', \'%d\',\'%d\',\'%d\',\'%d\',\'%s\')", u_id, f_id, f_id, m_status, m_type, detail);
     if (connectMessageDatabase())
     {
         res = mysql_query(&conn_message, sql_insert1); //执行SQL语句
@@ -115,9 +115,8 @@ bool Message::messageDelete(int u_id, int f_id, char *m_time)
     return false;
 }
 
-int main(int argc, char* argv[])
-{
-    Message m;
-    m.messageInsert(1,2,0,0,"hello");
-    
-}
+// int main(int argc, char* argv[])
+// {
+//     Message m;
+//     // m.messageDelete()
+// }
