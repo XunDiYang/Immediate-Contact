@@ -328,20 +328,17 @@ bool User::userUmodelUpdate(int u_mode, int u_id)
 /*作成日期：2019-9-1
 /*参数：参数1：参数名称 u_name、参数类型 char *、输入参数、参数含义：用户名称
        参数2：参数名称 u_passwd、参数类型 char *、输入参数、参数含义：用户密码
-       参数3：参数名称 u_icon、参数类型 char *、输入参数、参数含义：用户头像
-       参数4：参数名称 u_age、参数类型 int、输入参数、参数含义：用户年龄
-       参数5：参数名称 u_sex、参数类型 int、输入参数、参数含义：用户性别
-       参数6：参数名称 u_email、参数类型 char *、输入参数、参数含义：用户邮箱
-       参数7： 参数名称:conn_user; 参数类型: MYSQL;全局变量; 参数含义: 与user数据表之间建立的联系;
-       参数8：参数名称:res; 参数类型: int; 全局变量; 参数含义: 修改数据表，返回的结果，1:失败， 2：成功
+       参数3：参数名称 u_email、参数类型 char *、输入参数、参数含义：用户邮箱
+       参数4： 参数名称:conn_user; 参数类型: MYSQL;全局变量; 参数含义: 与user数据表之间建立的联系;
+       参数5：参数名称:res; 参数类型: int; 全局变量; 参数含义: 修改数据表，返回的结果，1:失败， 2：成功
 /*返回值：BOOL、是否插入成功
 /*作者：李可
 /***************************************************/
-bool User::userRegister(char *u_name, char *u_passwd, char *u_icon, int u_age, int u_sex, char *u_email)
+bool User::userRegister(char *u_name, char *u_passwd,  char *u_email)
 {
     int ret;
     char sql_insert[2048];
-    sprintf(sql_insert, "insert into user (u_name,u_passwd,u_icon,u_age,u_sex,u_email) values(\'%s\', \'%s\',\'%s\',\'%d\',\'%d\',\'%s\')", u_name, u_passwd, u_icon, u_age, u_sex, u_email);
+    sprintf(sql_insert, "insert into user (u_name,u_passwd,u_email) values(\'%s\', \'%s\',\'%s\')", u_name, u_passwd, u_email);
     if (connectUserDatabase())
     {
         res = mysql_query(&conn_user, sql_insert);

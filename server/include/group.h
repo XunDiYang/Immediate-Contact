@@ -43,7 +43,7 @@ public:
     bool groupeInsert(int g_admin_id, char *g_name, char *g_intro,char *g_icon);
 
     //描述：更改group_数据表中的g_icon(群组头像)
-    bool Group::groupGiconUpdate(int g_id, char *g_icon);
+    bool groupGiconUpdate(int g_id, char *g_icon);
 };
 
 #endif

@@ -46,7 +46,7 @@ bool Gmessage::connectGmessageDatabase()
     参数2：参数名称:res; 参数类型: int; 全局变量; 参数含义: 修改数据表，返回的结果，1:失败， 2：成功
     参数3：参数名称 gm_id、参数类型 int、输入参数、参数含义：用户id
     参数4：参数名称 g_id、参数类型 int、输入参数、参数含义：群id
-    参数5：参数名称 gm_type、参数类型 int、输入参数、参数含义：消息类别
+    参数5：参数名称 gm_type、参数类型 int、输入参数、参数含义：消息类别 0:text 1:picture 2:file
     参数6：参数名称 detail、参数类型 char *、输入参数、参数含义：消息内容
 /*返回值：BOOL、是否插入成功
 /*作者：李可
@@ -54,7 +54,7 @@ bool Gmessage::connectGmessageDatabase()
 bool Gmessage::gmessageInsert(int gm_id, int g_id, int gm_type, char *detail,int owner)
 {
     char sql_insert[2048];
-    sprintf(sql_insert, "insert into GMessage (gm_id,g_id,gm_type,detail,owner) values (\'%d\', \'%d\',\'%d\',\'%s\')", gm_id, g_id, gm_type, detail);
+    sprintf(sql_insert, "insert into gmessage (gm_id,g_id,gm_type,detail,owner) values (\'%d\', \'%d\',\'%d\',\'%s\',\'%d\')", gm_id, g_id, gm_type, detail,owner);
     if (connectGmessageDatabase())
     {
         res = mysql_query(&conn_gmessage, sql_insert); //执行SQL语句
@@ -91,7 +91,7 @@ bool Gmessage::gmessageInsert(int gm_id, int g_id, int gm_type, char *detail,int
 bool Gmessage::gmessageDelete(int gm_id, int g_id, char *gm_time)
 {
     string q = gm_time;
-    q = "delete from GMessage where gm_id=" + to_string(gm_id) + " and g_id=" + to_string(g_id) + " and gm_time between " + "'" + q + ".000" + "'" + " and " + "'" + q + ".999" + "'";
+    q = "delete from gmessage where gm_id=" + to_string(gm_id) + " and g_id=" + to_string(g_id) + " and gm_time between " + "'" + q + ".000" + "'" + " and " + "'" + q + ".999" + "'";
     const char *query = q.c_str();
     if (connectGmessageDatabase())
     {

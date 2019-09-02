@@ -49,7 +49,7 @@ public:
     bool userUmodelUpdate(int u_mode, int u_id);
 
     // 描述：用户注册
-    bool userRegister(char *u_name, char *u_passwd, char *u_icon, int u_age, int u_sex, char *u_email);
+   bool userRegister(char *u_name, char *u_passwd,  char *u_email);
 
     // 描述：注销账户
     bool userDelete(int u_id);

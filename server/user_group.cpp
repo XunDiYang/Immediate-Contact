@@ -129,7 +129,7 @@ bool UserGroup::userGroupInsert(int ug_id, int g_id, char *ug_name, int ug_statu
 {
     int ret;
     char sql_insert[2048];
-    sprintf(sql_insert, "insert into UserGroup (ug_id,g_id,ug_name,ug_status) values (\'%d\', \'%d\',\'%s\',\'%d\')", ugid, gid, ugname, ugstatus);
+    sprintf(sql_insert, "insert into user_group (ug_id,g_id,ug_name,ug_status) values (\'%d\', \'%d\',\'%s\',\'%d\')", ug_id, g_id, ug_name, ug_status);
     if (connectUserGroupDatabase())
     {
         res = mysql_query(&conn_user_group, sql_insert);
@@ -162,7 +162,7 @@ bool UserGroup::userGroupInsert(int ug_id, int g_id, char *ug_name, int ug_statu
 
 bool UserGroup::userGroupDelete(int ug_id, int g_id)
 {
-    string q = "delete from UserGroup where ug_id=" + to_string(ug_id) + " and g_id=" + to_string(g_id);
+    string q = "delete from user_group where ug_id=" + to_string(ug_id) + " and g_id=" + to_string(g_id);
     const char *query = q.c_str();
     if (connectUserGroupDatabase())
     {
@@ -181,4 +181,10 @@ bool UserGroup::userGroupDelete(int ug_id, int g_id)
         }
     }
     return false;
+}
+
+int main(int argc, char *argv[])
+{
+   UserGroup ug;
+   ug.userGroupInsert(2,1,"admin",0);
 }

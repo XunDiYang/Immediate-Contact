@@ -46,7 +46,7 @@ bool Message::connectMessageDatabase()
     参数2：参数名称 f_id、参数类型 int、输入参数、参数含义：用户密码
     参数3：参数名称 owner、参数类型 int、输入参数、参数含义：消息发送者
     参数4：参数名称 m_status、参数类型 int、输入参数、参数含义：信息是否已读
-    参数5：参数名称 m_type、参数类型 int、输入参数、参数含义：信息类别
+    参数5：参数名称 m_type、参数类型 int、输入参数、参数含义：信息类别 0:text 1:picture 2:file
     参数6：参数名称 detail、参数类型 char *、输入参数、参数含义：信息内容
     参数1： 参数名称:conn_message; 参数类型: MYSQL;全局变量; 参数含义: 与message数据表之间建立的联系;
     参数2：参数名称:res; 参数类型: int; 全局变量; 参数含义: 修改数据表，返回的结果，1:失败， 2：成功
@@ -56,12 +56,14 @@ bool Message::connectMessageDatabase()
 
 bool Message::messageInsert(int u_id, int f_id, int m_status, int m_type, char *detail)
 {
-    char sql_insert[2048];
-    sprintf(sql_insert, "insert into message (u_id,f_id,owner,m_status,m_type,detail) values (\'%d\', \'%d\',\'%d\',\'%d\',\'%d\',\'%s\')", u_id, f_id, u_id, 1, m_type, detail);
-    sprintf(sql_insert, "insert into message (u_id,f_id,owner,m_status,m_type,detail) values (\'%d\', \'%d\',\'%d\',\'%d\',\'%d\',\'%s\')", f_id, u_id, f_id, m_status, m_type, detail);
+    char sql_insert1[2048];
+    char sql_insert2[2048];
+    sprintf(sql_insert1, "insert into message (u_id,f_id,owner,m_status,m_type,detail) values (\'%d\', \'%d\',\'%d\',\'%d\',\'%d\',\'%s\')", u_id, f_id, u_id, 1, m_type, detail);
+    sprintf(sql_insert2, "insert into message (u_id,f_id,owner,m_status,m_type,detail) values (\'%d\', \'%d\',\'%d\',\'%d\',\'%d\',\'%s\')", f_id, u_id, f_id, m_status, m_type, detail);
     if (connectMessageDatabase())
     {
-        res = mysql_query(&conn_message, sql_insert); //执行SQL语句
+        res = mysql_query(&conn_message, sql_insert1); //执行SQL语句
+        res = mysql_query(&conn_message, sql_insert2); //执行SQL语句
         if (!res && (unsigned long)mysql_affected_rows(&conn_message) != 0)
         {
             printf(" updated %lu rowsn \n", (unsigned long)mysql_affected_rows(&conn_message));
@@ -92,7 +94,7 @@ bool Message::messageInsert(int u_id, int f_id, int m_status, int m_type, char *
 bool Message::messageDelete(int u_id, int f_id, char *m_time)
 {
     string q = m_time;
-    q = "delete from Message where u_id=" + to_string(u_id) + " and f_id=" + to_string(f_id) + " and m_time between " + "'" + q + ".000" + "'" + " and " + "'" + q + ".999" + "'";
+    q = "delete from message where u_id=" + to_string(u_id) + " and f_id=" + to_string(f_id) + " and m_time between " + "'" + q + ".000" + "'" + " and " + "'" + q + ".999" + "'";
     const char *query = q.c_str();
     if (connectMessageDatabase())
     {
@@ -111,4 +113,11 @@ bool Message::messageDelete(int u_id, int f_id, char *m_time)
         }
     }
     return false;
+}
+
+int main(int argc, char* argv[])
+{
+    Message m;
+    m.messageInsert(1,2,0,0,"hello");
+    
 }

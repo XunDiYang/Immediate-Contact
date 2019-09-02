@@ -183,9 +183,3 @@ bool Friends::friendsDelete(int u_id, int f_id)
     }
     return false;
 }
-
-int main(int argc, char* argv[])
-{
-    Friends f1;
-    f1.friendsInsert(1,2,"xx",1);
-}
