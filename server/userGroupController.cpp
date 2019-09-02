@@ -6,6 +6,7 @@
 /***************************************************/
 #include "include/userGroup.h"
 #include "string"
+#include "iostream"
 
 /**************************************************/
 /*名称：UserGroup::connectUserGroupDatabase
@@ -183,8 +184,209 @@ bool UserGroup::userGroupDelete(int ug_id, int g_id)
     return false;
 }
 
-int main(int argc, char *argv[])
+/**************************************************/
+/*名称： userGroupAllGidSelect
+/*描述：根据用户id查询其所有群id
+/*作成日期：2019-9-1
+/*参数：参数1：参数名称 ug_id、参数类型 int、输入参数、参数含义：用户id
+	    参数2： 参数名称:conn_user_group; 参数类型: MYSQL;全局变量; 参数含义: 与user_group数据表之间建立的联系;
+/*返回值：BOOL、是否赋值成功
+/*作者：邵雨洁
+/***************************************************/
+bool UserGroup::userGroupAllGidSelect(int ug_id)
 {
-   UserGroup ug;
-   ug.userGroupInsert(1,1,"yyy",1);
+    MYSQL_RES *res_ptr;
+    MYSQL_ROW row;
+    int flag;
+    char *ansch;
+    char *query;
+    if (connectUserGroupDatabase())
+    {
+        string q = "select g_id from user_group where ug_id=" + to_string(ug_id);
+        const char *query = q.c_str();
+        /*查询，成功则返回0*/
+        flag = mysql_query(&conn_user_group, query);
+        if (flag)
+        { /*如果查询失败*/
+            printf("Guery failed!\n");
+            userGroupAllGid[0] = -1;
+            return false;
+        }
+        else
+        { /*如果查询成功*/
+            printf("[select g_id from user_group where ug_id=%d ] made...\n", ug_id);
+            /*mysql_store_result讲全部的查询结果读取到客户端*/
+            res_ptr = mysql_store_result(&conn_user_group);
+            /*mysql_fetch_row检索结果集的下一行*/
+            int t = 1;
+            while (row = mysql_fetch_row(res_ptr))
+            {   /*printf ("%s\t ", row[0]); */
+                //ansch=row[0];
+                /*转换成int型*/
+                userGroupAllGid[t] = atoi(row[0]);
+                t = t + 1;
+            }
+            userGroupAllGid[0] = t - 1;
+        }
+        mysql_close(&conn_user_group);
+        return true;
+    }
+}
+
+/**************************************************/
+/*名称： uuserGroupAllMidSelect
+/*描述：根据小组id查询其所有成员
+/*作成日期：2019-9-1
+/*参数：参数1：参数名称 g_id、参数类型 int、输入参数、参数含义：群id
+		参数2： 参数名称:conn_user_group; 参数类型: MYSQL;全局变量; 参数含义: 与user_group数据表之间建立的联系;
+/*返回值：BOOL、是否赋值成功
+/*作者：邵雨洁
+/***************************************************/
+bool UserGroup::userGroupAllMidSelect(int g_id)
+{
+    MYSQL_RES *res_ptr;
+    MYSQL_ROW row;
+    int flag;
+    char *ansch;
+    char *query;
+    if (connectUserGroupDatabase())
+    {
+        string q = "select ug_id from user_group where g_id=" + to_string(g_id);
+        const char *query = q.c_str();
+        /*查询，成功则返回0*/
+        flag = mysql_query(&conn_user_group, query);
+        if (flag)
+        { /*如果查询失败*/
+            printf("Guery failed!\n");
+            userGroupAllMid[0] = -1;
+            return false;
+        }
+        else
+        { /*如果查询成功*/
+            printf("[select ug_id from user_group where g_id=%d ] made...\n", g_id);
+            /*mysql_store_result讲全部的查询结果读取到客户端*/
+            res_ptr = mysql_store_result(&conn_user_group);
+            /*mysql_fetch_row检索结果集的下一行*/
+            int t = 1;
+            while (row = mysql_fetch_row(res_ptr))
+            {   /*printf ("%s\t ", row[0]); */
+                //ansch=row[0];
+                /*转换成int型*/
+                userGroupAllMid[t] = atoi(row[0]);
+                t = t + 1;
+            }
+            userGroupAllMid[0] = t - 1;
+        }
+        mysql_close(&conn_user_group);
+        return true;
+    }
+}
+
+/**************************************************/
+/*名称： userGroupUGstatusSelect
+/*描述：根据小组和成员id查询成员身份
+/*作成日期：2019-9-1
+/*参数：参数1：参数名称 g_id、参数类型 int、输入参数、参数含义：群id
+        参数2：参数名称 ug_id、参数类型 int、输入参数、参数含义：用户id
+		参数3：参数名称:conn_user_group; 参数类型: MYSQL;全局变量; 参数含义: 与user_group数据表之间建立的联系;
+/*返回值：int、返回身份：0/1
+/*作者：邵雨洁
+/***************************************************/
+int UserGroup::userGroupUGstatusSelect(int g_id, int ug_id)
+{
+    MYSQL_RES *res_ptr;
+    MYSQL_ROW row;
+    int flag;
+    int ans;
+    char *query;
+    if (connectUserGroupDatabase())
+    {
+        string q = "select ug_status from user_group where g_id=" + to_string(g_id) + " and ug_id=" + to_string(ug_id);
+        const char *query = q.c_str();
+        /*查询，成功则返回0*/
+        flag = mysql_query(&conn_user_group, query);
+        if (flag)
+        { /*如果查询失败*/
+            printf("Guery failed!\n");
+            return -1;
+        }
+        else
+        { /*如果查询成功*/
+            printf("[select ug_status from user_group where g_id=%d  and ug_id=%d] made...\n", g_id, ug_id);
+            /*mysql_store_result讲全部的查询结果读取到客户端*/
+            res_ptr = mysql_store_result(&conn_user_group);
+            /*mysql_fetch_row检索结果集的下一行*/
+            while (row = mysql_fetch_row(res_ptr))
+            { /* printf ("%s\t", row[0]);*/
+                ans = atoi(row[0]);
+            }
+        }
+        mysql_close(&conn_user_group);
+        return ans;
+    }
+}
+
+/**************************************************/
+/*名称： userGroupUGstatusSelect
+/*描述：根据小组和成员id查询成员群昵称
+/*作成日期：2019-9-1
+/*参数：参数1：参数名称 g_id、参数类型 int、输入参数、参数含义：群id
+		参数2：参数名称 ug_id、参数类型 int、输入参数、参数含义：用户id
+		参数3：参数名称:conn_user_group; 参数类型: MYSQL;全局变量; 参数含义: 与user_group数据表之间建立的联系;
+/*返回值：char*、返回群昵称
+/*作者：邵雨洁
+/***************************************************/
+char *UserGroup::userGroupUGnameSelect(int g_id, int ug_id)
+{
+    MYSQL_RES *res_ptr;
+    MYSQL_ROW row;
+    int flag;
+    char *ans;
+    char *query;
+    if (connectUserGroupDatabase())
+    {
+        string q = "select ug_name from user_group where g_id=" + to_string(g_id) + " and ug_id=" + to_string(ug_id);
+        const char *query = q.c_str();
+        /*查询，成功则返回0*/
+        flag = mysql_query(&conn_user_group, query);
+        if (flag)
+        { /*如果查询失败*/
+            printf("Guery failed!\n");
+            return NULL;
+        }
+        else
+        { /*如果查询成功*/
+            printf("[select ug_name from user_group where g_id=%d  and ug_id=%d] made...\n", g_id, ug_id);
+            /*mysql_store_result讲全部的查询结果读取到客户端*/
+            res_ptr = mysql_store_result(&conn_user_group);
+            /*mysql_fetch_row检索结果集的下一行*/
+            while (row = mysql_fetch_row(res_ptr))
+            { /* printf ("%s\t", row[0]);*/
+                ans = row[0];
+            }
+        }
+        mysql_close(&conn_user_group);
+        return ans;
+    }
+}
+int main()
+{
+    UserGroup UG;
+    printf("输出所有组id：");
+    if (UG.userGroupAllGidSelect(1))
+    {
+        printf("%d  %d  %d\n", UG.userGroupAllGid[0], UG.userGroupAllGid[1], UG.userGroupAllGid[2]);
+    }
+    printf("输出所有组内成员id：");
+    if (UG.userGroupAllMidSelect(1))
+    {
+        printf("%d  %d  %d\n", UG.userGroupAllMid[0], UG.userGroupAllMid[1], UG.userGroupAllMid[2]);
+    }
+    printf("输出组内身份: ");
+    cout << UG.userGroupUGstatusSelect(1, 1) << endl;
+    cout << UG.userGroupUGstatusSelect(1, 3) << endl;
+    printf("输出组内昵称: ");
+    cout << UG.userGroupUGnameSelect(1, 1) << endl;
+
+    // UG.userGroupInsert(2,1,"jjjj",0);
 }

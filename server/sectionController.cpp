@@ -143,3 +143,62 @@ bool Section::sectionDelete(int s_id)
 }
 
 
+/**************************************************/
+/*名称：sectionDelete
+/*描述：根据用户id查询其所有分组s_id,s_name
+/*作成日期：2019-9-1
+/*参数：参数1：参数名称 s_id、参数类型 int、输入参数、参数含义：分组id
+        参数2：参数名称 s_name、参数类型 char*、输入参数、参数含义：分组名称
+/*返回值：BOOL、是否成功赋值
+/*作者：邵雨洁
+/***************************************************/
+bool Section::sectionSelect(int u_id)
+{
+	MYSQL_RES *res_ptr;
+	MYSQL_ROW row;
+	int flag;
+	char *ansch;
+	char* query;
+	if (connectSectionDatabase())
+	{
+		string q = "select s_id, s_name from section where u_id=" + to_string(u_id);
+		const char *query = q.c_str();
+		/*查询，成功则返回0*/
+		flag = mysql_query(&conn_section, query);
+		if (flag)
+		{  /*如果查询失败*/
+			printf("Guery failed!\n");
+			num = -1;
+			return false;
+		}
+		else
+		{  /*如果查询成功*/
+			printf("[select s_id, s_name from user_group where u_id=%d ] made...\n", u_id);
+			/*mysql_store_result讲全部的查询结果读取到客户端*/
+			res_ptr = mysql_store_result(&conn_section);
+			/*mysql_fetch_row检索结果集的下一行*/
+			int t = 0;
+			while (row = mysql_fetch_row(res_ptr))
+			{    
+				SList[t].s_id = atoi(row[0]);
+				SList[t].s_name = row[1];
+				t = t + 1;
+
+			}
+			num = t;
+		}
+		mysql_close(&conn_section);
+		return true;
+	}
+}
+
+// int main()
+// {
+// 	Section S;
+// 	printf("输出所有组id：");
+// 	if (S.sectionSelect(1))
+// 	{
+// 		printf("分组个数%d  %d  %s\n", S.num, S.SList[0].s_id, S.SList[0].s_name);
+// 	}
+
+// }

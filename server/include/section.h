@@ -19,6 +19,16 @@ public:
     //参数含义: 与section数据表之间建立的联系;
     MYSQL conn_section;
 
+    //某个用户的分组个数
+    int num;
+
+    //根据用户id查询其所有分组id和名称,保存在该结构体中
+    struct sectionlist
+    {
+        int s_id;
+        char *s_name;
+    } SList[200];
+
     // 描述：与section数据表建立联系
     bool connectSectionDatabase();
 
@@ -26,9 +36,12 @@ public:
     bool sectionSnameUpdate(char s_name[], int s_id);
 
     // 描述：建立分组
-    bool sectionInsert( int u_id, char *s_name);
+    bool sectionInsert(int u_id, char *s_name);
 
     // 描述：删除分组
     bool sectionDelete(int s_id);
+
+    //描述：根据用户id查询其所有分组id和名称
+    bool sectionSelect(int u_id);
 };
 #endif

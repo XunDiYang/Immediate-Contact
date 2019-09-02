@@ -35,6 +35,24 @@ public:
 
     // 描述：退群
     bool userGroupDelete(int ug_id,int g_id);
+
+    //一个用户所在的全部小组的id,[0]保存该用户全部小组数
+    int userGroupAllGid[200];
+
+    //一个小组的所有成员的id，[0]保存小组成员数
+    int userGroupAllMid[200];
+
+    //根据用户id查询其所有组id
+	bool userGroupAllGidSelect(int ug_id);
+
+	//根据小组id查询其所有成员
+	bool userGroupAllMidSelect(int g_id);
+
+	//根据小组和成员id查询成员身份
+	int userGroupUGstatusSelect(int g_id, int ug_id);
+
+	//根据小组和成员id查询成员在组内的昵称
+	char* userGroupUGnameSelect(int g_id, int ug_id);
 };
 
 #endif

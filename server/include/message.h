@@ -21,6 +21,19 @@ public:
     // 参数含义: 修改数据表，返回的结果，1:失败， 2：成功
     int res;
 
+    //一共取了多少条消息
+    int num;
+
+    //获取消息的结构体数组
+    struct MessageLise
+    {
+        char *m_time; //消息时间
+        char *detail; //具体消息内容
+        int sender;    //消息拥有者
+        int m_status; //消息状态
+        int m_type;
+    } MList[200];
+
     //描述：与message数据表建立联系
     bool connectMessageDatabase();
 
@@ -29,6 +42,9 @@ public:
 
     // 描述：删除消息
     bool messageDelete(int u_id, int f_id, char *m_time);
+
+    //输入两个人id ,将查询到的消息保存到结构体中，按时间顺序，最新的在前面，num为一共有多少条消息
+	bool messageSelect(int u_id, int f_id);
 };
 
 #endif

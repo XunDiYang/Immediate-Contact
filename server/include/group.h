@@ -21,6 +21,9 @@ public:
     //参数含义: 与group_数据表之间建立的联系;
     MYSQL conn_group;
 
+    // 在使用groupGidSelect是，输入群名称，将所有得到的群id存入该数组，[0]表示总数
+	int gnameIDlist[200];
+
     //描述：与group_数据表建立联系
     bool connectGroupDatabase();
 
@@ -44,6 +47,30 @@ public:
 
     //描述：更改group_数据表中的g_icon(群组头像)
     bool groupGiconUpdate(int g_id, char *g_icon);
+    
+    //根据群名称获取群ID
+	bool groupGidSelect(char g_name[]);
+
+	//描述：根据群ID获取群人数
+	int groupGnumSelect(int g_id);
+
+	//描述：根据群ID获取群主ID
+	int groupGadminidSelect(int g_id);
+
+	//根据群ID获取群公告
+	char* groupGnoticeSelect(int g_id);
+
+	//根据群ID获取群简介
+	char* groupGintroSelect(int g_id);
+
+	//根据群ID获取群的建立时间
+	char* groupGtimeSelect(int g_id);
+
+	//根据群ID获取群名称
+	char* groupGnameSelect(int g_id);
+
+	//根据群ID获取群的头像地址
+	char* groupGiconSelect(int g_id);
 };
 
 #endif

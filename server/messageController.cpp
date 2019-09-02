@@ -114,3 +114,71 @@ bool Message::messageDelete(int u_id, int f_id, char *m_time)
     }
     return false;
 }
+
+
+/**************************************************/
+/*名称：messageSelect
+/*描述：输入两个人id ,将查询到的消息保存到结构体中，按时间顺序，最新的在前面，num为一共有多少条消息
+/*作成日期：2019-9-1
+/*参数：参数1：参数名称 u_id、参数类型 int、输入参数、参数含义：用户id
+	    参数2：参数名称 f_id、参数类型 int、输入参数、参数含义：好友id
+	    参数3：参数名称：m_time、参数类型 char *、输入参数、参数含义：消息发送的时间
+/*返回值：BOOL、是否赋值成功
+/*作者：邵雨洁
+/***************************************************/
+bool Message::messageSelect(int u_id, int f_id)
+{
+	MYSQL_RES *res_ptr;
+	MYSQL_ROW row;
+	int flag;
+	char* query;
+	if (connectMessageDatabase())
+	{   /*新消息在前面 */
+		string q = "select m_time,detail,owner,m_status,m_type from message where ((u_id=" + to_string(u_id) + " and f_id=" + to_string(f_id) + ")" + " or (u_id = " + to_string(f_id) + " and f_id= " + to_string(u_id) + " )) and owner=u_id ORDER BY m_time DESC";
+		const char *query = q.c_str();
+		/*查询，成功则返回0*/
+		flag = mysql_query(&conn_message, query);
+		if (flag)
+		{  /*如果查询失败*/
+			printf("Guery failed!\n");
+			return false;
+		}
+		else
+		{  /*如果查询成功*/
+			printf("[select message from message between %d and %d ] made...\n", u_id, f_id);
+			/*mysql_store_result讲全部的查询结果读取到客户端*/
+			res_ptr = mysql_store_result(&conn_message);
+			/*mysql_fetch_row检索结果集的下一行*/
+			int t = 0;
+			while (row = mysql_fetch_row(res_ptr))
+			{
+				/*printf ("%s  %s  %s  %s  %s \t ", row[0],row[1],row[2],row[3],row[4]);*/
+				/*时间赋值*/
+				MList[t].m_time = row[0];
+				/*消息内容赋值*/
+				MList[t].detail = row[1];
+				/*消息拥有者赋值*/
+				MList[t].sender = atoi(row[2]);
+				/*消息状态赋值*/
+				MList[t].m_status = atoi(row[3]);
+				/*消息类型赋值*/
+				MList[t].m_type = atoi(row[4]);
+				t = t + 1;
+			}
+			num = t;
+		}
+		mysql_close(&conn_message);
+		return true;
+	}
+}
+
+// int main()
+// {
+
+// 	Message M;
+//     // M.messageInsert(2,1,1,0,"yayay");
+// 	if (M.messageSelect(1, 2))
+// 		printf("一共有%d条消息:\n", M.num);
+// 	printf("m_time:%s  detail:%s   owner:%d  m_status:%d  m_type:%d\n", M.MList[0].m_time, M.MList[0].detail, M.MList[0].owner, M.MList[0].m_status, M.MList[0].m_type);
+// 	printf("m_time:%s  detail:%s   owner:%d  m_status:%d  m_type:%d\n", M.MList[1].m_time, M.MList[1].detail, M.MList[1].owner, M.MList[1].m_status, M.MList[1].m_type);
+// }

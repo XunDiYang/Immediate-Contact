@@ -111,3 +111,72 @@ bool Gmessage::gmessageDelete(int gm_id, int g_id, char *gm_time)
     }
     return false;
 }
+
+/**************************************************/
+/*名称：gMessageSelect
+/*描述：获取群消息
+/*作成日期：2019-9-1
+/*参数：
+	参数1： 参数名称:conn_gmessage; 参数类型: MYSQL;全局变量; 参数含义: 与gmessage数据表之间建立的联系;
+	参数2：参数名称 g_id、参数类型 int、输入参数、参数含义：群id
+/*返回值：BOOL、是否成功赋值
+/*作者：邵雨洁
+/***************************************************/
+bool Gmessage::gMessageSelect(int g_id)
+{
+    MYSQL_RES *res_ptr;
+    MYSQL_ROW row;
+    int flag;
+    char *query;
+    if (connectGmessageDatabase())
+    { /*新消息在前面 */
+        string q = "select gm_id,owner,gm_status,gm_type,detail,gm_time from gmessage where g_id=" + to_string(g_id) + " ORDER BY gm_time DESC";
+        const char *query = q.c_str();
+        /*查询，成功则返回0*/
+        flag = mysql_query(&conn_gmessage, query);
+        if (flag)
+        { /*如果查询失败*/
+            printf("Guery failed!\n");
+            return false;
+        }
+        else
+        { /*如果查询成功*/
+            printf("[select message from gmessage where g_id=%d] made...\n", g_id);
+            /*mysql_store_result讲全部的查询结果读取到客户端*/
+            res_ptr = mysql_store_result(&conn_gmessage);
+            /*mysql_fetch_row检索结果集的下一行*/
+            int t = 0;
+            while (row = mysql_fetch_row(res_ptr))
+            {
+                /*printf ("%s  %s  %s  %s  %s \t ", row[0],row[1],row[2],row[3],row[4]);*/
+                /*发送者id*/
+                GMList[t].gm_id = atoi(row[0]);
+                /*发送者昵称*/
+                //GMList[t].gm_name=row[1];
+                /*消息拥有者赋值*/
+                GMList[t].owner = atoi(row[1]);
+                /*消息状态赋值*/
+                GMList[t].gm_status = atoi(row[2]);
+                /*消息类型赋值*/
+                GMList[t].gm_type = atoi(row[3]);
+                /*消息内容赋值*/
+                GMList[t].detail = row[4];
+                /*时间赋值*/
+                GMList[t].gm_time = row[5];
+                t = t + 1;
+            }
+            num = t;
+        }
+        mysql_close(&conn_gmessage);
+        return true;
+    }
+}
+// int main()
+// {
+//     Gmessage GM;
+//     if (GM.gMessageSelect(1))
+//         printf("一共有%d条消息:\n", GM.num);
+//     printf("gm_time:%s  detail:%s   owner:%d  gm_status:%d  gm_type:%d, gm_id:%d\n", GM.GMList[0].gm_time, GM.GMList[0].detail, GM.GMList[0].owner, GM.GMList[0].gm_status, GM.GMList[0].gm_type, GM.GMList[0].gm_id);
+//     printf("gm_time:%s  detail:%s   owner:%d  gm_status:%d  gm_type:%d, gm_id:%d\n",
+//            GM.GMList[1].gm_time, GM.GMList[1].detail, GM.GMList[1].owner, GM.GMList[1].gm_status, GM.GMList[1].gm_type, GM.GMList[0].gm_id);
+// }

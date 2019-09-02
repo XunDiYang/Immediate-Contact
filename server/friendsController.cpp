@@ -7,6 +7,7 @@
 
 #include "include/friends.h"
 #include "string"
+#include "iostream"
 
 /**************************************************/
 /*名称：Friends::connectFriendsDatabase()
@@ -183,3 +184,194 @@ bool Friends::friendsDelete(int u_id, int f_id)
     }
     return false;
 }
+
+/**************************************************/
+/*名称：Friends::ffriendsFnameSelect
+/*描述：根据双方id查询好友昵称
+/*作成日期：2019-9-1
+/*参数：
+	参数1： 参数名称:conn_friends; 参数类型: MYSQL;全局变量; 参数含义: 与friends数据表之间建立的联系;
+	参数2：参数名称:res; 参数类型: int; 全局变量; 参数含义: 修改数据表，返回的结果，1:失败， 2：成功
+	参数3：参数名称 u_id、参数类型 int、输入参数、参数含义：用户id
+	参数4：参数名称 f_id、参数类型 int、输入参数、参数含义：好友id
+/*返回值：char*、含义：返回昵称，没查到返回NULL
+/*作者：邵雨洁
+/***************************************************/
+char *Friends::friendsFnameSelect(int u_id, int f_id)
+{
+    MYSQL_RES *res_ptr;
+    MYSQL_ROW row;
+    int flag;
+    char *ans;
+    char *query;
+    if (connectFriendsDatabase())
+    {
+        string q = "select f_name from friends where u_id=" + to_string(u_id) + " and f_id=" + to_string(f_id);
+        const char *query = q.c_str();
+        /*查询，成功则返回0*/
+        flag = mysql_query(&conn_friends, query);
+        if (flag)
+        { /*如果查询失败*/
+            printf("Guery failed!\n");
+            return 0;
+        }
+        else
+        { /*如果查询成功*/
+            printf("[select f_name from friends where u_id=%d  and f_id=%d] made...\n", u_id, f_id);
+            /*mysql_store_result讲全部的查询结果读取到客户端*/
+            res_ptr = mysql_store_result(&conn_friends);
+            /*mysql_fetch_row检索结果集的下一行*/
+            while (row = mysql_fetch_row(res_ptr))
+            { /* printf ("%s\t", row[0]);*/
+                ans = row[0];
+            }
+        }
+        mysql_close(&conn_friends);
+        return ans;
+    }
+}
+
+/*根据双方 id查询好友所属分组id*/
+/**************************************************/
+/*名称：Friends::friendsFsectionidSelect
+/*描述：根据双方id查询好友的分组id
+/*作成日期：2019-9-1
+/*参数：
+	参数1： 参数名称:conn_friends; 参数类型: MYSQL;全局变量; 参数含义: 与friends数据表之间建立的联系;
+	参数2：参数名称:res; 参数类型: int; 全局变量; 参数含义: 修改数据表，返回的结果，1:失败， 2：成功
+	参数3：参数名称 u_id、参数类型 int、输入参数、参数含义：用户id
+	参数4：参数名称 f_id、参数类型 int、输入参数、参数含义：好友id
+/*返回值：char*、含义：返回昵称，没查到返回NULL
+/*作者：邵雨洁
+/***************************************************/
+int Friends::friendsFsectionidSelect(int u_id, int f_id)
+{
+    MYSQL_RES *res_ptr;
+    MYSQL_ROW row;
+    int flag;
+    int ans;
+    char *query;
+    if (connectFriendsDatabase())
+    {
+        string q = "select group_id from friends where u_id=" + to_string(u_id) + " and f_id=" + to_string(f_id);
+        const char *query = q.c_str();
+        /*查询，成功则返回0*/
+        flag = mysql_query(&conn_friends, query);
+        if (flag)
+        { /*如果查询失败*/
+            printf("Guery failed!\n");
+            return 0;
+        }
+        else
+        { /*如果查询成功*/
+            printf("[select group_id from Friends where u_id=%d  and f_id=%d] made...\n", u_id, f_id);
+            /*mysql_store_result讲全部的查询结果读取到客户端*/
+            res_ptr = mysql_store_result(&conn_friends);
+            /*mysql_fetch_row检索结果集的下一行*/
+            while (row = mysql_fetch_row(res_ptr))
+            { /* printf ("%s\t", row[0]);*/
+                ans = atoi(row[0]);
+            }
+        }
+        mysql_close(&conn_friends);
+        return ans;
+    }
+}
+
+/**************************************************/
+/*名称：Friends::friendsFlistSelec
+/*描述：传入u_id,查询u_id的所有好友的id,将其填入friendsList[0]表示一共有多少个好友
+/*作成日期：2019-9-1
+/*参数：
+	参数1： 参数名称:conn_friends; 参数类型: MYSQL;全局变量; 参数含义: 与friends数据表之间建立的联系;
+	参数2：参数名称:res; 参数类型: int; 全局变量; 参数含义: 修改数据表，返回的结果，1:失败， 2：成功
+	参数3：参数名称 u_id、参数类型 int、输入参数、参数含义：用户id
+	参数4：参数名称 friendslist、参数类型 int、全局变量、参数含义：[0]:好友数，[1...]好友id列表
+/*返回值：bool、含义：true:赋值成功 false:赋值失败
+/*作者：邵雨洁
+/***************************************************/
+bool Friends::friendsFlistSelect(int u_id)
+{
+    MYSQL_RES *res_ptr;
+    MYSQL_ROW row;
+    int flag;
+    char *ansch;
+    char *query;
+    if (connectFriendsDatabase())
+    {
+        string q = "select f_id from friends where u_id=" + to_string(u_id);
+        const char *query = q.c_str();
+        /*查询，成功则返回0*/
+        flag = mysql_query(&conn_friends, query);
+        if (flag)
+        { /*如果查询失败*/
+            printf("Guery failed!\n");
+            friendslist[0] = -1;
+            return false;
+        }
+        else
+        { /*如果查询成功*/
+            printf("[select f_id from friends where u_id=%d ] made...\n", u_id);
+            /*mysql_store_result讲全部的查询结果读取到客户端*/
+            res_ptr = mysql_store_result(&conn_friends);
+            /*mysql_fetch_row检索结果集的下一行*/
+            int t = 1;
+            while (row = mysql_fetch_row(res_ptr))
+            { /*printf ("%s\t ", row[0]); */
+                ansch = row[0];
+                /*转换成int型*/
+                friendslist[t] = atoi(ansch);
+                t = t + 1;
+            }
+            friendslist[0] = t - 1;
+        }
+        /*printf("\n人数：%d\n",ans[0]);*/
+        /*printf("ans[1]=%d  ans[2]=%d  ",ans[1],ans[2]);*/
+        mysql_close(&conn_friends);
+        return true;
+    }
+}
+
+//描述：根据用户和分组id查询所有组员id
+bool Friends::friendsSMidSelect(int u_id, int s_id)
+{
+    MYSQL_RES *res_ptr;
+    MYSQL_ROW row;
+    int flag;
+    char *ansch;
+    char *query;
+    if (connectFriendsDatabase())
+    {
+        string q = "select f_id from friends where u_id=" + to_string(u_id) + " and s_id=" + to_string(s_id);
+        const char *query = q.c_str();
+        /*查询，成功则返回0*/
+        flag = mysql_query(&conn_friends, query);
+        if (flag)
+        { /*如果查询失败*/
+            printf("Guery failed!\n");
+            SMList[0] = -1;
+            return false;
+        }
+        else
+        { /*如果查询成功*/
+            printf("[select f_id from friends where u_id=%d ] made...\n", u_id);
+            /*mysql_store_result讲全部的查询结果读取到客户端*/
+            res_ptr = mysql_store_result(&conn_friends);
+            /*mysql_fetch_row检索结果集的下一行*/
+            int t = 1;
+            while (row = mysql_fetch_row(res_ptr))
+            { //printf ("%s\t ", row[0]); 
+                ansch = row[0];
+                /*转换成int型*/
+                SMList[t] = atoi(ansch);
+                t = t + 1;
+            }
+            SMList[0] = t - 1;
+        }
+        /*printf("\n人数：%d\n",ans[0]);*/
+        /*printf("ans[1]=%d  ans[2]=%d  ",ans[1],ans[2]);*/
+        mysql_close(&conn_friends);
+        return true;
+    }
+}
+
