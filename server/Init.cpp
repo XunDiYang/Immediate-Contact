@@ -10,7 +10,20 @@ struct User client_prop[MAX_CONN];
 int send_q_head , send_q_tail;
 Message send_queue[MAX_MESSAGE_COUNT];
 static pthread_mutex_t queue_lock;
-
+void handle_client_message(struct client_property * prop, char * message) {
+    cJSON *root = cJSON_Parse(message);
+    if (root == NULL)
+        return;
+    char *type = cJSON_GetObjectItem(root, "type")->valuestring;
+    char message_json[BUFFER_SIZE];
+    if (strcmp(type, "register-message") == 0) {
+        //TODO: the strings'space might be freed
+        /*char *userid = cJSON_GetObjectItem(root, "userid")->valuestring;
+        char *password = cJSON_GetObjectItem(root, "password")->valuestring;
+        user_register(prop, userid, password);*/
+        user_register(message);
+    }
+}
 int init_server()
 {
     send_q_head = send_q_tail = 0;
@@ -171,38 +184,4 @@ User* get_user_fd(int userid) {
     }
     return 0;
 }
-void handle_client_message(struct client_property * prop, char * message) {
-    cJSON *root = cJSON_Parse(message);
-    if (root == NULL)
-        return;
-    char *type = cJSON_GetObjectItem(root, "type")->valuestring;
-    char message_json[BUFFER_SIZE];
-    if (strcmp(type, "register-message") == 0) {
-        //TODO: the strings'space might be freed
-        /*char *userid = cJSON_GetObjectItem(root, "userid")->valuestring;
-        char *password = cJSON_GetObjectItem(root, "password")->valuestring;
-        user_register(prop, userid, password);*/
-        user_register(message);
-    }
-}
-/*
-char *sock_ntop(struct sockaddr *sa)
-{
-    static char str[128];
-    struct sockaddr_in *sin = (struct sockaddr_in *)sa;
-    if (inet_ntop(AF_INET, &sin->sin_addr, str, sizeof(str))==NULL)
-        return NULL;
-    return str;
-}
 
-char *get_user_ip(int userid)
-{
-    if(userid==NULL) return NULL;
-    int i;
-    char *str;
-    for( i = 0;i< MAX_CONN;i++){
-        if(userid == client_prop[i].u_id){
-            return sock_ntop(&client_prop[i].addr);
-        }
-    }
-}*/

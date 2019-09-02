@@ -10,10 +10,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c1ebc0f2-71c9-48d4-87e1-85156503e0f7" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server/Init.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/server/Init.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/Login_out_register.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/server/Login_out_register.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/command.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/server/command.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server/include/server.h" beforeDir="false" afterPath="$PROJECT_DIR$/server/include/server.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/util/cJSON.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/util/cJSON.h" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -55,6 +56,7 @@
       <option name="presentableId" value="Default" />
       <updated>1567408735483</updated>
       <workItem from="1567408739854" duration="1739000" />
+      <workItem from="1567412653063" duration="980000" />
     </task>
     <servers />
   </component>
@@ -66,7 +68,9 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>

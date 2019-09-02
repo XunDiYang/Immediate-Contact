@@ -17,14 +17,13 @@
 #include <pthread.h>
 #include <time.h>
 #include <unistd.h>
-#include "../../util/cJSON.h"
+
 #define MAX_SEND_QUEUE_SIZE 10
 #define MAX_CONN 10 //最大连接数量
 #define BUFFER_SIZE 1024
 #define MAX_MESSAGE_COUNT 1024
 
-char command[10][100] = {"Send_singel_message", "Send_group_message", "Log_in"
-                                                                      "Log_out"};
+
 struct User
 {
     struct sockaddr_in addr;
@@ -40,7 +39,7 @@ struct Message
     int m_type;       //0:文字；1：文件
     char detail[200]; //文字：内容；文件：路径
 };
-
+void *client_thread_function(void *arg);
 int init_socket();
 
 int init_server();
@@ -50,7 +49,7 @@ void* send_thread_function(void *arg);
 
 void add_client(int connect_fd, struct sockaddr_in addr);
 
-void *client_thread_function(void *arg);
+
 
 void handle_client_message(struct User *prop, char *message);
 
