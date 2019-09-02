@@ -131,12 +131,12 @@ void* send_thread_function(void *arg) {
 			msg = send_queue[send_q_head];
 			send_q_head = (send_q_head + 1) % MAX_SEND_QUEUE_SIZE;
 			//判断用户是否在线
-			int fd = get_user_fd(msg.to_id)->user_fd; 
+			int fd = get_user_fd(msg.to_id)->user_fd;
 			if (fd != -1) {
 				memset(send_buffer, '\0', sizeof(send_buffer));
 				strcpy(send_buffer, msg.detail);
 				send(fd, send_buffer, sizeof(send_buffer), 0);
-				free(msg.detail);
+				//free(msg.detail);
 			}
 			else {
 				// save_offline_message(msg);
@@ -163,7 +163,6 @@ void delete_client(struct User *prop)
 
 //huoquyonghutaojiezi
 User* get_user_fd(int userid) {
-    if(userid == NULL) return NULL;
     int i;
     for(i = 0; i < MAX_CONN; i++) {
         if(userid == client_prop[i].u_id) {
@@ -171,6 +170,20 @@ User* get_user_fd(int userid) {
         }
     }
     return 0;
+}
+void handle_client_message(struct client_property * prop, char * message) {
+    cJSON *root = cJSON_Parse(message);
+    if (root == NULL)
+        return;
+    char *type = cJSON_GetObjectItem(root, "type")->valuestring;
+    char message_json[BUFFER_SIZE];
+    if (strcmp(type, "register-message") == 0) {
+        //TODO: the strings'space might be freed
+        /*char *userid = cJSON_GetObjectItem(root, "userid")->valuestring;
+        char *password = cJSON_GetObjectItem(root, "password")->valuestring;
+        user_register(prop, userid, password);*/
+        user_register(message);
+    }
 }
 /*
 char *sock_ntop(struct sockaddr *sa)

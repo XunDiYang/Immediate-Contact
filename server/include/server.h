@@ -52,11 +52,11 @@ void add_client(int connect_fd, struct sockaddr_in addr);
 
 void *client_thread_function(void *arg);
 
-void handle_client_message(struct User *prop, const char *message);
+void handle_client_message(struct User *prop, char *message);
 
 void delete_client(struct User *prop);
 
-struct User *get_user_fd(char *userid);
+struct User *get_user_fd(int userid);
 
 char *sock_ntop(const struct sockaddr *sa);
 
@@ -65,6 +65,6 @@ char *get_user_ip(char *userid);
 void send_s_message(struct User *prop);
 
 void send_s_file(struct User *prop);
-void user_register(const char *message);
 
+void user_register(char *message);
 #endif //TRY_SERVER_H
