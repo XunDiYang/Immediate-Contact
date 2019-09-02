@@ -10,20 +10,7 @@ struct User client_prop[MAX_CONN];
 int send_q_head , send_q_tail;
 Message send_queue[MAX_MESSAGE_COUNT];
 static pthread_mutex_t queue_lock;
-void handle_client_message(struct client_property * prop, char * message) {
-    cJSON *root = cJSON_Parse(message);
-    if (root == NULL)
-        return;
-    char *type = cJSON_GetObjectItem(root, "type")->valuestring;
-    char message_json[BUFFER_SIZE];
-    if (strcmp(type, "register-message") == 0) {
-        //TODO: the strings'space might be freed
-        /*char *userid = cJSON_GetObjectItem(root, "userid")->valuestring;
-        char *password = cJSON_GetObjectItem(root, "password")->valuestring;
-        user_register(prop, userid, password);*/
-        user_register(message);
-    }
-}
+
 int init_server()
 {
     send_q_head = send_q_tail = 0;
@@ -108,9 +95,6 @@ void add_client(int connect_fd, struct sockaddr_in addr) {
 
 void* client_thread_function(void *arg) {
     struct User * prop = (struct User *) arg;
-    //when in pressure test mode, send welcome message after some command rather than automatically.
-    //if(!PRESSURE_TEST)
-    //	send(prop->client_fd, welcome_message, sizeof(char) * (strlen(welcome_message) + 1), 0);
     printf("prop: %d %s\n", prop->user_fd, inet_ntoa(prop->addr.sin_addr));
     char buf[BUFFER_SIZE];
     int numbytes;
@@ -118,18 +102,12 @@ void* client_thread_function(void *arg) {
     while(1) {
         printf("recv.....\n");
         numbytes = recv(prop->user_fd, buf, BUFFER_SIZE, 0);
-		/*
-		buf里面是类似于
-		*/
         if(0 >= numbytes) {
             printf("user %s is offline.\n", inet_ntoa(prop->addr.sin_addr));
             break;
         }
         buf[numbytes] = '\0';
         handle_client_message(prop, buf);
-        //log when receive a message
-        //sprintf(log_buffer, "recv %s\n", buf);
-        //write_log(logfile, log_buffer);
     }
     delete_client(prop);
     pthread_exit(NULL);

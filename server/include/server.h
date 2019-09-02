@@ -17,6 +17,7 @@
 #include <pthread.h>
 #include <time.h>
 #include <unistd.h>
+#include "../util/cJSON.h"
 
 #define MAX_SEND_QUEUE_SIZE 10
 #define MAX_CONN 10 //最大连接数量
@@ -39,6 +40,8 @@ struct Message
     int m_type;       //0:文字；1：文件
     char detail[200]; //文字：内容；文件：路径
 };
+
+void handle_client_message(struct User *prop, char *message);
 void *client_thread_function(void *arg);
 int init_socket();
 
@@ -51,7 +54,7 @@ void add_client(int connect_fd, struct sockaddr_in addr);
 
 
 
-void handle_client_message(struct User *prop, char *message);
+
 
 void delete_client(struct User *prop);
 
