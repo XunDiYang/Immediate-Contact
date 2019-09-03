@@ -1,4 +1,4 @@
-#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
 
 #IncludeRegexScan: ^.*$
 
@@ -6,25 +6,25 @@
 
 #IncludeRegexTransform: 
 
-/home/xundi/github/tem/Immediate-Contact/server/include/Command.cpp
+/home/xundi/github/Immediate-Contact/server/include/Command.cpp
 server.h
-/home/xundi/github/tem/Immediate-Contact/server/include/server.h
+/home/xundi/github/Immediate-Contact/server/include/server.h
 
-/home/xundi/github/tem/Immediate-Contact/server/include/Init.cpp
+/home/xundi/github/Immediate-Contact/server/include/Init.cpp
 server.h
-/home/xundi/github/tem/Immediate-Contact/server/include/server.h
+/home/xundi/github/Immediate-Contact/server/include/server.h
 
-/home/xundi/github/tem/Immediate-Contact/server/include/Login_out_register.cpp
+/home/xundi/github/Immediate-Contact/server/include/Login_out_register.cpp
 server.h
-/home/xundi/github/tem/Immediate-Contact/server/include/server.h
+/home/xundi/github/Immediate-Contact/server/include/server.h
 
-/home/xundi/github/tem/Immediate-Contact/server/include/cJSON.h
+/home/xundi/github/Immediate-Contact/server/include/cJSON.h
 
-/home/xundi/github/tem/Immediate-Contact/server/include/friends.cpp
+/home/xundi/github/Immediate-Contact/server/include/friends.cpp
 friends.h
-/home/xundi/github/tem/Immediate-Contact/server/include/friends.h
+/home/xundi/github/Immediate-Contact/server/include/friends.h
 
-/home/xundi/github/tem/Immediate-Contact/server/include/friends.h
+/home/xundi/github/Immediate-Contact/server/include/friends.h
 stdio.h
 -
 stdlib.h
@@ -32,15 +32,15 @@ stdlib.h
 mysql/mysql.h
 -
 string
-/home/xundi/github/tem/Immediate-Contact/server/include/string
+/home/xundi/github/Immediate-Contact/server/include/string
 iostream
-/home/xundi/github/tem/Immediate-Contact/server/include/iostream
+/home/xundi/github/Immediate-Contact/server/include/iostream
 
-/home/xundi/github/tem/Immediate-Contact/server/include/gmessage.cpp
+/home/xundi/github/Immediate-Contact/server/include/gmessage.cpp
 gmessage.h
-/home/xundi/github/tem/Immediate-Contact/server/include/gmessage.h
+/home/xundi/github/Immediate-Contact/server/include/gmessage.h
 
-/home/xundi/github/tem/Immediate-Contact/server/include/gmessage.h
+/home/xundi/github/Immediate-Contact/server/include/gmessage.h
 stdio.h
 -
 stdlib.h
@@ -48,31 +48,31 @@ stdlib.h
 mysql/mysql.h
 -
 string
-/home/xundi/github/tem/Immediate-Contact/server/include/string
+/home/xundi/github/Immediate-Contact/server/include/string
 
-/home/xundi/github/tem/Immediate-Contact/server/include/group.cpp
+/home/xundi/github/Immediate-Contact/server/include/group.cpp
 group.h
-/home/xundi/github/tem/Immediate-Contact/server/include/group.h
+/home/xundi/github/Immediate-Contact/server/include/group.h
 string
-/home/xundi/github/tem/Immediate-Contact/server/include/string
+/home/xundi/github/Immediate-Contact/server/include/string
 iostream
-/home/xundi/github/tem/Immediate-Contact/server/include/iostream
+/home/xundi/github/Immediate-Contact/server/include/iostream
 
-/home/xundi/github/tem/Immediate-Contact/server/include/group.h
+/home/xundi/github/Immediate-Contact/server/include/group.h
 stdio.h
 -
 stdlib.h
 -
 string
-/home/xundi/github/tem/Immediate-Contact/server/include/string
+/home/xundi/github/Immediate-Contact/server/include/string
 mysql/mysql.h
 -
 
-/home/xundi/github/tem/Immediate-Contact/server/include/message.cpp
+/home/xundi/github/Immediate-Contact/server/include/message.cpp
 message.h
-/home/xundi/github/tem/Immediate-Contact/server/include/message.h
+/home/xundi/github/Immediate-Contact/server/include/message.h
 
-/home/xundi/github/tem/Immediate-Contact/server/include/message.h
+/home/xundi/github/Immediate-Contact/server/include/message.h
 stdio.h
 -
 stdlib.h
@@ -80,13 +80,13 @@ stdlib.h
 mysql/mysql.h
 -
 string
-/home/xundi/github/tem/Immediate-Contact/server/include/string
+/home/xundi/github/Immediate-Contact/server/include/string
 
-/home/xundi/github/tem/Immediate-Contact/server/include/section.cpp
+/home/xundi/github/Immediate-Contact/server/include/section.cpp
 section.h
-/home/xundi/github/tem/Immediate-Contact/server/include/section.h
+/home/xundi/github/Immediate-Contact/server/include/section.h
 
-/home/xundi/github/tem/Immediate-Contact/server/include/section.h
+/home/xundi/github/Immediate-Contact/server/include/section.h
 stdio.h
 -
 stdlib.h
@@ -94,9 +94,9 @@ stdlib.h
 mysql/mysql.h
 -
 string
-/home/xundi/github/tem/Immediate-Contact/server/include/string
+/home/xundi/github/Immediate-Contact/server/include/string
 
-/home/xundi/github/tem/Immediate-Contact/server/include/server.h
+/home/xundi/github/Immediate-Contact/server/include/server.h
 stdio.h
 -
 string.h
@@ -122,17 +122,17 @@ time.h
 unistd.h
 -
 cJSON.h
-/home/xundi/github/tem/Immediate-Contact/server/include/cJSON.h
+/home/xundi/github/Immediate-Contact/server/include/cJSON.h
 
-/home/xundi/github/tem/Immediate-Contact/server/include/user.cpp
+/home/xundi/github/Immediate-Contact/server/include/user.cpp
 user.h
-/home/xundi/github/tem/Immediate-Contact/server/include/user.h
+/home/xundi/github/Immediate-Contact/server/include/user.h
 string
-/home/xundi/github/tem/Immediate-Contact/server/include/string
+/home/xundi/github/Immediate-Contact/server/include/string
 iostream
-/home/xundi/github/tem/Immediate-Contact/server/include/iostream
+/home/xundi/github/Immediate-Contact/server/include/iostream
 
-/home/xundi/github/tem/Immediate-Contact/server/include/user.h
+/home/xundi/github/Immediate-Contact/server/include/user.h
 stdio.h
 -
 stdlib.h
@@ -140,17 +140,17 @@ stdlib.h
 mysql/mysql.h
 -
 string
-/home/xundi/github/tem/Immediate-Contact/server/include/string
+/home/xundi/github/Immediate-Contact/server/include/string
 
-/home/xundi/github/tem/Immediate-Contact/server/include/userGroup.cpp
+/home/xundi/github/Immediate-Contact/server/include/userGroup.cpp
 userGroup.h
-/home/xundi/github/tem/Immediate-Contact/server/include/userGroup.h
+/home/xundi/github/Immediate-Contact/server/include/userGroup.h
 string
-/home/xundi/github/tem/Immediate-Contact/server/include/string
+/home/xundi/github/Immediate-Contact/server/include/string
 iostream
-/home/xundi/github/tem/Immediate-Contact/server/include/iostream
+/home/xundi/github/Immediate-Contact/server/include/iostream
 
-/home/xundi/github/tem/Immediate-Contact/server/include/userGroup.h
+/home/xundi/github/Immediate-Contact/server/include/userGroup.h
 stdio.h
 -
 stdlib.h
@@ -158,5 +158,5 @@ stdlib.h
 mysql/mysql.h
 -
 string
-/home/xundi/github/tem/Immediate-Contact/server/include/string
+/home/xundi/github/Immediate-Contact/server/include/string
 

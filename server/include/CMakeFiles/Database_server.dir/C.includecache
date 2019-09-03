@@ -1,4 +1,4 @@
-#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
 
 #IncludeRegexScan: ^.*$
 
@@ -6,7 +6,7 @@
 
 #IncludeRegexTransform: 
 
-/home/xundi/github/tem/Immediate-Contact/server/include/cJSON.c
+/home/xundi/github/Immediate-Contact/server/include/cJSON.c
 string.h
 -
 stdio.h
@@ -22,7 +22,7 @@ limits.h
 ctype.h
 -
 cJSON.h
-/home/xundi/github/tem/Immediate-Contact/server/include/cJSON.h
+/home/xundi/github/Immediate-Contact/server/include/cJSON.h
 
-/home/xundi/github/tem/Immediate-Contact/server/include/cJSON.h
+/home/xundi/github/Immediate-Contact/server/include/cJSON.h
 

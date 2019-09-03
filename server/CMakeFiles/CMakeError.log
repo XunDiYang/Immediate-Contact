@@ -1,24 +1,24 @@
 Determining if the pthread_create exist failed with the following output:
-Change Dir: /home/xundi/github/tem/Immediate-Contact/server/CMakeFiles/CMakeTmp
+Change Dir: /home/xundi/github/Immediate-Contact/server/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/usr/bin/make cmTC_31e48/fast 
-/usr/bin/make -f CMakeFiles/cmTC_31e48.dir/build.make CMakeFiles/cmTC_31e48.dir/build
-make[1]: Entering directory '/home/xundi/github/tem/Immediate-Contact/server/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_31e48.dir/CheckSymbolExists.c.o
-/usr/bin/cc    -o CMakeFiles/cmTC_31e48.dir/CheckSymbolExists.c.o   -c /home/xundi/github/tem/Immediate-Contact/server/CMakeFiles/CMakeTmp/CheckSymbolExists.c
-Linking C executable cmTC_31e48
-/home/xundi/Downloads/clion-2019.2.1/bin/cmake/linux/bin/cmake -E cmake_link_script CMakeFiles/cmTC_31e48.dir/link.txt --verbose=1
-/usr/bin/cc      -rdynamic CMakeFiles/cmTC_31e48.dir/CheckSymbolExists.c.o  -o cmTC_31e48 
-CMakeFiles/cmTC_31e48.dir/CheckSymbolExists.c.o: In function `main':
+Run Build Command:"/usr/bin/make" "cmTC_0b151/fast"
+/usr/bin/make -f CMakeFiles/cmTC_0b151.dir/build.make CMakeFiles/cmTC_0b151.dir/build
+make[1]: Entering directory '/home/xundi/github/Immediate-Contact/server/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_0b151.dir/CheckSymbolExists.c.o
+/usr/bin/cc     -o CMakeFiles/cmTC_0b151.dir/CheckSymbolExists.c.o   -c /home/xundi/github/Immediate-Contact/server/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+Linking C executable cmTC_0b151
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_0b151.dir/link.txt --verbose=1
+/usr/bin/cc       CMakeFiles/cmTC_0b151.dir/CheckSymbolExists.c.o  -o cmTC_0b151 -rdynamic 
+CMakeFiles/cmTC_0b151.dir/CheckSymbolExists.c.o: In function `main':
 CheckSymbolExists.c:(.text+0x16): undefined reference to `pthread_create'
 collect2: error: ld returned 1 exit status
-CMakeFiles/cmTC_31e48.dir/build.make:86: recipe for target 'cmTC_31e48' failed
-make[1]: *** [cmTC_31e48] Error 1
-make[1]: Leaving directory '/home/xundi/github/tem/Immediate-Contact/server/CMakeFiles/CMakeTmp'
-Makefile:121: recipe for target 'cmTC_31e48/fast' failed
-make: *** [cmTC_31e48/fast] Error 2
+CMakeFiles/cmTC_0b151.dir/build.make:97: recipe for target 'cmTC_0b151' failed
+make[1]: *** [cmTC_0b151] Error 1
+make[1]: Leaving directory '/home/xundi/github/Immediate-Contact/server/CMakeFiles/CMakeTmp'
+Makefile:126: recipe for target 'cmTC_0b151/fast' failed
+make: *** [cmTC_0b151/fast] Error 2
 
-File /home/xundi/github/tem/Immediate-Contact/server/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+File /home/xundi/github/Immediate-Contact/server/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
 /* */
 #include <pthread.h>
 
@@ -34,22 +34,22 @@ int main(int argc, char** argv)
 }
 
 Determining if the function pthread_create exists in the pthreads failed with the following output:
-Change Dir: /home/xundi/github/tem/Immediate-Contact/server/CMakeFiles/CMakeTmp
+Change Dir: /home/xundi/github/Immediate-Contact/server/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/usr/bin/make cmTC_cddb1/fast 
-/usr/bin/make -f CMakeFiles/cmTC_cddb1.dir/build.make CMakeFiles/cmTC_cddb1.dir/build
-make[1]: Entering directory '/home/xundi/github/tem/Immediate-Contact/server/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_cddb1.dir/CheckFunctionExists.c.o
-/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_cddb1.dir/CheckFunctionExists.c.o   -c /home/xundi/Downloads/clion-2019.2.1/bin/cmake/linux/share/cmake-3.14/Modules/CheckFunctionExists.c
-Linking C executable cmTC_cddb1
-/home/xundi/Downloads/clion-2019.2.1/bin/cmake/linux/bin/cmake -E cmake_link_script CMakeFiles/cmTC_cddb1.dir/link.txt --verbose=1
-/usr/bin/cc  -DCHECK_FUNCTION_EXISTS=pthread_create    -rdynamic CMakeFiles/cmTC_cddb1.dir/CheckFunctionExists.c.o  -o cmTC_cddb1 -lpthreads 
+Run Build Command:"/usr/bin/make" "cmTC_c1b74/fast"
+/usr/bin/make -f CMakeFiles/cmTC_c1b74.dir/build.make CMakeFiles/cmTC_c1b74.dir/build
+make[1]: Entering directory '/home/xundi/github/Immediate-Contact/server/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_c1b74.dir/CheckFunctionExists.c.o
+/usr/bin/cc    -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_c1b74.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.5/Modules/CheckFunctionExists.c
+Linking C executable cmTC_c1b74
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_c1b74.dir/link.txt --verbose=1
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create    CMakeFiles/cmTC_c1b74.dir/CheckFunctionExists.c.o  -o cmTC_c1b74 -rdynamic -lpthreads 
 /usr/bin/ld: cannot find -lpthreads
 collect2: error: ld returned 1 exit status
-CMakeFiles/cmTC_cddb1.dir/build.make:86: recipe for target 'cmTC_cddb1' failed
-make[1]: *** [cmTC_cddb1] Error 1
-make[1]: Leaving directory '/home/xundi/github/tem/Immediate-Contact/server/CMakeFiles/CMakeTmp'
-Makefile:121: recipe for target 'cmTC_cddb1/fast' failed
-make: *** [cmTC_cddb1/fast] Error 2
+CMakeFiles/cmTC_c1b74.dir/build.make:97: recipe for target 'cmTC_c1b74' failed
+make[1]: *** [cmTC_c1b74] Error 1
+make[1]: Leaving directory '/home/xundi/github/Immediate-Contact/server/CMakeFiles/CMakeTmp'
+Makefile:126: recipe for target 'cmTC_c1b74/fast' failed
+make: *** [cmTC_c1b74/fast] Error 2
 
 

@@ -1,4 +1,4 @@
-#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
 
 #IncludeRegexScan: ^.*$
 
@@ -6,9 +6,9 @@
 
 #IncludeRegexTransform: 
 
-/home/xundi/github/tem/Immediate-Contact/server/include/cJSON.h
+/home/xundi/github/Immediate-Contact/server/include/cJSON.h
 
-/home/xundi/github/tem/Immediate-Contact/server/include/server.h
+/home/xundi/github/Immediate-Contact/server/include/server.h
 stdio.h
 -
 string.h
@@ -34,9 +34,9 @@ time.h
 unistd.h
 -
 cJSON.h
-/home/xundi/github/tem/Immediate-Contact/server/include/cJSON.h
+/home/xundi/github/Immediate-Contact/server/include/cJSON.h
 
-/home/xundi/github/tem/Immediate-Contact/server/main.cpp
+/home/xundi/github/Immediate-Contact/server/main.cpp
 include/server.h
-/home/xundi/github/tem/Immediate-Contact/server/include/server.h
+/home/xundi/github/Immediate-Contact/server/include/server.h
 

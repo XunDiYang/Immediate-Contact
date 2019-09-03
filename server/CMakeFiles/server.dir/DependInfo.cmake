@@ -4,7 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/xundi/github/tem/Immediate-Contact/server/main.cpp" "/home/xundi/github/tem/Immediate-Contact/server/CMakeFiles/server.dir/main.cpp.o"
+  "/home/xundi/github/Immediate-Contact/server/main.cpp" "/home/xundi/github/Immediate-Contact/server/CMakeFiles/server.dir/main.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 
@@ -14,7 +14,7 @@ set(CMAKE_CXX_TARGET_INCLUDE_PATH
 
 # Targets to which this target links.
 set(CMAKE_TARGET_LINKED_INFO_FILES
-  "/home/xundi/github/tem/Immediate-Contact/server/include/CMakeFiles/Database_server.dir/DependInfo.cmake"
+  "/home/xundi/github/Immediate-Contact/server/include/CMakeFiles/Database_server.dir/DependInfo.cmake"
   )
 
 # Fortran module output directory.

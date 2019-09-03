@@ -1,6 +1,0 @@
-/home/xundi/github/seven_chat/server/cmake-build-debug/CMakeFiles/rebuild_cache.dir
-/home/xundi/github/seven_chat/server/cmake-build-debug/CMakeFiles/Demo.dir
-/home/xundi/github/seven_chat/server/cmake-build-debug/CMakeFiles/edit_cache.dir
-/home/xundi/github/seven_chat/server/cmake-build-debug/include/CMakeFiles/rebuild_cache.dir
-/home/xundi/github/seven_chat/server/cmake-build-debug/include/CMakeFiles/Database_server.dir
-/home/xundi/github/seven_chat/server/cmake-build-debug/include/CMakeFiles/edit_cache.dir
