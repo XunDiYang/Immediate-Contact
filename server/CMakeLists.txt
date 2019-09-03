@@ -16,6 +16,8 @@ add_subdirectory(include)
 
 #-lmysqlclient
 link_directories(/usr/lib/x86_64-linux-gnu/)
+#-lpthread
+link_directories(/usr/lib/x86_64-linux-gnu)
 
 # 指定生成目标
 add_executable(Demo main.cpp)
@@ -23,3 +25,6 @@ add_executable(Demo main.cpp)
 # 添加链接库
 target_link_libraries(Demo Database_server)
 target_link_libraries(Demo mysqlclient)
+target_link_libraries(Demo pthread)
+
+# -lpthread

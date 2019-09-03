@@ -84,6 +84,9 @@ public:
 
     //根据姓名查询id
     bool userUidSelect(char u_name[]);
+
+    //验证登陆
+    bool idpasswd(int u_id,char u_passwd[]);
 };
 
 #endif

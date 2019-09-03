@@ -1,7 +1,7 @@
 /**************************************************/
 /*名称：user.cpp
 /*描述：实现对user数据表的有关操作
-/*作成日期： 2019/9/2
+/*作成日期： 2019/8/31
 /*作者：杨训迪  邵雨洁 李可
 /***************************************************/
 
@@ -798,39 +798,52 @@ bool User::userUidSelect(char u_name[])
     }
 }
 
-// int main()
-// {
+/**************************************************/
+/*名称：idpasswd
+/*描述：登陆验证
+/*作成日期：2019-9-1
+/*参数：参数1：参数名称 u_id、参数类型 int、输入参数、参数含义：用户id
+        参数2：参数名称 u_passwd、参数类型 char*、输入参数、参数含义：用户密码
+        参数3：参数名称:conn_user; 参数类型: MYSQL;全局变量; 参数含义: 与user数据表之间建立的联系;
+/*返回值：bool、true:成功登陆  false：id或秘密错误
+/*作者：邵雨洁
+/***************************************************/
+bool  User::idpasswd(int u_id,char u_passwd[])
+{
+    MYSQL_RES *res_ptr;
+    MYSQL_ROW row;
+    int flag,model;
+    int ans;
+    char* query;
+    //连接数据库
+    if(connectUserDatabase())
+    {
+        string q=u_passwd;
+        q = "select u_id from user where u_passwd=\""+ q + "\"" + " and u_id="+ to_string(u_id);
+        const char *query = q.c_str();
+        /*查询，成功则返回0*/
+        flag = mysql_query(&conn_user, query);
+        if (flag)
+        {  /*如果查询失败*/
+            printf("Guery failed!\n");
+            return false;
+        }
+        else
+        {  /*如果查询成功*/
+            printf("[select u_model from user where u_id=%d] made...\n",u_id);
+            /*mysql_store_result讲全部的查询结果读取到客户端*/
+            res_ptr = mysql_store_result(&conn_user);
+            /*mysql_fetch_row检索结果集的下一行*/
+            ans=0;
+            while (row = mysql_fetch_row(res_ptr))
+            {    printf ("%s\t", row[0]);
+                ans=1;
+            }
+        }
+        mysql_close(&conn_user);
+        if(ans==1) return true;
+        else if(ans==0) return false;
 
-//     User u1;
-//     printf("姓名u_name的检查\n");
-//     cout << u1.userUnameSelect(1) << endl;
-//     cout << u1.userUnameSelect(2) << endl;
-//     printf("密码u_passwd的检查\n");
-//     cout << u1.userUpasswdSelect(1) << endl;
-//     cout << u1.userUpasswdSelect(2) << endl;
-//     printf("头像 u_icon的检查\n");
-//     cout << u1.userUiconSelect(1) << endl;
-//     cout << u1.userUiconSelect(2) << endl;
-//     printf("年龄u_age的检查\n");
-//     cout << u1.userUageSelect(1) << endl;
-//     cout << u1.userUageSelect(2) << endl;
-//     printf("性别u_ sex的检查\n");
-//     cout << u1.userUsexSelect(1) << endl;
-//     cout << u1.userUsexSelect(2) << endl;
-//     printf("签名u_signature的检查\n");
-//     /*因为签名为空，所以返回在为NULL,不能cout  cout<<u1.userUsignatureSelect(1)<<endl;
-// 	cout<<u1.userUsignatureSelect(2)<<endl;*/
-//     printf("邮箱u_email的检查\n");
-//     cout << u1.userUemailSelect(1) << endl;
-//     cout << u1.userUemailSelect(2) << endl;
-//     printf("日夜模式u_model的检查\n");
-//     cout << u1.userUmodelSelect(1) << endl;
-//     cout << u1.userUmodelSelect(2) << endl;
-//     printf("根据姓名查询id\n");
-//     char Oct[] = " yangxundi";
+    }
+}
 
-//     if(u1.userUidSelect(Oct))cout << u1.idList[0]<< " "<<u1.idList[1]<< endl;
-//     // u1.userRegister("yaya","kojojio","kojionxia@ddd.com");
-
-//     return 0;
-// }

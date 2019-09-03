@@ -1,1 +1,1 @@
-/usr/bin/c++  -g  -rdynamic CMakeFiles/Demo.dir/main.cpp.o  -o Demo include/libDatabase_server.a -lmysqlclient 
+/usr/bin/c++  -g  -rdynamic CMakeFiles/Demo.dir/main.cpp.o  -o Demo include/libDatabase_server.a -lmysqlclient -lpthread 
