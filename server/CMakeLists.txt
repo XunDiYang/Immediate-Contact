@@ -14,17 +14,18 @@ aux_source_directory(. DIR_SRCS)
 # 添加 math 子目录
 add_subdirectory(include)
 
+find_package (Threads)
+
 #-lmysqlclient
 link_directories(/usr/lib/x86_64-linux-gnu/)
 #-lpthread
 link_directories(/usr/lib/x86_64-linux-gnu)
 
 # 指定生成目标
-add_executable(Demo main.cpp)
+add_executable(server main.cpp)
 
 # 添加链接库
-target_link_libraries(Demo Database_server)
-target_link_libraries(Demo mysqlclient)
-target_link_libraries(Demo pthread)
-
-# -lpthread
+target_link_libraries(server Database_server)
+target_link_libraries(server mysqlclient)
+target_link_libraries(server pthread)
+target_link_libraries (server ${CMAKE_THREAD_LIBS_INIT})

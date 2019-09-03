@@ -240,7 +240,8 @@ bool Group::groupGiconUpdate(int g_id, char *g_icon)
 bool Group::groupeInsert(int g_admin_id, char *g_name, char *g_intro, char *g_icon)
 {
     char sql_insert[2048];
-    sprintf(sql_insert, "insert into group_ (g_admin_id,g_name,g_intro,g_icon,g_num) values (\'%d\', \'%s\',\'%s\',\'%s\',\'%d\')", g_admin_id, g_name, g_intro, g_icon, 1);
+    sprintf(sql_insert, "insert into group_ (g_admin_id,g_name,g_intro,g_icon,g_num) values (\'%d\', \'%s\',\'%s\',\'%s\',\'%d\')",
+            g_admin_id, g_name, g_intro, g_icon, 1);
     if (connectGroupDatabase())
     {
         res = mysql_query(&conn_group, sql_insert); //执行SQL语句

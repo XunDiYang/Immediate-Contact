@@ -1,6 +1,6 @@
-/home/xundi/github/seven_chat/server/CMakeFiles/rebuild_cache.dir
-/home/xundi/github/seven_chat/server/CMakeFiles/Demo.dir
-/home/xundi/github/seven_chat/server/CMakeFiles/edit_cache.dir
-/home/xundi/github/seven_chat/server/include/CMakeFiles/rebuild_cache.dir
-/home/xundi/github/seven_chat/server/include/CMakeFiles/Database_server.dir
-/home/xundi/github/seven_chat/server/include/CMakeFiles/edit_cache.dir
+/home/xundi/github/tem/Immediate-Contact/server/CMakeFiles/rebuild_cache.dir
+/home/xundi/github/tem/Immediate-Contact/server/CMakeFiles/server.dir
+/home/xundi/github/tem/Immediate-Contact/server/CMakeFiles/edit_cache.dir
+/home/xundi/github/tem/Immediate-Contact/server/include/CMakeFiles/rebuild_cache.dir
+/home/xundi/github/tem/Immediate-Contact/server/include/CMakeFiles/Database_server.dir
+/home/xundi/github/tem/Immediate-Contact/server/include/CMakeFiles/edit_cache.dir

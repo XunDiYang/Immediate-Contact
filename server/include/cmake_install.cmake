@@ -1,4 +1,4 @@
-# Install script for directory: /home/xundi/github/seven_chat/server/include
+# Install script for directory: /home/xundi/github/tem/Immediate-Contact/server/include
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)

@@ -1,0 +1,6 @@
+/home/xundi/github/tem/Immediate-Contact/client/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/home/xundi/github/tem/Immediate-Contact/client/cmake-build-debug/CMakeFiles/client.dir
+/home/xundi/github/tem/Immediate-Contact/client/cmake-build-debug/CMakeFiles/edit_cache.dir
+/home/xundi/github/tem/Immediate-Contact/client/cmake-build-debug/util/CMakeFiles/rebuild_cache.dir
+/home/xundi/github/tem/Immediate-Contact/client/cmake-build-debug/util/CMakeFiles/Util.dir
+/home/xundi/github/tem/Immediate-Contact/client/cmake-build-debug/util/CMakeFiles/edit_cache.dir

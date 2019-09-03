@@ -1,4 +1,8 @@
 file(REMOVE_RECURSE
+  "CMakeFiles/Database_server.dir/Command.cpp.o"
+  "CMakeFiles/Database_server.dir/Init.cpp.o"
+  "CMakeFiles/Database_server.dir/Login_out_register.cpp.o"
+  "CMakeFiles/Database_server.dir/cJSON.c.o"
   "CMakeFiles/Database_server.dir/friends.cpp.o"
   "CMakeFiles/Database_server.dir/gmessage.cpp.o"
   "CMakeFiles/Database_server.dir/group.cpp.o"
@@ -11,6 +15,6 @@ file(REMOVE_RECURSE
 )
 
 # Per-language clean rules from dependency scanning.
-foreach(lang CXX)
+foreach(lang C CXX)
   include(CMakeFiles/Database_server.dir/cmake_clean_${lang}.cmake OPTIONAL)
 endforeach()

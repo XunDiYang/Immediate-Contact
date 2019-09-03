@@ -1,0 +1,42 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/xundi/github/tem/Immediate-Contact/server/include/cJSON.h
+
+/home/xundi/github/tem/Immediate-Contact/server/include/server.h
+stdio.h
+-
+string.h
+-
+strings.h
+-
+stdlib.h
+-
+errno.h
+-
+sys/types.h
+-
+sys/socket.h
+-
+netinet/in.h
+-
+arpa/inet.h
+-
+pthread.h
+-
+time.h
+-
+unistd.h
+-
+cJSON.h
+/home/xundi/github/tem/Immediate-Contact/server/include/cJSON.h
+
+/home/xundi/github/tem/Immediate-Contact/server/main.cpp
+include/server.h
+/home/xundi/github/tem/Immediate-Contact/server/include/server.h
+

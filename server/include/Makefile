@@ -48,10 +48,10 @@ RM = /home/xundi/Downloads/clion-2019.2.1/bin/cmake/linux/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/xundi/github/seven_chat/server
+CMAKE_SOURCE_DIR = /home/xundi/github/tem/Immediate-Contact/server
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/xundi/github/seven_chat/server
+CMAKE_BINARY_DIR = /home/xundi/github/tem/Immediate-Contact/server
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -80,14 +80,14 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	cd /home/xundi/github/seven_chat/server && $(CMAKE_COMMAND) -E cmake_progress_start /home/xundi/github/seven_chat/server/CMakeFiles /home/xundi/github/seven_chat/server/include/CMakeFiles/progress.marks
-	cd /home/xundi/github/seven_chat/server && $(MAKE) -f CMakeFiles/Makefile2 include/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/xundi/github/seven_chat/server/CMakeFiles 0
+	cd /home/xundi/github/tem/Immediate-Contact/server && $(CMAKE_COMMAND) -E cmake_progress_start /home/xundi/github/tem/Immediate-Contact/server/CMakeFiles /home/xundi/github/tem/Immediate-Contact/server/include/CMakeFiles/progress.marks
+	cd /home/xundi/github/tem/Immediate-Contact/server && $(MAKE) -f CMakeFiles/Makefile2 include/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/xundi/github/tem/Immediate-Contact/server/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /home/xundi/github/seven_chat/server && $(MAKE) -f CMakeFiles/Makefile2 include/clean
+	cd /home/xundi/github/tem/Immediate-Contact/server && $(MAKE) -f CMakeFiles/Makefile2 include/clean
 .PHONY : clean
 
 # The main clean target
@@ -97,22 +97,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /home/xundi/github/seven_chat/server && $(MAKE) -f CMakeFiles/Makefile2 include/preinstall
+	cd /home/xundi/github/tem/Immediate-Contact/server && $(MAKE) -f CMakeFiles/Makefile2 include/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /home/xundi/github/seven_chat/server && $(MAKE) -f CMakeFiles/Makefile2 include/preinstall
+	cd /home/xundi/github/tem/Immediate-Contact/server && $(MAKE) -f CMakeFiles/Makefile2 include/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /home/xundi/github/seven_chat/server && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /home/xundi/github/tem/Immediate-Contact/server && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 include/CMakeFiles/Database_server.dir/rule:
-	cd /home/xundi/github/seven_chat/server && $(MAKE) -f CMakeFiles/Makefile2 include/CMakeFiles/Database_server.dir/rule
+	cd /home/xundi/github/tem/Immediate-Contact/server && $(MAKE) -f CMakeFiles/Makefile2 include/CMakeFiles/Database_server.dir/rule
 .PHONY : include/CMakeFiles/Database_server.dir/rule
 
 # Convenience name for target.
@@ -122,8 +122,116 @@ Database_server: include/CMakeFiles/Database_server.dir/rule
 
 # fast build rule for target.
 Database_server/fast:
-	cd /home/xundi/github/seven_chat/server && $(MAKE) -f include/CMakeFiles/Database_server.dir/build.make include/CMakeFiles/Database_server.dir/build
+	cd /home/xundi/github/tem/Immediate-Contact/server && $(MAKE) -f include/CMakeFiles/Database_server.dir/build.make include/CMakeFiles/Database_server.dir/build
 .PHONY : Database_server/fast
+
+Command.o: Command.cpp.o
+
+.PHONY : Command.o
+
+# target to build an object file
+Command.cpp.o:
+	cd /home/xundi/github/tem/Immediate-Contact/server && $(MAKE) -f include/CMakeFiles/Database_server.dir/build.make include/CMakeFiles/Database_server.dir/Command.cpp.o
+.PHONY : Command.cpp.o
+
+Command.i: Command.cpp.i
+
+.PHONY : Command.i
+
+# target to preprocess a source file
+Command.cpp.i:
+	cd /home/xundi/github/tem/Immediate-Contact/server && $(MAKE) -f include/CMakeFiles/Database_server.dir/build.make include/CMakeFiles/Database_server.dir/Command.cpp.i
+.PHONY : Command.cpp.i
+
+Command.s: Command.cpp.s
+
+.PHONY : Command.s
+
+# target to generate assembly for a file
+Command.cpp.s:
+	cd /home/xundi/github/tem/Immediate-Contact/server && $(MAKE) -f include/CMakeFiles/Database_server.dir/build.make include/CMakeFiles/Database_server.dir/Command.cpp.s
+.PHONY : Command.cpp.s
+
+Init.o: Init.cpp.o
+
+.PHONY : Init.o
+
+# target to build an object file
+Init.cpp.o:
+	cd /home/xundi/github/tem/Immediate-Contact/server && $(MAKE) -f include/CMakeFiles/Database_server.dir/build.make include/CMakeFiles/Database_server.dir/Init.cpp.o
+.PHONY : Init.cpp.o
+
+Init.i: Init.cpp.i
+
+.PHONY : Init.i
+
+# target to preprocess a source file
+Init.cpp.i:
+	cd /home/xundi/github/tem/Immediate-Contact/server && $(MAKE) -f include/CMakeFiles/Database_server.dir/build.make include/CMakeFiles/Database_server.dir/Init.cpp.i
+.PHONY : Init.cpp.i
+
+Init.s: Init.cpp.s
+
+.PHONY : Init.s
+
+# target to generate assembly for a file
+Init.cpp.s:
+	cd /home/xundi/github/tem/Immediate-Contact/server && $(MAKE) -f include/CMakeFiles/Database_server.dir/build.make include/CMakeFiles/Database_server.dir/Init.cpp.s
+.PHONY : Init.cpp.s
+
+Login_out_register.o: Login_out_register.cpp.o
+
+.PHONY : Login_out_register.o
+
+# target to build an object file
+Login_out_register.cpp.o:
+	cd /home/xundi/github/tem/Immediate-Contact/server && $(MAKE) -f include/CMakeFiles/Database_server.dir/build.make include/CMakeFiles/Database_server.dir/Login_out_register.cpp.o
+.PHONY : Login_out_register.cpp.o
+
+Login_out_register.i: Login_out_register.cpp.i
+
+.PHONY : Login_out_register.i
+
+# target to preprocess a source file
+Login_out_register.cpp.i:
+	cd /home/xundi/github/tem/Immediate-Contact/server && $(MAKE) -f include/CMakeFiles/Database_server.dir/build.make include/CMakeFiles/Database_server.dir/Login_out_register.cpp.i
+.PHONY : Login_out_register.cpp.i
+
+Login_out_register.s: Login_out_register.cpp.s
+
+.PHONY : Login_out_register.s
+
+# target to generate assembly for a file
+Login_out_register.cpp.s:
+	cd /home/xundi/github/tem/Immediate-Contact/server && $(MAKE) -f include/CMakeFiles/Database_server.dir/build.make include/CMakeFiles/Database_server.dir/Login_out_register.cpp.s
+.PHONY : Login_out_register.cpp.s
+
+cJSON.o: cJSON.c.o
+
+.PHONY : cJSON.o
+
+# target to build an object file
+cJSON.c.o:
+	cd /home/xundi/github/tem/Immediate-Contact/server && $(MAKE) -f include/CMakeFiles/Database_server.dir/build.make include/CMakeFiles/Database_server.dir/cJSON.c.o
+.PHONY : cJSON.c.o
+
+cJSON.i: cJSON.c.i
+
+.PHONY : cJSON.i
+
+# target to preprocess a source file
+cJSON.c.i:
+	cd /home/xundi/github/tem/Immediate-Contact/server && $(MAKE) -f include/CMakeFiles/Database_server.dir/build.make include/CMakeFiles/Database_server.dir/cJSON.c.i
+.PHONY : cJSON.c.i
+
+cJSON.s: cJSON.c.s
+
+.PHONY : cJSON.s
+
+# target to generate assembly for a file
+cJSON.c.s:
+	cd /home/xundi/github/tem/Immediate-Contact/server && $(MAKE) -f include/CMakeFiles/Database_server.dir/build.make include/CMakeFiles/Database_server.dir/cJSON.c.s
+.PHONY : cJSON.c.s
 
 friends.o: friends.cpp.o
 
@@ -131,7 +239,7 @@ friends.o: friends.cpp.o
 
 # target to build an object file
 friends.cpp.o:
-	cd /home/xundi/github/seven_chat/server && $(MAKE) -f include/CMakeFiles/Database_server.dir/build.make include/CMakeFiles/Database_server.dir/friends.cpp.o
+	cd /home/xundi/github/tem/Immediate-Contact/server && $(MAKE) -f include/CMakeFiles/Database_server.dir/build.make include/CMakeFiles/Database_server.dir/friends.cpp.o
 .PHONY : friends.cpp.o
 
 friends.i: friends.cpp.i
@@ -140,7 +248,7 @@ friends.i: friends.cpp.i
 
 # target to preprocess a source file
 friends.cpp.i:
-	cd /home/xundi/github/seven_chat/server && $(MAKE) -f include/CMakeFiles/Database_server.dir/build.make include/CMakeFiles/Database_server.dir/friends.cpp.i
+	cd /home/xundi/github/tem/Immediate-Contact/server && $(MAKE) -f include/CMakeFiles/Database_server.dir/build.make include/CMakeFiles/Database_server.dir/friends.cpp.i
 .PHONY : friends.cpp.i
 
 friends.s: friends.cpp.s
@@ -149,7 +257,7 @@ friends.s: friends.cpp.s
 
 # target to generate assembly for a file
 friends.cpp.s:
-	cd /home/xundi/github/seven_chat/server && $(MAKE) -f include/CMakeFiles/Database_server.dir/build.make include/CMakeFiles/Database_server.dir/friends.cpp.s
+	cd /home/xundi/github/tem/Immediate-Contact/server && $(MAKE) -f include/CMakeFiles/Database_server.dir/build.make include/CMakeFiles/Database_server.dir/friends.cpp.s
 .PHONY : friends.cpp.s
 
 gmessage.o: gmessage.cpp.o
@@ -158,7 +266,7 @@ gmessage.o: gmessage.cpp.o
 
 # target to build an object file
 gmessage.cpp.o:
-	cd /home/xundi/github/seven_chat/server && $(MAKE) -f include/CMakeFiles/Database_server.dir/build.make include/CMakeFiles/Database_server.dir/gmessage.cpp.o
+	cd /home/xundi/github/tem/Immediate-Contact/server && $(MAKE) -f include/CMakeFiles/Database_server.dir/build.make include/CMakeFiles/Database_server.dir/gmessage.cpp.o
 .PHONY : gmessage.cpp.o
 
 gmessage.i: gmessage.cpp.i
@@ -167,7 +275,7 @@ gmessage.i: gmessage.cpp.i
 
 # target to preprocess a source file
 gmessage.cpp.i:
-	cd /home/xundi/github/seven_chat/server && $(MAKE) -f include/CMakeFiles/Database_server.dir/build.make include/CMakeFiles/Database_server.dir/gmessage.cpp.i
+	cd /home/xundi/github/tem/Immediate-Contact/server && $(MAKE) -f include/CMakeFiles/Database_server.dir/build.make include/CMakeFiles/Database_server.dir/gmessage.cpp.i
 .PHONY : gmessage.cpp.i
 
 gmessage.s: gmessage.cpp.s
@@ -176,7 +284,7 @@ gmessage.s: gmessage.cpp.s
 
 # target to generate assembly for a file
 gmessage.cpp.s:
-	cd /home/xundi/github/seven_chat/server && $(MAKE) -f include/CMakeFiles/Database_server.dir/build.make include/CMakeFiles/Database_server.dir/gmessage.cpp.s
+	cd /home/xundi/github/tem/Immediate-Contact/server && $(MAKE) -f include/CMakeFiles/Database_server.dir/build.make include/CMakeFiles/Database_server.dir/gmessage.cpp.s
 .PHONY : gmessage.cpp.s
 
 group.o: group.cpp.o
@@ -185,7 +293,7 @@ group.o: group.cpp.o
 
 # target to build an object file
 group.cpp.o:
-	cd /home/xundi/github/seven_chat/server && $(MAKE) -f include/CMakeFiles/Database_server.dir/build.make include/CMakeFiles/Database_server.dir/group.cpp.o
+	cd /home/xundi/github/tem/Immediate-Contact/server && $(MAKE) -f include/CMakeFiles/Database_server.dir/build.make include/CMakeFiles/Database_server.dir/group.cpp.o
 .PHONY : group.cpp.o
 
 group.i: group.cpp.i
@@ -194,7 +302,7 @@ group.i: group.cpp.i
 
 # target to preprocess a source file
 group.cpp.i:
-	cd /home/xundi/github/seven_chat/server && $(MAKE) -f include/CMakeFiles/Database_server.dir/build.make include/CMakeFiles/Database_server.dir/group.cpp.i
+	cd /home/xundi/github/tem/Immediate-Contact/server && $(MAKE) -f include/CMakeFiles/Database_server.dir/build.make include/CMakeFiles/Database_server.dir/group.cpp.i
 .PHONY : group.cpp.i
 
 group.s: group.cpp.s
@@ -203,7 +311,7 @@ group.s: group.cpp.s
 
 # target to generate assembly for a file
 group.cpp.s:
-	cd /home/xundi/github/seven_chat/server && $(MAKE) -f include/CMakeFiles/Database_server.dir/build.make include/CMakeFiles/Database_server.dir/group.cpp.s
+	cd /home/xundi/github/tem/Immediate-Contact/server && $(MAKE) -f include/CMakeFiles/Database_server.dir/build.make include/CMakeFiles/Database_server.dir/group.cpp.s
 .PHONY : group.cpp.s
 
 message.o: message.cpp.o
@@ -212,7 +320,7 @@ message.o: message.cpp.o
 
 # target to build an object file
 message.cpp.o:
-	cd /home/xundi/github/seven_chat/server && $(MAKE) -f include/CMakeFiles/Database_server.dir/build.make include/CMakeFiles/Database_server.dir/message.cpp.o
+	cd /home/xundi/github/tem/Immediate-Contact/server && $(MAKE) -f include/CMakeFiles/Database_server.dir/build.make include/CMakeFiles/Database_server.dir/message.cpp.o
 .PHONY : message.cpp.o
 
 message.i: message.cpp.i
@@ -221,7 +329,7 @@ message.i: message.cpp.i
 
 # target to preprocess a source file
 message.cpp.i:
-	cd /home/xundi/github/seven_chat/server && $(MAKE) -f include/CMakeFiles/Database_server.dir/build.make include/CMakeFiles/Database_server.dir/message.cpp.i
+	cd /home/xundi/github/tem/Immediate-Contact/server && $(MAKE) -f include/CMakeFiles/Database_server.dir/build.make include/CMakeFiles/Database_server.dir/message.cpp.i
 .PHONY : message.cpp.i
 
 message.s: message.cpp.s
@@ -230,7 +338,7 @@ message.s: message.cpp.s
 
 # target to generate assembly for a file
 message.cpp.s:
-	cd /home/xundi/github/seven_chat/server && $(MAKE) -f include/CMakeFiles/Database_server.dir/build.make include/CMakeFiles/Database_server.dir/message.cpp.s
+	cd /home/xundi/github/tem/Immediate-Contact/server && $(MAKE) -f include/CMakeFiles/Database_server.dir/build.make include/CMakeFiles/Database_server.dir/message.cpp.s
 .PHONY : message.cpp.s
 
 section.o: section.cpp.o
@@ -239,7 +347,7 @@ section.o: section.cpp.o
 
 # target to build an object file
 section.cpp.o:
-	cd /home/xundi/github/seven_chat/server && $(MAKE) -f include/CMakeFiles/Database_server.dir/build.make include/CMakeFiles/Database_server.dir/section.cpp.o
+	cd /home/xundi/github/tem/Immediate-Contact/server && $(MAKE) -f include/CMakeFiles/Database_server.dir/build.make include/CMakeFiles/Database_server.dir/section.cpp.o
 .PHONY : section.cpp.o
 
 section.i: section.cpp.i
@@ -248,7 +356,7 @@ section.i: section.cpp.i
 
 # target to preprocess a source file
 section.cpp.i:
-	cd /home/xundi/github/seven_chat/server && $(MAKE) -f include/CMakeFiles/Database_server.dir/build.make include/CMakeFiles/Database_server.dir/section.cpp.i
+	cd /home/xundi/github/tem/Immediate-Contact/server && $(MAKE) -f include/CMakeFiles/Database_server.dir/build.make include/CMakeFiles/Database_server.dir/section.cpp.i
 .PHONY : section.cpp.i
 
 section.s: section.cpp.s
@@ -257,7 +365,7 @@ section.s: section.cpp.s
 
 # target to generate assembly for a file
 section.cpp.s:
-	cd /home/xundi/github/seven_chat/server && $(MAKE) -f include/CMakeFiles/Database_server.dir/build.make include/CMakeFiles/Database_server.dir/section.cpp.s
+	cd /home/xundi/github/tem/Immediate-Contact/server && $(MAKE) -f include/CMakeFiles/Database_server.dir/build.make include/CMakeFiles/Database_server.dir/section.cpp.s
 .PHONY : section.cpp.s
 
 user.o: user.cpp.o
@@ -266,7 +374,7 @@ user.o: user.cpp.o
 
 # target to build an object file
 user.cpp.o:
-	cd /home/xundi/github/seven_chat/server && $(MAKE) -f include/CMakeFiles/Database_server.dir/build.make include/CMakeFiles/Database_server.dir/user.cpp.o
+	cd /home/xundi/github/tem/Immediate-Contact/server && $(MAKE) -f include/CMakeFiles/Database_server.dir/build.make include/CMakeFiles/Database_server.dir/user.cpp.o
 .PHONY : user.cpp.o
 
 user.i: user.cpp.i
@@ -275,7 +383,7 @@ user.i: user.cpp.i
 
 # target to preprocess a source file
 user.cpp.i:
-	cd /home/xundi/github/seven_chat/server && $(MAKE) -f include/CMakeFiles/Database_server.dir/build.make include/CMakeFiles/Database_server.dir/user.cpp.i
+	cd /home/xundi/github/tem/Immediate-Contact/server && $(MAKE) -f include/CMakeFiles/Database_server.dir/build.make include/CMakeFiles/Database_server.dir/user.cpp.i
 .PHONY : user.cpp.i
 
 user.s: user.cpp.s
@@ -284,7 +392,7 @@ user.s: user.cpp.s
 
 # target to generate assembly for a file
 user.cpp.s:
-	cd /home/xundi/github/seven_chat/server && $(MAKE) -f include/CMakeFiles/Database_server.dir/build.make include/CMakeFiles/Database_server.dir/user.cpp.s
+	cd /home/xundi/github/tem/Immediate-Contact/server && $(MAKE) -f include/CMakeFiles/Database_server.dir/build.make include/CMakeFiles/Database_server.dir/user.cpp.s
 .PHONY : user.cpp.s
 
 userGroup.o: userGroup.cpp.o
@@ -293,7 +401,7 @@ userGroup.o: userGroup.cpp.o
 
 # target to build an object file
 userGroup.cpp.o:
-	cd /home/xundi/github/seven_chat/server && $(MAKE) -f include/CMakeFiles/Database_server.dir/build.make include/CMakeFiles/Database_server.dir/userGroup.cpp.o
+	cd /home/xundi/github/tem/Immediate-Contact/server && $(MAKE) -f include/CMakeFiles/Database_server.dir/build.make include/CMakeFiles/Database_server.dir/userGroup.cpp.o
 .PHONY : userGroup.cpp.o
 
 userGroup.i: userGroup.cpp.i
@@ -302,7 +410,7 @@ userGroup.i: userGroup.cpp.i
 
 # target to preprocess a source file
 userGroup.cpp.i:
-	cd /home/xundi/github/seven_chat/server && $(MAKE) -f include/CMakeFiles/Database_server.dir/build.make include/CMakeFiles/Database_server.dir/userGroup.cpp.i
+	cd /home/xundi/github/tem/Immediate-Contact/server && $(MAKE) -f include/CMakeFiles/Database_server.dir/build.make include/CMakeFiles/Database_server.dir/userGroup.cpp.i
 .PHONY : userGroup.cpp.i
 
 userGroup.s: userGroup.cpp.s
@@ -311,7 +419,7 @@ userGroup.s: userGroup.cpp.s
 
 # target to generate assembly for a file
 userGroup.cpp.s:
-	cd /home/xundi/github/seven_chat/server && $(MAKE) -f include/CMakeFiles/Database_server.dir/build.make include/CMakeFiles/Database_server.dir/userGroup.cpp.s
+	cd /home/xundi/github/tem/Immediate-Contact/server && $(MAKE) -f include/CMakeFiles/Database_server.dir/build.make include/CMakeFiles/Database_server.dir/userGroup.cpp.s
 .PHONY : userGroup.cpp.s
 
 # Help Target
@@ -323,6 +431,18 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... Database_server"
 	@echo "... edit_cache"
+	@echo "... Command.o"
+	@echo "... Command.i"
+	@echo "... Command.s"
+	@echo "... Init.o"
+	@echo "... Init.i"
+	@echo "... Init.s"
+	@echo "... Login_out_register.o"
+	@echo "... Login_out_register.i"
+	@echo "... Login_out_register.s"
+	@echo "... cJSON.o"
+	@echo "... cJSON.i"
+	@echo "... cJSON.s"
 	@echo "... friends.o"
 	@echo "... friends.i"
 	@echo "... friends.s"
@@ -355,6 +475,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /home/xundi/github/seven_chat/server && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /home/xundi/github/tem/Immediate-Contact/server && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

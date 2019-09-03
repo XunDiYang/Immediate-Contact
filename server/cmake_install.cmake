@@ -1,4 +1,4 @@
-# Install script for directory: /home/xundi/github/seven_chat/server
+# Install script for directory: /home/xundi/github/tem/Immediate-Contact/server
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -39,7 +39,7 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  include("/home/xundi/github/seven_chat/server/include/cmake_install.cmake")
+  include("/home/xundi/github/tem/Immediate-Contact/server/include/cmake_install.cmake")
 
 endif()
 
@@ -51,5 +51,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/home/xundi/github/seven_chat/server/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/home/xundi/github/tem/Immediate-Contact/server/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

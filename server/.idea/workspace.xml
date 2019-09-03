@@ -2,7 +2,7 @@
 <project version="4">
   <component name="CMakeRunConfigurationManager" shouldGenerate="true" shouldDeleteObsolete="true">
     <generated>
-      <config projectName="seven_chat_server" targetName="Demo" />
+      <config projectName="seven_chat_server" targetName="server" />
       <config projectName="seven_chat_server" targetName="Database_server" />
     </generated>
   </component>
@@ -12,7 +12,62 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="48a862fd-55b7-43bd-b1a1-26c242053f7f" name="Default Changelist" comment="" />
+    <list default="true" id="48a862fd-55b7-43bd-b1a1-26c242053f7f" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/include/cJSON.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/include/cJSON.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CMakeCache.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeCache.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CMakeFiles/3.5.1/CMakeCCompiler.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CMakeFiles/3.5.1/CMakeCXXCompiler.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CMakeFiles/3.5.1/CMakeDetermineCompilerABI_C.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CMakeFiles/3.5.1/CMakeDetermineCompilerABI_CXX.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CMakeFiles/3.5.1/CMakeSystem.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CMakeFiles/3.5.1/CompilerIdC/CMakeCCompilerId.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CMakeFiles/3.5.1/CompilerIdC/a.out" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CMakeFiles/3.5.1/CompilerIdCXX/CMakeCXXCompilerId.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CMakeFiles/3.5.1/CompilerIdCXX/a.out" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CMakeFiles/CMakeDirectoryInformation.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeFiles/CMakeDirectoryInformation.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CMakeFiles/CMakeOutput.log" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeFiles/CMakeOutput.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CMakeFiles/Demo.dir/CXX.includecache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CMakeFiles/Demo.dir/DependInfo.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeFiles/Demo.dir/DependInfo.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CMakeFiles/Demo.dir/build.make" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeFiles/Demo.dir/build.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CMakeFiles/Demo.dir/depend.internal" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CMakeFiles/Demo.dir/depend.make" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeFiles/Demo.dir/depend.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CMakeFiles/Demo.dir/main.cpp.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CMakeFiles/Makefile.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeFiles/Makefile.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CMakeFiles/Makefile2" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeFiles/Makefile2" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CMakeFiles/TargetDirectories.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeFiles/TargetDirectories.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CMakeFiles/clion-log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeFiles/clion-log.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CMakeFiles/progress.marks" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeFiles/progress.marks" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Demo" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/Makefile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake_install.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake_install.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/include/CMakeFiles/CMakeDirectoryInformation.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/include/CMakeFiles/CMakeDirectoryInformation.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/include/CMakeFiles/Database_server.dir/CXX.includecache" beforeDir="false" afterPath="$PROJECT_DIR$/include/CMakeFiles/Database_server.dir/CXX.includecache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/include/CMakeFiles/Database_server.dir/DependInfo.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/include/CMakeFiles/Database_server.dir/DependInfo.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/include/CMakeFiles/Database_server.dir/build.make" beforeDir="false" afterPath="$PROJECT_DIR$/include/CMakeFiles/Database_server.dir/build.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/include/CMakeFiles/Database_server.dir/cmake_clean.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/include/CMakeFiles/Database_server.dir/cmake_clean.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/include/CMakeFiles/Database_server.dir/depend.internal" beforeDir="false" afterPath="$PROJECT_DIR$/include/CMakeFiles/Database_server.dir/depend.internal" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/include/CMakeFiles/Database_server.dir/depend.make" beforeDir="false" afterPath="$PROJECT_DIR$/include/CMakeFiles/Database_server.dir/depend.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/include/CMakeFiles/Database_server.dir/flags.make" beforeDir="false" afterPath="$PROJECT_DIR$/include/CMakeFiles/Database_server.dir/flags.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/include/CMakeFiles/Database_server.dir/friends.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/include/CMakeFiles/Database_server.dir/friends.cpp.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/include/CMakeFiles/Database_server.dir/gmessage.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/include/CMakeFiles/Database_server.dir/gmessage.cpp.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/include/CMakeFiles/Database_server.dir/group.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/include/CMakeFiles/Database_server.dir/group.cpp.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/include/CMakeFiles/Database_server.dir/link.txt" beforeDir="false" afterPath="$PROJECT_DIR$/include/CMakeFiles/Database_server.dir/link.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/include/CMakeFiles/Database_server.dir/message.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/include/CMakeFiles/Database_server.dir/message.cpp.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/include/CMakeFiles/Database_server.dir/progress.make" beforeDir="false" afterPath="$PROJECT_DIR$/include/CMakeFiles/Database_server.dir/progress.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/include/CMakeFiles/Database_server.dir/section.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/include/CMakeFiles/Database_server.dir/section.cpp.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/include/CMakeFiles/Database_server.dir/user.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/include/CMakeFiles/Database_server.dir/user.cpp.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/include/CMakeFiles/Database_server.dir/userGroup.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/include/CMakeFiles/Database_server.dir/userGroup.cpp.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/include/CMakeFiles/progress.marks" beforeDir="false" afterPath="$PROJECT_DIR$/include/CMakeFiles/progress.marks" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/include/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/include/Makefile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/include/cmake_install.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/include/cmake_install.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/include/group.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/include/group.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/include/libDatabase_server.a" beforeDir="false" afterPath="$PROJECT_DIR$/include/libDatabase_server.a" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/main.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/seven_chat_server.cbp" beforeDir="false" afterPath="$PROJECT_DIR$/seven_chat_server.cbp" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -23,9 +78,20 @@
     <option name="formatViaClangd" value="false" />
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="CMakeBuildProfile:Debug" />
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
   <component name="ProjectId" id="1QJIZ7Xq6rdoAnYGnXeghKnTZs2" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/include" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/include" />
+      <recent name="$PROJECT_DIR$/include/util" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -39,19 +105,19 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="CMake Application.Demo">
+  <component name="RunManager" selected="CMake Application.server">
     <configuration name="Database_server" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="seven_chat_server" TARGET_NAME="Database_server" CONFIG_NAME="Debug">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Demo" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="seven_chat_server" TARGET_NAME="Demo" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="seven_chat_server" RUN_TARGET_NAME="Demo">
+    <configuration name="server" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="seven_chat_server" TARGET_NAME="server" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="seven_chat_server" RUN_TARGET_NAME="server">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
     <list>
-      <item itemvalue="CMake Application.Demo" />
+      <item itemvalue="CMake Application.server" />
       <item itemvalue="CMake Application.Database_server" />
     </list>
   </component>
@@ -66,10 +132,25 @@
       <option name="presentableId" value="Default" />
       <updated>1567482327387</updated>
       <workItem from="1567482342424" duration="1183000" />
+      <workItem from="1567487783293" duration="197000" />
+      <workItem from="1567489005422" duration="2330000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
 </project>
