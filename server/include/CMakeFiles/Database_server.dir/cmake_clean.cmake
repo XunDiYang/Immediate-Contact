@@ -3,6 +3,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/Database_server.dir/message.cpp.o"
   "CMakeFiles/Database_server.dir/friends.cpp.o"
   "CMakeFiles/Database_server.dir/group.cpp.o"
+  "CMakeFiles/Database_server.dir/groupController.cpp.o"
   "CMakeFiles/Database_server.dir/gmessage.cpp.o"
   "CMakeFiles/Database_server.dir/section.cpp.o"
   "CMakeFiles/Database_server.dir/Init.cpp.o"

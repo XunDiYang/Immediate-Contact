@@ -43,8 +43,8 @@ public:
     // 描述：解散群
     bool groupDelete(int g_id);
 
-    // 描述：建群
-    bool groupeInsert(int g_admin_id, char *g_name, char *g_intro,char *g_icon);
+    // // 描述：建群
+    // bool groupeInsert(int g_admin_id, char *g_name, char *g_intro,char *g_icon);
 
     //描述：更改group_数据表中的g_icon(群组头像)
     bool groupGiconUpdate(int g_id, char *g_icon);
@@ -59,19 +59,22 @@ public:
     int groupGadminidSelect(int g_id);
 
     //根据群ID获取群公告
-    char* groupGnoticeSelect(int g_id);
+    const char* groupGnoticeSelect(int g_id);
 
     //根据群ID获取群简介
-    char* groupGintroSelect(int g_id);
+    const char* groupGintroSelect(int g_id);
 
     //根据群ID获取群的建立时间
-    char* groupGtimeSelect(int g_id);
+    const char* groupGtimeSelect(int g_id);
 
     //根据群ID获取群名称
-    char* groupGnameSelect(int g_id);
+    const char* groupGnameSelect(int g_id);
 
     //根据群ID获取群的头像地址
-    char* groupGiconSelect(int g_id);
+    const char* groupGiconSelect(int g_id);
+
+    // 描述：建群,成功返回群ID，否则返回-1
+    int groupeInsert(int g_admin_id, char *g_name, char *g_intro,char *g_icon);
 };
 
 #endif

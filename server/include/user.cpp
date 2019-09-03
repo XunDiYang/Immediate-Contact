@@ -18,7 +18,7 @@
 /*返回值：返回值名称:无; 类型: bool; 含义:true:表示连接成功  false:表示连接失败
 /*作者：杨训迪
 /***************************************************/
-bool User::connectUserDatabase()
+bool TheUser::connectUserDatabase()
 {
     mysql_init(&conn_user);
     if (mysql_real_connect(&conn_user, "localhost", "root", "20190120", "seven_chat", 0, NULL, CLIENT_FOUND_ROWS))
@@ -50,7 +50,7 @@ bool User::connectUserDatabase()
 /*返回值：返回值名称:无; 类型: bool; 含义:true:表示修改成功  false:表示修改失败
 /*作者：杨训迪
 /***************************************************/
-bool User::userUnameUpdate(char u_name[], int u_id)
+bool TheUser::userUnameUpdate(char u_name[], int u_id)
 {
     string q = u_name;
     q = "UPDATE user SET u_name = \"" + q + "\" WHERE u_id = " + to_string(u_id);
@@ -86,7 +86,7 @@ bool User::userUnameUpdate(char u_name[], int u_id)
 /*返回值：返回值名称:无; 类型: bool; 含义:true:表示修改成功  false:表示修改失败
 /*作者：杨训迪
 /***************************************************/
-bool User::userUpasswdUpdate(char u_passwd[], int u_id)
+bool TheUser::userUpasswdUpdate(char u_passwd[], int u_id)
 {
     string q = u_passwd;
     q = "UPDATE user SET u_passwd = \"" + q + "\" WHERE u_id = " + to_string(u_id);
@@ -122,7 +122,7 @@ bool User::userUpasswdUpdate(char u_passwd[], int u_id)
 /*返回值：返回值名称:无; 类型: bool; 含义:true:表示修改成功  false:表示修改失败
 /*作者：杨训迪
 /***************************************************/
-bool User::userUiconUpdate(char u_icon[], int u_id)
+bool TheUser::userUiconUpdate(char u_icon[], int u_id)
 {
     string q = u_icon;
     q = "UPDATE user SET u_icon = \"" + q + "\" WHERE u_id = " + to_string(u_id);
@@ -158,7 +158,7 @@ bool User::userUiconUpdate(char u_icon[], int u_id)
 /*返回值：返回值名称:无; 类型: bool; 含义:true:表示修改成功  false:表示修改失败
 /*作者：杨训迪
 /***************************************************/
-bool User::userUageUpdate(int u_age, int u_id)
+bool TheUser::userUageUpdate(int u_age, int u_id)
 {
     string q = "UPDATE user SET u_age = \"" + to_string(u_age) + "\" WHERE u_id = " + to_string(u_id);
     const char *query = q.c_str();
@@ -193,7 +193,7 @@ bool User::userUageUpdate(int u_age, int u_id)
 /*返回值：返回值名称:无; 类型: bool; 含义:true:表示修改成功  false:表示修改失败
 /*作者：杨训迪
 /***************************************************/
-bool User::userUsexUpdate(int u_sex, int u_id)
+bool TheUser::userUsexUpdate(int u_sex, int u_id)
 {
     string q = "UPDATE user SET u_sex = \"" + to_string(u_sex) + "\" WHERE u_id = " + to_string(u_id);
     const char *query = q.c_str();
@@ -228,7 +228,7 @@ bool User::userUsexUpdate(int u_sex, int u_id)
 /*返回值：返回值名称:无; 类型: bool; 含义:true:表示修改成功  false:表示修改失败
 /*作者：杨训迪
 /***************************************************/
-bool User::userUsignatureUpdate(char u_signature[], int u_id)
+bool TheUser::userUsignatureUpdate(char u_signature[], int u_id)
 {
     string q = u_signature;
     q = "UPDATE user SET u_signature = \"" + q + "\" WHERE u_id = " + to_string(u_id);
@@ -264,7 +264,7 @@ bool User::userUsignatureUpdate(char u_signature[], int u_id)
 /*返回值：返回值名称:无; 类型: bool; 含义:true:表示修改成功  false:表示修改失败
 /*作者：杨训迪
 /***************************************************/
-bool User::userUemilUpdate(char u_email[], int u_id)
+bool TheUser::userUemilUpdate(char u_email[], int u_id)
 {
     string q = u_email;
     q = "UPDATE user SET u_email = \"" + q + "\" WHERE u_id = " + to_string(u_id);
@@ -300,7 +300,7 @@ bool User::userUemilUpdate(char u_email[], int u_id)
 /*返回值：返回值名称:无; 类型: bool; 含义:true:表示修改成功  false:表示修改失败
 /*作者：杨训迪
 /***************************************************/
-bool User::userUmodelUpdate(int u_mode, int u_id)
+bool TheUser::userUmodelUpdate(int u_mode, int u_id)
 {
     string q = "UPDATE user SET u_model = \"" + to_string(u_mode) + "\" WHERE u_id = " + to_string(u_id);
     const char *query = q.c_str();
@@ -328,14 +328,18 @@ bool User::userUmodelUpdate(int u_mode, int u_id)
 /*描述：用户注册
 /*作成日期：2019-9-1
 /*参数：参数1：参数名称 u_name、参数类型 char *、输入参数、参数含义：用户名称
-       参数2：参数名称 u_passwd、参数类型 char *、输入参数、参数含义：用户密码
-       参数3：参数名称 u_email、参数类型 char *、输入参数、参数含义：用户邮箱
-       参数4： 参数名称:conn_user; 参数类型: MYSQL;全局变量; 参数含义: 与user数据表之间建立的联系;
-       参数5：参数名称:res; 参数类型: int; 全局变量; 参数含义: 修改数据表，返回的结果，1:失败， 2：成功
-/*返回值：BOOL、是否插入成功
+        参数2：参数名称 u_passwd、参数类型 char *、输入参数、参数含义：用户密码
+        参数3：参数名称 u_email、参数类型 char *、输入参数、参数含义：用户邮箱
+        参数4： 参数名称:conn_user; 参数类型: MYSQL;全局变量; 参数含义: 与user数据表之间建立的联系;
+        参数5：参数名称:res; 参数类型: int; 全局变量; 参数含义: 修改数据表，返回的结果，1:失败， 2：成功
+        参数6：参数名称 u_icon、参数类型 char *、输入参数、参数含义：用户头像地址
+        参数7：参数名称 u_age、参数类型 int、输入参数、参数含义：用户年龄
+        参数8：参数名称 u_sex、参数类型 int、输入参数、参数含义：用户年龄
+        参数9：参数名称 u_model、参数类型 int、输入参数、参数含义：用户年龄
+/*返回值：int 若int=-1插入失败 否则成功
 /*作者：李可
 /***************************************************/
-bool User::userRegister(char *u_name, char *u_passwd, char *u_email)
+int TheUser::userRegister(char u_name[], char u_passwd[], char u_email[])
 {
     int ret;
     char sql_insert[2048];
@@ -344,19 +348,43 @@ bool User::userRegister(char *u_name, char *u_passwd, char *u_email)
     {
         res = mysql_query(&conn_user, sql_insert);
         if (!res && (unsigned long)mysql_affected_rows(&conn_user) != 0)
-        {
+        {   //查询id
+          MYSQL_RES *res_ptr;
+          MYSQL_ROW row;
+          int flag;
+          int ans;
+          string q = "select LAST_INSERT_ID()";
+          const char *query = q.c_str();
+          /*查询，成功则返回0*/
+          flag = mysql_query(&conn_user, query);
+          if (flag)
+          { /*如果查询失败*/
+            printf("Guery failed!\n");
+            return -1;
+          }
+          else
+          {
+            /*mysql_store_result讲全部的查询结果读取到客户端*/
+            res_ptr = mysql_store_result(&conn_user);
+            /*mysql_fetch_row检索结果集的下一行*/
+            while (row = mysql_fetch_row(res_ptr))
+            {  //printf ("%s\t", row[0]);
+                ans = atoi(row[0]);
+            }
+          }
+       
             printf(" updated %lu rowsn \n", (unsigned long)mysql_affected_rows(&conn_user));
             mysql_close(&conn_user);
-            return true;
+            return ans;
         }
         else
         {
             fprintf(stderr, "update error %d: %sn \n", mysql_errno(&conn_user), mysql_error(&conn_user));
             mysql_close(&conn_user);
-            return false;
+            return -1;
         }
     }
-    return false;
+    return -1;
 }
 
 /**************************************************/
@@ -370,7 +398,7 @@ bool User::userRegister(char *u_name, char *u_passwd, char *u_email)
 /*作者：李可
 /***************************************************/
 
-bool User::userDelete(int u_id)
+bool TheUser::userDelete(int u_id)
 {
     string q = "delete from user where u_id=" + to_string(u_id);
     const char *query = q.c_str();
@@ -402,7 +430,7 @@ bool User::userDelete(int u_id)
 /*返回值：char*、返回姓名指针，若没查到为NULL
 /*作者：邵雨洁
 /***************************************************/
-char *User::userUnameSelect(int u_id)
+const char *TheUser::userUnameSelect(int u_id)
 {
     MYSQL_RES *res_ptr;
     MYSQL_ROW row;
@@ -446,7 +474,7 @@ char *User::userUnameSelect(int u_id)
 /*返回值：char*、返回密码指针，若没查到为NULL
 /*作者：邵雨洁
 /***************************************************/
-char *User::userUpasswdSelect(int u_id)
+const char *TheUser::userUpasswdSelect(int u_id)
 {
     MYSQL_RES *res_ptr;
     MYSQL_ROW row;
@@ -490,7 +518,7 @@ char *User::userUpasswdSelect(int u_id)
 /*返回值：char*、返回头像地址指针，若没查到为NULL
 /*作者：邵雨洁
 /***************************************************/
-char *User::userUiconSelect(int u_id)
+const char *TheUser::userUiconSelect(int u_id)
 {
     MYSQL_RES *res_ptr;
     MYSQL_ROW row;
@@ -534,7 +562,7 @@ char *User::userUiconSelect(int u_id)
 /*返回值：int、返回用户年龄
 /*作者：邵雨洁
 /***************************************************/
-int User::userUageSelect(int u_id)
+int TheUser::userUageSelect(int u_id)
 {
     MYSQL_RES *res_ptr;
     MYSQL_ROW row;
@@ -579,7 +607,7 @@ int User::userUageSelect(int u_id)
 /*返回值：int、返回用户性别
 /*作者：邵雨洁
 /***************************************************/
-int User::userUsexSelect(int u_id)
+int TheUser::userUsexSelect(int u_id)
 {
     MYSQL_RES *res_ptr;
     MYSQL_ROW row;
@@ -624,7 +652,7 @@ int User::userUsexSelect(int u_id)
 /*返回值：char*、如查询到返回内容，否则NULL
 /*作者：邵雨洁
 /***************************************************/
-char *User::userUsignatureSelect(int u_id)
+const char *TheUser::userUsignatureSelect(int u_id)
 {
     MYSQL_RES *res_ptr;
     MYSQL_ROW row;
@@ -669,7 +697,7 @@ char *User::userUsignatureSelect(int u_id)
 /*返回值：char*、如查询到返回邮箱，否则NULL
 /*作者：邵雨洁
 /***************************************************/
-char *User::userUemailSelect(int u_id)
+const char *TheUser::userUemailSelect(int u_id)
 {
     MYSQL_RES *res_ptr;
     MYSQL_ROW row;
@@ -713,7 +741,7 @@ char *User::userUemailSelect(int u_id)
 /*返回值：int、如查询到日夜模式0/1
 /*作者：邵雨洁
 /***************************************************/
-int User::userUmodelSelect(int u_id)
+int TheUser::userUmodelSelect(int u_id)
 {
     MYSQL_RES *res_ptr;
     MYSQL_ROW row;
@@ -759,7 +787,7 @@ int User::userUmodelSelect(int u_id)
 /*返回值：int、如查询到用户id
 /*作者：邵雨洁
 /***************************************************/
-bool User::userUidSelect(char u_name[])
+bool TheUser::userUidSelect(char u_name[])
 {
     MYSQL_RES *res_ptr;
     MYSQL_ROW row;
@@ -808,7 +836,7 @@ bool User::userUidSelect(char u_name[])
 /*返回值：bool、true:成功登陆  false：id或秘密错误
 /*作者：邵雨洁
 /***************************************************/
-bool  User::idpasswd(int u_id,char u_passwd[])
+bool  TheUser::idpasswd(int u_id,char u_passwd[])
 {
     MYSQL_RES *res_ptr;
     MYSQL_ROW row;

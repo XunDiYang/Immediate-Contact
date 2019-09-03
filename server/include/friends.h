@@ -38,13 +38,13 @@ public:
     bool friendsSidUpdate(int u_id, int f_id, int s_id);
 
     //描述：添加好友
-    bool friendsInsert(int u_id, int f_id, char *f_name, int s_id);
+    bool friendsInsert(int u_id, int f_id, const char *f_name, int s_id);
 
     // 描述：删除好友
     bool friendsDelete(int u_id, int f_id);
 
     //描述：根据双方id查询 昵称
-    char *friendsFnameSelect(int u_id, int f_id);
+    const char *friendsFnameSelect(int u_id, int f_id);
 
     //描述：传入u_id,查询u_id的所有好友的id,将其填入friendsList[0]表示一共有多少个好友
     bool friendsFlistSelect(int u_id);

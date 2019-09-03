@@ -314,6 +314,33 @@ group.cpp.s:
 	cd /home/xundi/github/Immediate-Contact/server && $(MAKE) -f include/CMakeFiles/Database_server.dir/build.make include/CMakeFiles/Database_server.dir/group.cpp.s
 .PHONY : group.cpp.s
 
+groupController.o: groupController.cpp.o
+
+.PHONY : groupController.o
+
+# target to build an object file
+groupController.cpp.o:
+	cd /home/xundi/github/Immediate-Contact/server && $(MAKE) -f include/CMakeFiles/Database_server.dir/build.make include/CMakeFiles/Database_server.dir/groupController.cpp.o
+.PHONY : groupController.cpp.o
+
+groupController.i: groupController.cpp.i
+
+.PHONY : groupController.i
+
+# target to preprocess a source file
+groupController.cpp.i:
+	cd /home/xundi/github/Immediate-Contact/server && $(MAKE) -f include/CMakeFiles/Database_server.dir/build.make include/CMakeFiles/Database_server.dir/groupController.cpp.i
+.PHONY : groupController.cpp.i
+
+groupController.s: groupController.cpp.s
+
+.PHONY : groupController.s
+
+# target to generate assembly for a file
+groupController.cpp.s:
+	cd /home/xundi/github/Immediate-Contact/server && $(MAKE) -f include/CMakeFiles/Database_server.dir/build.make include/CMakeFiles/Database_server.dir/groupController.cpp.s
+.PHONY : groupController.cpp.s
+
 message.o: message.cpp.o
 
 .PHONY : message.o
@@ -452,6 +479,9 @@ help:
 	@echo "... group.o"
 	@echo "... group.i"
 	@echo "... group.s"
+	@echo "... groupController.o"
+	@echo "... groupController.i"
+	@echo "... groupController.s"
 	@echo "... message.o"
 	@echo "... message.i"
 	@echo "... message.s"

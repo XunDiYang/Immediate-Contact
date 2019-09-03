@@ -153,9 +153,33 @@ include/CMakeFiles/Database_server.dir/group.cpp.o.provides: include/CMakeFiles/
 include/CMakeFiles/Database_server.dir/group.cpp.o.provides.build: include/CMakeFiles/Database_server.dir/group.cpp.o
 
 
+include/CMakeFiles/Database_server.dir/groupController.cpp.o: include/CMakeFiles/Database_server.dir/flags.make
+include/CMakeFiles/Database_server.dir/groupController.cpp.o: include/groupController.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/xundi/github/Immediate-Contact/server/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object include/CMakeFiles/Database_server.dir/groupController.cpp.o"
+	cd /home/xundi/github/Immediate-Contact/server/include && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Database_server.dir/groupController.cpp.o -c /home/xundi/github/Immediate-Contact/server/include/groupController.cpp
+
+include/CMakeFiles/Database_server.dir/groupController.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Database_server.dir/groupController.cpp.i"
+	cd /home/xundi/github/Immediate-Contact/server/include && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/xundi/github/Immediate-Contact/server/include/groupController.cpp > CMakeFiles/Database_server.dir/groupController.cpp.i
+
+include/CMakeFiles/Database_server.dir/groupController.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Database_server.dir/groupController.cpp.s"
+	cd /home/xundi/github/Immediate-Contact/server/include && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/xundi/github/Immediate-Contact/server/include/groupController.cpp -o CMakeFiles/Database_server.dir/groupController.cpp.s
+
+include/CMakeFiles/Database_server.dir/groupController.cpp.o.requires:
+
+.PHONY : include/CMakeFiles/Database_server.dir/groupController.cpp.o.requires
+
+include/CMakeFiles/Database_server.dir/groupController.cpp.o.provides: include/CMakeFiles/Database_server.dir/groupController.cpp.o.requires
+	$(MAKE) -f include/CMakeFiles/Database_server.dir/build.make include/CMakeFiles/Database_server.dir/groupController.cpp.o.provides.build
+.PHONY : include/CMakeFiles/Database_server.dir/groupController.cpp.o.provides
+
+include/CMakeFiles/Database_server.dir/groupController.cpp.o.provides.build: include/CMakeFiles/Database_server.dir/groupController.cpp.o
+
+
 include/CMakeFiles/Database_server.dir/gmessage.cpp.o: include/CMakeFiles/Database_server.dir/flags.make
 include/CMakeFiles/Database_server.dir/gmessage.cpp.o: include/gmessage.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/xundi/github/Immediate-Contact/server/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object include/CMakeFiles/Database_server.dir/gmessage.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/xundi/github/Immediate-Contact/server/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object include/CMakeFiles/Database_server.dir/gmessage.cpp.o"
 	cd /home/xundi/github/Immediate-Contact/server/include && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Database_server.dir/gmessage.cpp.o -c /home/xundi/github/Immediate-Contact/server/include/gmessage.cpp
 
 include/CMakeFiles/Database_server.dir/gmessage.cpp.i: cmake_force
@@ -179,7 +203,7 @@ include/CMakeFiles/Database_server.dir/gmessage.cpp.o.provides.build: include/CM
 
 include/CMakeFiles/Database_server.dir/section.cpp.o: include/CMakeFiles/Database_server.dir/flags.make
 include/CMakeFiles/Database_server.dir/section.cpp.o: include/section.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/xundi/github/Immediate-Contact/server/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object include/CMakeFiles/Database_server.dir/section.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/xundi/github/Immediate-Contact/server/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object include/CMakeFiles/Database_server.dir/section.cpp.o"
 	cd /home/xundi/github/Immediate-Contact/server/include && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Database_server.dir/section.cpp.o -c /home/xundi/github/Immediate-Contact/server/include/section.cpp
 
 include/CMakeFiles/Database_server.dir/section.cpp.i: cmake_force
@@ -203,7 +227,7 @@ include/CMakeFiles/Database_server.dir/section.cpp.o.provides.build: include/CMa
 
 include/CMakeFiles/Database_server.dir/Init.cpp.o: include/CMakeFiles/Database_server.dir/flags.make
 include/CMakeFiles/Database_server.dir/Init.cpp.o: include/Init.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/xundi/github/Immediate-Contact/server/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object include/CMakeFiles/Database_server.dir/Init.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/xundi/github/Immediate-Contact/server/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object include/CMakeFiles/Database_server.dir/Init.cpp.o"
 	cd /home/xundi/github/Immediate-Contact/server/include && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Database_server.dir/Init.cpp.o -c /home/xundi/github/Immediate-Contact/server/include/Init.cpp
 
 include/CMakeFiles/Database_server.dir/Init.cpp.i: cmake_force
@@ -227,7 +251,7 @@ include/CMakeFiles/Database_server.dir/Init.cpp.o.provides.build: include/CMakeF
 
 include/CMakeFiles/Database_server.dir/user.cpp.o: include/CMakeFiles/Database_server.dir/flags.make
 include/CMakeFiles/Database_server.dir/user.cpp.o: include/user.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/xundi/github/Immediate-Contact/server/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object include/CMakeFiles/Database_server.dir/user.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/xundi/github/Immediate-Contact/server/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object include/CMakeFiles/Database_server.dir/user.cpp.o"
 	cd /home/xundi/github/Immediate-Contact/server/include && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Database_server.dir/user.cpp.o -c /home/xundi/github/Immediate-Contact/server/include/user.cpp
 
 include/CMakeFiles/Database_server.dir/user.cpp.i: cmake_force
@@ -251,7 +275,7 @@ include/CMakeFiles/Database_server.dir/user.cpp.o.provides.build: include/CMakeF
 
 include/CMakeFiles/Database_server.dir/Login_out_register.cpp.o: include/CMakeFiles/Database_server.dir/flags.make
 include/CMakeFiles/Database_server.dir/Login_out_register.cpp.o: include/Login_out_register.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/xundi/github/Immediate-Contact/server/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object include/CMakeFiles/Database_server.dir/Login_out_register.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/xundi/github/Immediate-Contact/server/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object include/CMakeFiles/Database_server.dir/Login_out_register.cpp.o"
 	cd /home/xundi/github/Immediate-Contact/server/include && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Database_server.dir/Login_out_register.cpp.o -c /home/xundi/github/Immediate-Contact/server/include/Login_out_register.cpp
 
 include/CMakeFiles/Database_server.dir/Login_out_register.cpp.i: cmake_force
@@ -275,7 +299,7 @@ include/CMakeFiles/Database_server.dir/Login_out_register.cpp.o.provides.build: 
 
 include/CMakeFiles/Database_server.dir/Command.cpp.o: include/CMakeFiles/Database_server.dir/flags.make
 include/CMakeFiles/Database_server.dir/Command.cpp.o: include/Command.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/xundi/github/Immediate-Contact/server/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object include/CMakeFiles/Database_server.dir/Command.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/xundi/github/Immediate-Contact/server/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object include/CMakeFiles/Database_server.dir/Command.cpp.o"
 	cd /home/xundi/github/Immediate-Contact/server/include && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Database_server.dir/Command.cpp.o -c /home/xundi/github/Immediate-Contact/server/include/Command.cpp
 
 include/CMakeFiles/Database_server.dir/Command.cpp.i: cmake_force
@@ -299,7 +323,7 @@ include/CMakeFiles/Database_server.dir/Command.cpp.o.provides.build: include/CMa
 
 include/CMakeFiles/Database_server.dir/cJSON.c.o: include/CMakeFiles/Database_server.dir/flags.make
 include/CMakeFiles/Database_server.dir/cJSON.c.o: include/cJSON.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/xundi/github/Immediate-Contact/server/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building C object include/CMakeFiles/Database_server.dir/cJSON.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/xundi/github/Immediate-Contact/server/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building C object include/CMakeFiles/Database_server.dir/cJSON.c.o"
 	cd /home/xundi/github/Immediate-Contact/server/include && /usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/Database_server.dir/cJSON.c.o   -c /home/xundi/github/Immediate-Contact/server/include/cJSON.c
 
 include/CMakeFiles/Database_server.dir/cJSON.c.i: cmake_force
@@ -327,6 +351,7 @@ Database_server_OBJECTS = \
 "CMakeFiles/Database_server.dir/message.cpp.o" \
 "CMakeFiles/Database_server.dir/friends.cpp.o" \
 "CMakeFiles/Database_server.dir/group.cpp.o" \
+"CMakeFiles/Database_server.dir/groupController.cpp.o" \
 "CMakeFiles/Database_server.dir/gmessage.cpp.o" \
 "CMakeFiles/Database_server.dir/section.cpp.o" \
 "CMakeFiles/Database_server.dir/Init.cpp.o" \
@@ -342,6 +367,7 @@ include/libDatabase_server.a: include/CMakeFiles/Database_server.dir/userGroup.c
 include/libDatabase_server.a: include/CMakeFiles/Database_server.dir/message.cpp.o
 include/libDatabase_server.a: include/CMakeFiles/Database_server.dir/friends.cpp.o
 include/libDatabase_server.a: include/CMakeFiles/Database_server.dir/group.cpp.o
+include/libDatabase_server.a: include/CMakeFiles/Database_server.dir/groupController.cpp.o
 include/libDatabase_server.a: include/CMakeFiles/Database_server.dir/gmessage.cpp.o
 include/libDatabase_server.a: include/CMakeFiles/Database_server.dir/section.cpp.o
 include/libDatabase_server.a: include/CMakeFiles/Database_server.dir/Init.cpp.o
@@ -351,7 +377,7 @@ include/libDatabase_server.a: include/CMakeFiles/Database_server.dir/Command.cpp
 include/libDatabase_server.a: include/CMakeFiles/Database_server.dir/cJSON.c.o
 include/libDatabase_server.a: include/CMakeFiles/Database_server.dir/build.make
 include/libDatabase_server.a: include/CMakeFiles/Database_server.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/xundi/github/Immediate-Contact/server/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Linking CXX static library libDatabase_server.a"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/xundi/github/Immediate-Contact/server/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Linking CXX static library libDatabase_server.a"
 	cd /home/xundi/github/Immediate-Contact/server/include && $(CMAKE_COMMAND) -P CMakeFiles/Database_server.dir/cmake_clean_target.cmake
 	cd /home/xundi/github/Immediate-Contact/server/include && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/Database_server.dir/link.txt --verbose=$(VERBOSE)
 
@@ -364,6 +390,7 @@ include/CMakeFiles/Database_server.dir/requires: include/CMakeFiles/Database_ser
 include/CMakeFiles/Database_server.dir/requires: include/CMakeFiles/Database_server.dir/message.cpp.o.requires
 include/CMakeFiles/Database_server.dir/requires: include/CMakeFiles/Database_server.dir/friends.cpp.o.requires
 include/CMakeFiles/Database_server.dir/requires: include/CMakeFiles/Database_server.dir/group.cpp.o.requires
+include/CMakeFiles/Database_server.dir/requires: include/CMakeFiles/Database_server.dir/groupController.cpp.o.requires
 include/CMakeFiles/Database_server.dir/requires: include/CMakeFiles/Database_server.dir/gmessage.cpp.o.requires
 include/CMakeFiles/Database_server.dir/requires: include/CMakeFiles/Database_server.dir/section.cpp.o.requires
 include/CMakeFiles/Database_server.dir/requires: include/CMakeFiles/Database_server.dir/Init.cpp.o.requires

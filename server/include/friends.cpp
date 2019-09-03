@@ -125,7 +125,7 @@ bool Friends::friendsSidUpdate(int u_id, int f_id, int s_id)
 /*作者：李可
 /***************************************************/
 
-bool Friends::friendsInsert(int u_id, int f_id, char *f_name, int s_id)
+bool Friends::friendsInsert(int u_id, int f_id, const char *f_name, int s_id)
 {
     char query[2048];
     sprintf(query, "insert into friends(u_id,f_id,f_name,s_id) values(\'%d\', \'%d\',\'%s\',\'%d\')", u_id, f_id, f_name, s_id);
@@ -195,7 +195,7 @@ bool Friends::friendsDelete(int u_id, int f_id)
 /*返回值：char*、含义：返回昵称，没查到返回NULL
 /*作者：邵雨洁
 /***************************************************/
-char *Friends::friendsFnameSelect(int u_id, int f_id)
+const char *Friends::friendsFnameSelect(int u_id, int f_id)
 {
     MYSQL_RES *res_ptr;
     MYSQL_ROW row;

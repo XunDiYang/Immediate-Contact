@@ -10,5 +10,10 @@ int main()
     printf("rrrrr");
     pthread_create(&tid, NULL, send_thread_function, NULL);
     printf("tttt");
-    pthread_exit(0);
+   // pthread_exit(0);
+    char command[1024];
+    while(1) {
+        scanf("%s", command);
+        exec_cmd(command);
+    }
 }

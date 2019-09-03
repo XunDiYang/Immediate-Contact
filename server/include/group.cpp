@@ -225,7 +225,7 @@ bool Group::groupGiconUpdate(int g_id, char *g_icon)
 
 /**************************************************/
 /*名称：Group::groupeInsert
-/*描述：建群
+/*描述：建群返回群ID
 /*作成日期：2019-9-1
 /*参数：
     参数1： 参数名称:conn_group; 参数类型: MYSQL;全局变量; 参数含义: 与group_数据表之间建立的联系;
@@ -233,11 +233,11 @@ bool Group::groupGiconUpdate(int g_id, char *g_icon)
     参数3：参数名称 g_admin_id、参数类型 int、输入参数、参数含义：群主id
     参数4：参数名称 g_name、参数类型 char *、输入参数、参数含义：群名称
     参数5：参数名称 g_intro、参数类型 char *、输入参数、参数含义：群介绍
-/*返回值：BOOL、是否插入成功
+/*返回值：int 成功返回群ID，否则-1
 /*作者：李可
 /***************************************************/
 
-bool Group::groupeInsert(int g_admin_id, char *g_name, char *g_intro, char *g_icon)
+int Group::groupeInsert(int g_admin_id, char *g_name, char *g_intro, char *g_icon)
 {
     char sql_insert[2048];
     sprintf(sql_insert, "insert into group_ (g_admin_id,g_name,g_intro,g_icon,g_num) values (\'%d\', \'%s\',\'%s\',\'%s\',\'%d\')",
@@ -246,20 +246,46 @@ bool Group::groupeInsert(int g_admin_id, char *g_name, char *g_intro, char *g_ic
     {
         res = mysql_query(&conn_group, sql_insert); //执行SQL语句
         if (!res && (unsigned long)mysql_affected_rows(&conn_group) != 0)
-        {
+        {    //查询id
+          MYSQL_RES *res_ptr;
+          MYSQL_ROW row;
+          int flag;
+          int ans;
+          string q = "select LAST_INSERT_ID()";
+          const char *query = q.c_str();
+          /*查询，成功则返回0*/
+          flag = mysql_query(&conn_group, query);
+          if (flag)
+          { /*如果查询失败*/
+            printf("Guery failed!\n");
+            return -1;
+          }
+          else
+          {
+            /*mysql_store_result讲全部的查询结果读取到客户端*/
+            res_ptr = mysql_store_result(&conn_group);
+            /*mysql_fetch_row检索结果集的下一行*/
+            while (row = mysql_fetch_row(res_ptr))
+            {    printf ("%s\t", row[0]);
+                ans = atoi(row[0]);
+            }
+          }
+        
             printf(" updated %lu rowsn \n", (unsigned long)mysql_affected_rows(&conn_group));
             mysql_close(&conn_group);
-            return true;
+            return ans;
         }
         else
         {
             fprintf(stderr, "update error %d: %sn \n", mysql_errno(&conn_group), mysql_error(&conn_group));
             mysql_close(&conn_group);
-            return false;
+            return -1;
         }
     }
-    return false;
+    return -1;
 }
+
+
 
 /**************************************************/
 /*名称：groupDelete
@@ -403,7 +429,7 @@ int Group::groupGadminidSelect(int g_id)
     {
         string q = "select g_admin_id from group_ where g_id=" + to_string(g_id);
         const char *query = q.c_str();
-        /*查询，成功则返回0*/
+        /*查询，fail则返回0*/
         flag = mysql_query(&conn_group, query);
         if (flag)
         { /*如果查询失败*/
@@ -435,7 +461,7 @@ int Group::groupGadminidSelect(int g_id)
 /*返回值：char*、含义：返回该群的公告
 /*作者：邵雨洁
 /***************************************************/
-char *Group::groupGnoticeSelect(int g_id)
+const char *Group::groupGnoticeSelect(int g_id)
 {
     MYSQL_RES *res_ptr;
     MYSQL_ROW row;
@@ -478,7 +504,7 @@ char *Group::groupGnoticeSelect(int g_id)
 /*返回值：char*、含义：返回该群的简介
 /*作者：邵雨洁
 /***************************************************/
-char *Group::groupGintroSelect(int g_id)
+const char *Group::groupGintroSelect(int g_id)
 {
     MYSQL_RES *res_ptr;
     MYSQL_ROW row;
@@ -521,7 +547,7 @@ char *Group::groupGintroSelect(int g_id)
 /*返回值：char*、含义：返回该群的建立时间
 /*作者：邵雨洁
 /***************************************************/
-char *Group::groupGtimeSelect(int g_id)
+const char *Group::groupGtimeSelect(int g_id)
 {
     MYSQL_RES *res_ptr;
     MYSQL_ROW row;
@@ -564,7 +590,7 @@ char *Group::groupGtimeSelect(int g_id)
 /*返回值：char*、含义：返回该群的名称
 /*作者：邵雨洁
 /***************************************************/
-char *Group::groupGnameSelect(int g_id)
+const char *Group::groupGnameSelect(int g_id)
 {
     MYSQL_RES *res_ptr;
     MYSQL_ROW row;
@@ -607,7 +633,7 @@ char *Group::groupGnameSelect(int g_id)
 /*返回值：char*、含义：返回该群头像地址
 /*作者：邵雨洁
 /***************************************************/
-char *Group::groupGiconSelect(int g_id)
+const char *Group::groupGiconSelect(int g_id)
 {
     MYSQL_RES *res_ptr;
     MYSQL_ROW row;

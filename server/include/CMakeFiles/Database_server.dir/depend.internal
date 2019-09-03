@@ -7,15 +7,36 @@ include/CMakeFiles/Database_server.dir/cJSON.c.o
 include/CMakeFiles/Database_server.dir/Command.cpp.o
  /home/xundi/github/Immediate-Contact/server/include/Command.cpp
  /home/xundi/github/Immediate-Contact/server/include/cJSON.h
+ /home/xundi/github/Immediate-Contact/server/include/friends.h
+ /home/xundi/github/Immediate-Contact/server/include/gmessage.h
+ /home/xundi/github/Immediate-Contact/server/include/group.h
+ /home/xundi/github/Immediate-Contact/server/include/message.h
+ /home/xundi/github/Immediate-Contact/server/include/section.h
  /home/xundi/github/Immediate-Contact/server/include/server.h
+ /home/xundi/github/Immediate-Contact/server/include/user.h
+ /home/xundi/github/Immediate-Contact/server/include/userGroup.h
 include/CMakeFiles/Database_server.dir/Init.cpp.o
  /home/xundi/github/Immediate-Contact/server/include/Init.cpp
  /home/xundi/github/Immediate-Contact/server/include/cJSON.h
+ /home/xundi/github/Immediate-Contact/server/include/friends.h
+ /home/xundi/github/Immediate-Contact/server/include/gmessage.h
+ /home/xundi/github/Immediate-Contact/server/include/group.h
+ /home/xundi/github/Immediate-Contact/server/include/message.h
+ /home/xundi/github/Immediate-Contact/server/include/section.h
  /home/xundi/github/Immediate-Contact/server/include/server.h
+ /home/xundi/github/Immediate-Contact/server/include/user.h
+ /home/xundi/github/Immediate-Contact/server/include/userGroup.h
 include/CMakeFiles/Database_server.dir/Login_out_register.cpp.o
  /home/xundi/github/Immediate-Contact/server/include/Login_out_register.cpp
  /home/xundi/github/Immediate-Contact/server/include/cJSON.h
+ /home/xundi/github/Immediate-Contact/server/include/friends.h
+ /home/xundi/github/Immediate-Contact/server/include/gmessage.h
+ /home/xundi/github/Immediate-Contact/server/include/group.h
+ /home/xundi/github/Immediate-Contact/server/include/message.h
+ /home/xundi/github/Immediate-Contact/server/include/section.h
  /home/xundi/github/Immediate-Contact/server/include/server.h
+ /home/xundi/github/Immediate-Contact/server/include/user.h
+ /home/xundi/github/Immediate-Contact/server/include/userGroup.h
 include/CMakeFiles/Database_server.dir/friends.cpp.o
  /home/xundi/github/Immediate-Contact/server/include/friends.cpp
  /home/xundi/github/Immediate-Contact/server/include/friends.h
@@ -25,6 +46,17 @@ include/CMakeFiles/Database_server.dir/gmessage.cpp.o
 include/CMakeFiles/Database_server.dir/group.cpp.o
  /home/xundi/github/Immediate-Contact/server/include/group.cpp
  /home/xundi/github/Immediate-Contact/server/include/group.h
+include/CMakeFiles/Database_server.dir/groupController.cpp.o
+ /home/xundi/github/Immediate-Contact/server/include/cJSON.h
+ /home/xundi/github/Immediate-Contact/server/include/friends.h
+ /home/xundi/github/Immediate-Contact/server/include/gmessage.h
+ /home/xundi/github/Immediate-Contact/server/include/group.h
+ /home/xundi/github/Immediate-Contact/server/include/groupController.cpp
+ /home/xundi/github/Immediate-Contact/server/include/message.h
+ /home/xundi/github/Immediate-Contact/server/include/section.h
+ /home/xundi/github/Immediate-Contact/server/include/server.h
+ /home/xundi/github/Immediate-Contact/server/include/user.h
+ /home/xundi/github/Immediate-Contact/server/include/userGroup.h
 include/CMakeFiles/Database_server.dir/message.cpp.o
  /home/xundi/github/Immediate-Contact/server/include/message.cpp
  /home/xundi/github/Immediate-Contact/server/include/message.h

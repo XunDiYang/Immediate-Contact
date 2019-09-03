@@ -13,6 +13,8 @@ server.h
 /home/xundi/github/Immediate-Contact/server/include/Init.cpp
 server.h
 /home/xundi/github/Immediate-Contact/server/include/server.h
+userGroup.h
+/home/xundi/github/Immediate-Contact/server/include/userGroup.h
 
 /home/xundi/github/Immediate-Contact/server/include/Login_out_register.cpp
 server.h
@@ -67,6 +69,10 @@ string
 /home/xundi/github/Immediate-Contact/server/include/string
 mysql/mysql.h
 -
+
+/home/xundi/github/Immediate-Contact/server/include/groupController.cpp
+server.h
+/home/xundi/github/Immediate-Contact/server/include/server.h
 
 /home/xundi/github/Immediate-Contact/server/include/message.cpp
 message.h
@@ -123,6 +129,20 @@ unistd.h
 -
 cJSON.h
 /home/xundi/github/Immediate-Contact/server/include/cJSON.h
+group.h
+/home/xundi/github/Immediate-Contact/server/include/group.h
+friends.h
+/home/xundi/github/Immediate-Contact/server/include/friends.h
+gmessage.h
+/home/xundi/github/Immediate-Contact/server/include/gmessage.h
+message.h
+/home/xundi/github/Immediate-Contact/server/include/message.h
+user.h
+/home/xundi/github/Immediate-Contact/server/include/user.h
+userGroup.h
+/home/xundi/github/Immediate-Contact/server/include/userGroup.h
+section.h
+/home/xundi/github/Immediate-Contact/server/include/section.h
 
 /home/xundi/github/Immediate-Contact/server/include/user.cpp
 user.h

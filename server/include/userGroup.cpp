@@ -336,7 +336,7 @@ int UserGroup::userGroupUGstatusSelect(int g_id, int ug_id)
 /*返回值：char*、返回群昵称
 /*作者：邵雨洁
 /***************************************************/
-char *UserGroup::userGroupUGnameSelect(int g_id, int ug_id)
+const char *UserGroup::userGroupUGnameSelect(int g_id, int ug_id)
 {
     MYSQL_RES *res_ptr;
     MYSQL_ROW row;

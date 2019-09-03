@@ -53,7 +53,7 @@ public:
     int userGroupUGstatusSelect(int g_id, int ug_id);
 
     //根据小组和成员id查询成员在组内的昵称
-    char* userGroupUGnameSelect(int g_id, int ug_id);
+    const char* userGroupUGnameSelect(int g_id, int ug_id);
 };
 
 #endif

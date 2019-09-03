@@ -19,52 +19,115 @@ char buffer[BUFFER_SIZE];
 /*返回值：VOID
 /*作者：马文聪
 /***************************************************/
-void handle_client_message(struct User * prop, char * message) {
+void handle_client_message(struct User *prop, char *message)
+{
     printf("handle_client_message\n");
     cJSON *root = cJSON_Parse(message);
+    cJSON *sendroot = cJSON_CreateObject();
     if (root == NULL)
         return;
     char *type = cJSON_GetObjectItem(root, "type")->valuestring;
     char message_json[BUFFER_SIZE];
     if (strcmp(type, "register-message") == 0)
     {
-        printf("接下来和数据库链接了！\n");
         char *username = cJSON_GetObjectItem(root, "username")->valuestring;
         char *password = cJSON_GetObjectItem(root, "password")->valuestring;
         char *emailaddress = cJSON_GetObjectItem(root, "emailaddress")->valuestring;
         //user_register(message);
-        sprintf(buffer, "register successful!\n");
-        send_message_to_local(prop->user_fd, buffer);
+        if (user_register(message))
+            cJSON_AddNumberToObject(sendroot, "status", 1);
+        else
+            cJSON_AddNumberToObject(sendroot, "status", 0);
+        cJSON_AddStringToObject(sendroot, "type", "register-message");
+        send_message_to_local(prop->user_fd, cJSON_Print(sendroot));
+        printf("register successful！\n");
     }
-    else if(strcmp(type, "login-message") == 0)
+    else if (strcmp(type, "login-message") == 0)
     {
-        char *username = cJSON_GetObjectItem(root, "username")->valuestring;
+        int userid = cJSON_GetObjectItem(root, "userid")->valueint;
         char *password = cJSON_GetObjectItem(root, "password")->valuestring;
-        //user_login(prop, username, password);
-        sprintf(buffer, "register successful!\n");
-        send_message_to_local(prop->user_fd, buffer);
+        if (user_login(prop, userid, password))
+            cJSON_AddNumberToObject(sendroot, "status", 1);
+        else
+            cJSON_AddNumberToObject(sendroot, "status", 0);
+        cJSON_AddStringToObject(sendroot, "type", "login-message");
+        send_message_to_local(prop->user_fd, cJSON_Print(sendroot));
+        printf("login-message successful！\n");
     }
-    else if(strcmp(type, "logout-message") == 0)
+    else if (strcmp(type, "logout-message") == 0)
     {
-        char *username = cJSON_GetObjectItem(root, "username")->valuestring;
+        int userid = cJSON_GetObjectItem(root, "userid")->valueint;
         user_logout(prop);
-        sprintf(buffer, "logout successful!\n");
-        send_message_to_local(prop->user_fd, buffer);
+        cJSON_AddStringToObject(sendroot, "type", "logout-message");
+        cJSON_AddNumberToObject(sendroot, "status", 1);
+        send_message_to_local(prop->user_fd, cJSON_Print(sendroot));
+        printf("logout successful!\n");
     }
-    else if(strcmp(type, "message/text") == 0)
+    else if (strcmp(type, "message/text") == 0)
     {
         printf("message/text\n");
         memset(message_json, '\0', sizeof(message_json));
         strcpy(message_json, message);
         send_single_message(message_json);
     }
-    else if(strcmp(type,"message/file") == 0) {
+    else if (strcmp(type, "message/file") == 0)
+    {
         memset(message_json, '\0', sizeof(message_json));
         strcpy(message_json, message);
         send_single_file(message_json);
     }
+    else if (strcmp(type, "group-create-request") == 0)
+    {
+        memset(message_json, '\0', sizeof(message_json));
+        strcpy(message_json, message);
+        if (create_group(message_json))
+            cJSON_AddNumberToObject(sendroot, "status", 1);
+        else
+            cJSON_AddNumberToObject(sendroot, "status", 1);
+        cJSON_AddStringToObject(sendroot, "type", "group-create-request");
+        send_message_to_local(prop->user_fd, cJSON_Print(sendroot));
+        printf("logout successful!\n");
+    }
+    else if (strcmp(type, "group-join-request") == 0)
+    {
+        int userid = cJSON_GetObjectItem(root, "userid")->valueint;
+        int groupid = cJSON_GetObjectItem(root, "groupid")->valueint;
+        if (join_group(userid, groupid))
+            cJSON_AddNumberToObject(sendroot, "status", 1);
+        else
+            cJSON_AddNumberToObject(sendroot, "status", 1);
+        cJSON_AddNumberToObject(sendroot, "groupid", groupid);
+        cJSON_AddStringToObject(sendroot, "type", "group-join-request");
+        send_message_to_local(prop->user_fd, cJSON_Print(sendroot));
+        printf("group-join-request!\n");
+    }
+    else if (strcmp(type, "message/text/group") == 0)
+    {
+        memset(message_json, '\0', sizeof(message_json));
+        strcpy(message_json, message);
+        send_group_message(message_json);
+    }
+    else if (strcmp(type, "group-quit-request") == 0)
+    {
+        int userid = cJSON_GetObjectItem(root, "username")->valueint;
+        int groupID = cJSON_GetObjectItem(root, "groupID")->valueint;
+        if (quit_group(userid, groupID))
+            cJSON_AddNumberToObject(sendroot, "status", 1);
+        else
+            cJSON_AddNumberToObject(sendroot, "status", 1);
+        cJSON_AddStringToObject(sendroot, "type", "group-quit-request");
+        send_message_to_local(prop->user_fd, cJSON_Print(sendroot));
+        printf("group-quit-request!\n");
+    }
+
+    else if(strcmp(type, "friend-list-request") == 0)
+    {
+        int userid = cJSON_GetObjectItem(root, "userid")->valueint;
+        send_friend_list(userid);
+    }
+    else if(strcmp(type, "add-to-contact-request") == 0) {
+       int userid = cJSON_GetObjectItem(root, "userid")->valueint;
+       int contact = cJSON_GetObjectItem(root, "contact")->valueint;
+        add_contact(userid, contact);
+    }
 }
-
-
-
-

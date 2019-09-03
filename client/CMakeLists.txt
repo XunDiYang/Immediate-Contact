@@ -14,20 +14,25 @@ aux_source_directory(. DIR_SRCS)
 # 添加 util 子目录
 add_subdirectory(util)
 
-#
+#related to Threads
 find_package (Threads)
-#
-find_package(PkgConfig REQUIRED)
-#
-pkg_check_modules(GTK3 REQUIRED gtk+-3.0)
-#
-include_directories(${GTK3_INCLUDE_DIRS})
-#
-add_definitions(${GTK3_CFLAGS_OTHER})
+
+# related to GTK
+find_package (PkgConfig REQUIRED)
+
+# related to GTK
+include_directories (${GTK3_INCLUDE_DIRS})
+
+# related to GTK
+link_directories (${GTK3_LIBRARY_DIRS})
+
+# related to GTK
+add_definitions (${GTK3_CFLAGS_OTHER})
 
 #-lpthread
 link_directories(/usr/lib/x86_64-linux-gnu)
 
+# related to GTK
 link_directories(${GTK3_LIBRARY_DIRS})
 
 # 指定生成目标
@@ -38,3 +43,11 @@ target_link_libraries(client Util)
 target_link_libraries(client pthread)
 target_link_libraries (client ${CMAKE_THREAD_LIBS_INIT})
 target_link_libraries(client ${GTK3_LIBRARIES})
+target_link_libraries (wibus ${GTK3_LIBRARIES})
+
+
+
+
+
+
+

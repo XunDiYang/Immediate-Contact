@@ -6,11 +6,13 @@
 //
 
 #include "server.h"
+#include "userGroup.h"
 
 int listen_fd,connect_fd;
 struct sockaddr_in client,server;
 struct User client_prop[MAX_CONN];
 int send_q_head , send_q_tail;
+char timestr[64];
 Message send_queue[MAX_MESSAGE_COUNT];
 static pthread_mutex_t queue_lock;
 
@@ -137,9 +139,6 @@ void* send_thread_function(void *arg) {
                 send(fd, send_buffer, sizeof(send_buffer), 0);
                 //free(msg.detail);
             }
-            else {
-                // save_offline_message(msg);
-            }
             pthread_mutex_unlock(&queue_lock);
         }
         else {
@@ -147,6 +146,7 @@ void* send_thread_function(void *arg) {
             //sleep here to avoid high CPU usagelogin
             sleep(1);
         }
+
 
     }
     return NULL;
@@ -200,6 +200,63 @@ void send_single_file(char *message){
 }
 
 /**************************************************/
+/*名称：send_group_message
+/*描述：发送群组消息
+/*作成日期：2019.9.3
+/*参数：参数1：参数名称 message、参数类型 char *、输入参数、参数含义：消息
+/*返回值：VOID
+/*作者：马文聪
+/***************************************************/
+int send_group_message(char *message) {
+    int i;
+    int grouplist[100];
+    int num;
+    cJSON *root = cJSON_Parse(message);
+    int groupid = cJSON_GetObjectItem(root, "sendto")->valueint;
+    int sendfrom = cJSON_GetObjectItem(root, "sendfrom")->valueint;
+    char *content = cJSON_GetObjectItem(root, "content")->valuestring;
+    //得到所有
+    UserGroup ug;
+    if(ug.userGroupAllMidSelect(groupid))
+    {
+        //ug.userGroupAllGid[0]; //总人数
+        //ug.userGroupAllGid[1]; //群内第一个人
+        for(i = 1; i < ug.userGroupAllGid[0]; ++i){
+            send_message_by_group(groupid, sendfrom, ug.userGroupAllGid[i], content);
+        }
+    }
+    else{
+        return 0;
+    }
+
+
+}
+
+/**************************************************/
+/*名称：send_message_by_group
+/*描述：将要发送的信息存入发送队列
+/*作成日期：2019.9.3
+/*参数:sendto：发送人name, sendfrom：接收人name, content：发送内容
+/*返回值：无
+/*作者：马文聪
+/***************************************************/
+int send_message_by_group(int groupid, int sendfrom, int sendto, char*msg){
+    cJSON *sendroot = cJSON_CreateObject();
+    cJSON_AddNumberToObject(sendroot, "status", 1);
+    cJSON_AddNumberToObject(sendroot, "groupid", groupid);
+    cJSON_AddStringToObject(sendroot, "type", "message/text/group");
+    cJSON_AddNumberToObject(sendroot, "sendto", sendto);
+    cJSON_AddNumberToObject(sendroot, "sendfrom", sendfrom);
+    cJSON_AddStringToObject(sendroot, "sendtime", get_formatted_time());
+    cJSON_AddStringToObject(sendroot, "content", (char *) msg);
+    int fd = get_user_fd(sendto)->user_fd;
+    if(send(fd, cJSON_Print(sendroot), sizeof(cJSON_Print(sendroot)), 0) > 0)
+        return 1;
+    else
+        return 0;
+}
+
+/**************************************************/
 /*名称：send_message_by_userid
 /*描述：将要发送的信息存入发送队列
 /*作成日期：2019.9.3
@@ -235,6 +292,53 @@ void send_message_to_local(int user_fd, char* buffer){
 }
 
 
+
+/**************************************************/
+/*名称：show_server_status
+/*描述：show_server_status
+/*作成日期：2019.9.3
+/*参数：
+/*返回值：VOID
+/*作者：
+/***************************************************/
+void show_server_status() {
+    printf("server status:\n");
+    printf("max client count: %d\n", MAX_CONN);
+    int i;
+    for(i = 0; i < MAX_CONN; i++){
+        printf("client %d: %d %s\n", i, client_prop[i].u_id, client_prop[i].u_name);
+    }
+}
+
+/**************************************************/
+/*名称：exec_cmd
+/*描述：stop server by command or check server status
+/*作成日期：2016-8-31
+/*参数：
+/*返回值：VOID
+/*作者：迟泽闻
+/***************************************************/
+void exec_cmd(char * command) {
+    if(strcmp(command, "exit") == 0){
+        exit_server();
+    }
+    if(strcmp(command, "status") == 0){
+        show_server_status();
+    }
+}
+
+/**************************************************/
+/*名称：exit_server
+/*描述：退出服务器
+/*作成日期：2019.9.3
+/*参数：
+/*返回值：VOID
+/*作者：马文聪
+/***************************************************/
+void exit_server() {
+    pthread_mutex_destroy(&queue_lock);
+    exit(0);
+}
 
 
 void delete_client(struct User * prop) {
@@ -297,5 +401,62 @@ char *sock_ntop(const struct sockaddr *sa)
     return str;
 }
 
+const char *get_formatted_time(){
+    time_t t = time(0);
+    strftime(timestr, sizeof(timestr), "%Y-%m-%d %H:%M:%S", localtime(&t));
+    return timestr;
+}
 
+
+/**************************************************/
+/*名称：add_contact
+/*描述：添加好友
+/*作成日期：2019.9.3
+/*参数：参数1：参数名称 ua、参数类型 char *、输入参数、参数含义：用户名a
+		参数1：参数名称 ub、参数类型 char *、输入参数、参数含义：用户名b
+/*返回值：VOID
+/*作者：马文聪
+/***************************************************/
+void add_contact(int user_id, int friend_id){
+    printf("%d trying to add %d as contact\n", user_id, friend_id);
+    cJSON *root = cJSON_CreateObject();
+    int userid = cJSON_GetObjectItem(root, "userid")->valueint;
+    int friendid = cJSON_GetObjectItem(root, "contact")->valueint;
+    TheUser friend_user;
+    Friends friends;
+    friends.friendsInsert(user_id,friend_id,friend_user.userUnameSelect(friend_id),1);
+}
+
+
+
+/**************************************************/
+/*名称：send_friend_list
+/*描述：发送friend list
+/*作成日期：2019.9.3
+/*参数：参数1：参数名称 userid、参数类型 int、输入参数、参数含义：用户ID
+/*返回值：VOID
+/*作者：马文聪
+/***************************************************/
+void send_friend_list(int userid) {
+
+    cJSON *root = cJSON_CreateObject();
+    cJSON *list = cJSON_CreateArray();
+
+    Friends friends;
+    friends.friendsFlistSelect(userid);
+
+    int i;
+    for(i = 1;i <= friends.friendslist[0]; i++){
+        //printf("%s ", res[nindex]);
+            int status = get_user_fd(friends.friendslist[0])->is_online;
+            cJSON *item;
+            cJSON_AddItemToArray(list, item = cJSON_CreateObject());
+            cJSON_AddNumberToObject(item, "userid", friends.friendslist[i]);
+            cJSON_AddNumberToObject(item, "status", status);
+    }
+    cJSON_AddStringToObject(root, "type", "friend-list");
+    cJSON_AddNumberToObject(root, "size", friends.friendslist[0]);
+    cJSON_AddItemToObject(root, "list", list);
+    send_message_to_local(userid, cJSON_Print(root));
+}
 

@@ -13,7 +13,7 @@
 #include "string"
 using namespace std;
 
-class Message
+class Umessage
 {
 public:
     // 参数含义: 与friends数据表之间建立的联系;

@@ -8,7 +8,7 @@
 #include "message.h"
 
 /**************************************************/
-/*名称：Message::connectMessageDatabase
+/*名称：Umessage::connectMessageDatabase
 /*描述：与message数据表建立联系
 /*作成日期： 2019/8/31
 /*参数：
@@ -16,7 +16,7 @@
 /*返回值：返回值名称:无; 类型: bool; 含义:true:表示连接成功  false:表示连接失败
 /*作者：杨训迪
 /***************************************************/
-bool Message::connectMessageDatabase()
+bool Umessage::connectMessageDatabase()
 {
     mysql_init(&conn_message);
     if (mysql_real_connect(&conn_message, "localhost", "root", "20190120", "seven_chat", 0, NULL, CLIENT_FOUND_ROWS))
@@ -53,7 +53,7 @@ bool Message::connectMessageDatabase()
 /*作者：李可
 /***************************************************/
 
-bool Message::messageInsert(int u_id, int f_id, int m_status, int m_type, char *detail)
+bool Umessage::messageInsert(int u_id, int f_id, int m_status, int m_type, char *detail)
 {
     char sql_insert1[2048];
     char sql_insert2[2048];
@@ -90,7 +90,7 @@ bool Message::messageInsert(int u_id, int f_id, int m_status, int m_type, char *
 /*作者：李可
 /***************************************************/
 
-bool Message::messageDelete(int u_id, int f_id, char *m_time)
+bool Umessage::messageDelete(int u_id, int f_id, char *m_time)
 {
     string q = m_time;
     q = "delete from message where u_id=" + to_string(u_id) + " and f_id=" + to_string(f_id) + " and m_time between " + "'" + q + ".000" + "'" + " and " + "'" + q + ".999" + "'";
@@ -125,7 +125,7 @@ bool Message::messageDelete(int u_id, int f_id, char *m_time)
 /*返回值：BOOL、是否赋值成功
 /*作者：邵雨洁
 /***************************************************/
-bool Message::messageSelect(int u_id, int f_id)
+bool Umessage::messageSelect(int u_id, int f_id)
 {
     MYSQL_RES *res_ptr;
     MYSQL_ROW row;

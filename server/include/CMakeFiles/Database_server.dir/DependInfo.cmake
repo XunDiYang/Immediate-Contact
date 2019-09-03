@@ -19,6 +19,7 @@ set(CMAKE_DEPENDS_CHECK_CXX
   "/home/xundi/github/Immediate-Contact/server/include/friends.cpp" "/home/xundi/github/Immediate-Contact/server/include/CMakeFiles/Database_server.dir/friends.cpp.o"
   "/home/xundi/github/Immediate-Contact/server/include/gmessage.cpp" "/home/xundi/github/Immediate-Contact/server/include/CMakeFiles/Database_server.dir/gmessage.cpp.o"
   "/home/xundi/github/Immediate-Contact/server/include/group.cpp" "/home/xundi/github/Immediate-Contact/server/include/CMakeFiles/Database_server.dir/group.cpp.o"
+  "/home/xundi/github/Immediate-Contact/server/include/groupController.cpp" "/home/xundi/github/Immediate-Contact/server/include/CMakeFiles/Database_server.dir/groupController.cpp.o"
   "/home/xundi/github/Immediate-Contact/server/include/message.cpp" "/home/xundi/github/Immediate-Contact/server/include/CMakeFiles/Database_server.dir/message.cpp.o"
   "/home/xundi/github/Immediate-Contact/server/include/section.cpp" "/home/xundi/github/Immediate-Contact/server/include/CMakeFiles/Database_server.dir/section.cpp.o"
   "/home/xundi/github/Immediate-Contact/server/include/user.cpp" "/home/xundi/github/Immediate-Contact/server/include/CMakeFiles/Database_server.dir/user.cpp.o"
