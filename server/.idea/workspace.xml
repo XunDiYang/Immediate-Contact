@@ -12,21 +12,7 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="48a862fd-55b7-43bd-b1a1-26c242053f7f" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/include/CMakeFiles/Database_server.dir/Command.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/include/CMakeFiles/Database_server.dir/Command.cpp.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/include/CMakeFiles/Database_server.dir/Init.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/include/CMakeFiles/Database_server.dir/Init.cpp.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/include/CMakeFiles/Database_server.dir/gmessage.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/include/CMakeFiles/Database_server.dir/gmessage.cpp.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/include/CMakeFiles/Database_server.dir/message.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/include/CMakeFiles/Database_server.dir/message.cpp.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/include/Command.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/include/Command.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/include/Init.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/include/Init.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/include/gmessage.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/include/gmessage.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/include/gmessage.h" beforeDir="false" afterPath="$PROJECT_DIR$/include/gmessage.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/include/libDatabase_server.a" beforeDir="false" afterPath="$PROJECT_DIR$/include/libDatabase_server.a" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/include/message.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/include/message.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/include/message.h" beforeDir="false" afterPath="$PROJECT_DIR$/include/message.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server" beforeDir="false" afterPath="$PROJECT_DIR$/server" afterDir="false" />
-    </list>
+    <list default="true" id="48a862fd-55b7-43bd-b1a1-26c242053f7f" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
