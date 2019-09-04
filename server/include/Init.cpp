@@ -59,6 +59,11 @@ int init_socket()
         printf("listen error: %s(errno: %d)\n",strerror(errno),errno);
         return 0;
     }
+    for(int idx = 0; idx < MAX_CONN; idx++) {
+        client_prop[idx].is_online = 0;
+        client_prop[idx].u_id = 0;
+        client_prop[idx].user_fd = -1;
+    }
     return 1;
 }
 
@@ -83,16 +88,14 @@ void* listen_func(void *)
 void add_client(int connect_fd, struct sockaddr_in addr) {
     int idx = 0;
     for(idx = 0; idx < MAX_CONN; idx++) {
-        if(client_prop[idx].user_fd == -1) {
+        if(client_prop[idx].is_online == 0) {
             break;
         }
     }
-    if(client_prop[idx].user_fd != -1) {
-        printf("failed to create new thread for connect %s\n", inet_ntoa(addr.sin_addr));
-        return ;
-    }
+
     client_prop[idx].user_fd = connect_fd;
     client_prop[idx].addr = addr;
+    client_prop[idx].is_online = 1;
     pthread_t tid;
     pthread_create(&tid, NULL, client_thread_function, &client_prop[idx]);
     printf("created new thread for connect %s\n", inet_ntoa(addr.sin_addr));
@@ -107,6 +110,7 @@ void* client_thread_function(void *arg) {
     while(1) {
         printf("recv.....\n");
         numbytes = recv(prop->user_fd, buf, BUFFER_SIZE, 0);
+        printf("%s\n", buf);
         printf("%d", prop->user_fd);
         if(0 >= numbytes) {
             perror("recv error!");
@@ -285,13 +289,13 @@ void send_message_by_userid(int sendto, int sendfrom, char *msg) {
 /*返回值：无
 /*作者：马文聪
 /***************************************************/
-void send_message_to_local(int user_fd, char* buffer){
-    if(send(user_fd, buffer, sizeof(buffer), 0) < 0){
+void send_message_to_local(int user_fd, const char* buffer){
+    printf("hello\n");
+    printf("%s", buffer);
+    if(send(user_fd, buffer, BUFFER_SIZE, 0) < 0){
         printf("send_message_to_local fail!\n");
     }
 }
-
-
 
 /**************************************************/
 /*名称：show_server_status
@@ -345,6 +349,7 @@ void delete_client(struct User * prop) {
     close(prop->user_fd);
     prop->user_fd = -1;
     prop->is_online = 0;
+    prop->u_id = 0;
     memset(prop->u_name, '\0', sizeof(prop->u_name));
 }
 
@@ -417,14 +422,15 @@ const char *get_formatted_time(){
 /*返回值：VOID
 /*作者：马文聪
 /***************************************************/
-void add_contact(int user_id, int friend_id){
+int add_contact(int user_id, int friend_id){
     printf("%d trying to add %d as contact\n", user_id, friend_id);
     cJSON *root = cJSON_CreateObject();
-    int userid = cJSON_GetObjectItem(root, "userid")->valueint;
-    int friendid = cJSON_GetObjectItem(root, "contact")->valueint;
     TheUser friend_user;
     Friends friends;
-    friends.friendsInsert(user_id,friend_id,friend_user.userUnameSelect(friend_id),1);
+    if(friends.friendsInsert(user_id,friend_id,friend_user.userUnameSelect(friend_id),2))
+        return 1;
+    else
+        return 0;
 }
 
 
@@ -448,15 +454,19 @@ void send_friend_list(int userid) {
     int i;
     for(i = 1;i <= friends.friendslist[0]; i++){
         //printf("%s ", res[nindex]);
-            int status = get_user_fd(friends.friendslist[0])->is_online;
+            //int status = get_user_fd(friends.friendslist[i])->is_online;
             cJSON *item;
             cJSON_AddItemToArray(list, item = cJSON_CreateObject());
             cJSON_AddNumberToObject(item, "userid", friends.friendslist[i]);
-            cJSON_AddNumberToObject(item, "status", status);
+            TheUser friendUser;
+            const char* friendsUserName = friendUser.userUnameSelect(friends.friendslist[i]); //通过朋友id查找朋友姓名
+            cJSON_AddStringToObject(item,"friendsUserName", friendsUserName);
+           // cJSON_AddNumberToObject(item, "status", status);
     }
-    cJSON_AddStringToObject(root, "type", "friend-list");
+    cJSON_AddStringToObject(root, "type", "friend-list-request");
     cJSON_AddNumberToObject(root, "size", friends.friendslist[0]);
     cJSON_AddItemToObject(root, "list", list);
-    send_message_to_local(userid, cJSON_Print(root));
+
+    send_message_to_local(get_user_fd(userid)->user_fd, cJSON_Print(root));
 }
 

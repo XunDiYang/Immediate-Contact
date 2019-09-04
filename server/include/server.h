@@ -28,7 +28,7 @@
 
 #define MAX_SEND_QUEUE_SIZE 10
 #define MAX_CONN 10 //最大连接数量
-#define BUFFER_SIZE 1024
+#define BUFFER_SIZE 2048
 #define MAX_MESSAGE_COUNT 1024
 
 struct User
@@ -74,7 +74,7 @@ void send_single_message(char *message);
 void send_message_by_userid(int sendto, int sendfrom, char *msg);
 void send_single_file(char *message);
 int send_group_message(char *message);
-void send_message_to_local(int user_fd, char *buffer);
+void send_message_to_local(int user_fd, const char *buffer);
 int send_message_by_group(int groupid, int sendfrom, int sendto, char*msg);
 
 int user_register(char *message);
@@ -82,7 +82,7 @@ int user_logout(struct User *prop);
 int user_login(struct User *prop, int userid, char *password);
 char *userUpasswdSelect(int userid);
 
-void add_contact(int user_id, int friend_id);
+int add_contact(int user_id, int friend_id);
 void send_friend_list(int userid);
 
 

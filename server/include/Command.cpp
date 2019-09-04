@@ -9,7 +9,7 @@
 #include "server.h"
 
 char buffer[BUFFER_SIZE];
-
+extern struct User client_prop[MAX_CONN];
 /**************************************************/
 /*名称：handle_client_message
 /*描述：处理客户端发来的消息
@@ -33,12 +33,13 @@ void handle_client_message(struct User *prop, char *message)
         char *username = cJSON_GetObjectItem(root, "username")->valuestring;
         char *password = cJSON_GetObjectItem(root, "password")->valuestring;
         char *emailaddress = cJSON_GetObjectItem(root, "emailaddress")->valuestring;
-        //user_register(message);
-        if (user_register(message))
+        int user_id = user_register(message);
+        if (user_id)
             cJSON_AddNumberToObject(sendroot, "status", 1);
         else
             cJSON_AddNumberToObject(sendroot, "status", 0);
         cJSON_AddStringToObject(sendroot, "type", "register-message");
+        cJSON_AddNumberToObject(sendroot, "userid", user_id);
         send_message_to_local(prop->user_fd, cJSON_Print(sendroot));
         printf("register successful！\n");
     }
@@ -46,11 +47,20 @@ void handle_client_message(struct User *prop, char *message)
     {
         int userid = cJSON_GetObjectItem(root, "userid")->valueint;
         char *password = cJSON_GetObjectItem(root, "password")->valuestring;
-        if (user_login(prop, userid, password))
+        if (user_login(prop, userid, password)) {
+            for(int i = 0; i < MAX_CONN; ++i){
+                if(client_prop[i].u_id == 0) {
+                    client_prop[i].u_id = userid;
+                    break;
+                }
+            }
+
             cJSON_AddNumberToObject(sendroot, "status", 1);
+        }
         else
             cJSON_AddNumberToObject(sendroot, "status", 0);
         cJSON_AddStringToObject(sendroot, "type", "login-message");
+        cJSON_AddNumberToObject(sendroot, "userid", userid);
         send_message_to_local(prop->user_fd, cJSON_Print(sendroot));
         printf("login-message successful！\n");
     }
@@ -114,7 +124,7 @@ void handle_client_message(struct User *prop, char *message)
         if (quit_group(userid, groupID))
             cJSON_AddNumberToObject(sendroot, "status", 1);
         else
-            cJSON_AddNumberToObject(sendroot, "status", 1);
+            cJSON_AddNumberToObject(sendroot, "status", 0);
         cJSON_AddStringToObject(sendroot, "type", "group-quit-request");
         send_message_to_local(prop->user_fd, cJSON_Print(sendroot));
         printf("group-quit-request!\n");
@@ -123,11 +133,24 @@ void handle_client_message(struct User *prop, char *message)
     else if(strcmp(type, "friend-list-request") == 0)
     {
         int userid = cJSON_GetObjectItem(root, "userid")->valueint;
+
         send_friend_list(userid);
     }
     else if(strcmp(type, "add-to-contact-request") == 0) {
-       int userid = cJSON_GetObjectItem(root, "userid")->valueint;
-       int contact = cJSON_GetObjectItem(root, "contact")->valueint;
-        add_contact(userid, contact);
+        int userid = cJSON_GetObjectItem(root, "userid")->valueint;
+        int contact = cJSON_GetObjectItem(root, "contact")->valueint;
+        if (add_contact(userid, contact) == 1) {
+
+            cJSON_AddNumberToObject(sendroot, "status", 1);
+            cJSON_AddStringToObject(sendroot, "type", "add-to-contact-request");
+            TheUser contactUser;
+            const char *contactUserName = contactUser.userUnameSelect(contact);
+            cJSON_AddStringToObject(sendroot, "contactUserName", contactUserName);
+            send_message_to_local(prop->user_fd, cJSON_Print(sendroot));
+            printf("add-to-contact-request!\n");
+        }
+        else{
+            printf("add-to-contact-request fail!\n");
+        }
     }
 }

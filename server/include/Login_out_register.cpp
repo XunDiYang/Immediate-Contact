@@ -8,6 +8,8 @@
 
 #include "server.h"
 
+
+extern struct User client_prop[MAX_CONN];
 /**************************************************/
 /*名称：user_register
 /*描述：用户登录
@@ -22,14 +24,11 @@ int user_register(char *message) {
     cJSON *root = cJSON_Parse(message);
     char *password = cJSON_GetObjectItem(root, "password")->valuestring;
     char *username = cJSON_GetObjectItem(root, "username")->valuestring;
-    char *email = cJSON_GetObjectItem(root, "email")->valuestring;
-    char *content = cJSON_GetObjectItem(root, "content")->valuestring;
+    char *email = cJSON_GetObjectItem(root, "emailaddress")->valuestring;
+    //char *content = cJSON_GetObjectItem(root, "content")->valuestring;
     printf("准备写入数据库啦！\n");
     TheUser user;
-    if(user.userRegister(username,password,email))
-        return 1;
-    else
-        return 0;
+    return user.userRegister(username,password,email);
 }
 
 /**************************************************/
@@ -48,6 +47,7 @@ int user_login(struct User *prop, int userid, char *password)
     const char* passwd = user.userUpasswdSelect(userid);
  	if (strcmp(password, passwd) == 0)
  	{
+
  		return 1;
  	}
  	else

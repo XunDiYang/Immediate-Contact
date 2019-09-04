@@ -13,60 +13,63 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="48a862fd-55b7-43bd-b1a1-26c242053f7f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/include/cJSON.c" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/include/cJSON.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../client/CMakeCache.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../client/CMakeCache.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../client/CMakeFiles/CMakeDirectoryInformation.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../client/CMakeFiles/CMakeError.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../client/CMakeFiles/CMakeOutput.log" beforeDir="false" afterPath="$PROJECT_DIR$/../client/CMakeFiles/CMakeOutput.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../client/CMakeFiles/Makefile.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../client/CMakeFiles/Makefile2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../client/CMakeFiles/TargetDirectories.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../client/CMakeFiles/client.dir/CXX.includecache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../client/CMakeFiles/client.dir/DependInfo.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../client/CMakeFiles/client.dir/build.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../client/CMakeFiles/client.dir/cmake_clean.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../client/CMakeFiles/client.dir/depend.internal" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../client/CMakeFiles/client.dir/depend.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../client/CMakeFiles/client.dir/flags.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../client/CMakeFiles/client.dir/link.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../client/CMakeFiles/client.dir/main.cpp.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../client/CMakeFiles/client.dir/progress.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../client/CMakeFiles/progress.marks" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../client/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../client/CMakeLists.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../client/Makefile" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../client/client" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../client/cmake_install.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../client/util/CMakeFiles/CMakeDirectoryInformation.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../client/util/CMakeFiles/Util.dir/C.includecache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../client/util/CMakeFiles/Util.dir/DependInfo.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../client/util/CMakeFiles/Util.dir/build.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../client/util/CMakeFiles/Util.dir/cJSON.c.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../client/util/CMakeFiles/Util.dir/cmake_clean.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../client/util/CMakeFiles/Util.dir/cmake_clean_target.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../client/util/CMakeFiles/Util.dir/depend.internal" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../client/util/CMakeFiles/Util.dir/depend.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../client/util/CMakeFiles/Util.dir/flags.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../client/util/CMakeFiles/Util.dir/link.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../client/util/CMakeFiles/Util.dir/progress.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../client/util/CMakeFiles/progress.marks" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../client/util/Makefile" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../client/util/cmake_install.cmake" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CMakeCache.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeCache.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CMakeFiles/3.5.1/CMakeCCompiler.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CMakeFiles/3.5.1/CMakeCXXCompiler.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CMakeFiles/3.5.1/CMakeDetermineCompilerABI_C.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CMakeFiles/3.5.1/CMakeDetermineCompilerABI_CXX.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CMakeFiles/3.5.1/CMakeSystem.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CMakeFiles/3.5.1/CompilerIdC/CMakeCCompilerId.c" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CMakeFiles/3.5.1/CompilerIdC/a.out" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CMakeFiles/3.5.1/CompilerIdCXX/CMakeCXXCompilerId.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CMakeFiles/3.5.1/CompilerIdCXX/a.out" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CMakeFiles/CMakeDirectoryInformation.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeFiles/CMakeDirectoryInformation.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CMakeFiles/CMakeOutput.log" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeFiles/CMakeOutput.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CMakeFiles/Demo.dir/CXX.includecache" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CMakeFiles/Demo.dir/DependInfo.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeFiles/Demo.dir/DependInfo.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CMakeFiles/Demo.dir/build.make" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeFiles/Demo.dir/build.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CMakeFiles/Demo.dir/depend.internal" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CMakeFiles/Demo.dir/depend.make" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeFiles/Demo.dir/depend.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CMakeFiles/Demo.dir/main.cpp.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CMakeFiles/Makefile.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeFiles/Makefile.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CMakeFiles/Makefile2" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeFiles/Makefile2" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CMakeFiles/TargetDirectories.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeFiles/TargetDirectories.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CMakeFiles/clion-log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeFiles/clion-log.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CMakeFiles/progress.marks" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeFiles/progress.marks" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Demo" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/Makefile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake_install.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake_install.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/include/CMakeFiles/CMakeDirectoryInformation.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/include/CMakeFiles/CMakeDirectoryInformation.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/include/CMakeFiles/Database_server.dir/CXX.includecache" beforeDir="false" afterPath="$PROJECT_DIR$/include/CMakeFiles/Database_server.dir/CXX.includecache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/include/CMakeFiles/Database_server.dir/DependInfo.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/include/CMakeFiles/Database_server.dir/DependInfo.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/include/CMakeFiles/Database_server.dir/build.make" beforeDir="false" afterPath="$PROJECT_DIR$/include/CMakeFiles/Database_server.dir/build.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/include/CMakeFiles/Database_server.dir/cmake_clean.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/include/CMakeFiles/Database_server.dir/cmake_clean.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/include/CMakeFiles/Database_server.dir/depend.internal" beforeDir="false" afterPath="$PROJECT_DIR$/include/CMakeFiles/Database_server.dir/depend.internal" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/include/CMakeFiles/Database_server.dir/depend.make" beforeDir="false" afterPath="$PROJECT_DIR$/include/CMakeFiles/Database_server.dir/depend.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/include/CMakeFiles/Database_server.dir/Command.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/include/CMakeFiles/Database_server.dir/Command.cpp.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/include/CMakeFiles/Database_server.dir/Init.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/include/CMakeFiles/Database_server.dir/Init.cpp.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/include/CMakeFiles/Database_server.dir/Login_out_register.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/include/CMakeFiles/Database_server.dir/Login_out_register.cpp.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/include/CMakeFiles/Database_server.dir/cJSON.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/include/CMakeFiles/Database_server.dir/cJSON.c.o" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/include/CMakeFiles/Database_server.dir/flags.make" beforeDir="false" afterPath="$PROJECT_DIR$/include/CMakeFiles/Database_server.dir/flags.make" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/include/CMakeFiles/Database_server.dir/friends.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/include/CMakeFiles/Database_server.dir/friends.cpp.o" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/include/CMakeFiles/Database_server.dir/gmessage.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/include/CMakeFiles/Database_server.dir/gmessage.cpp.o" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/include/CMakeFiles/Database_server.dir/group.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/include/CMakeFiles/Database_server.dir/group.cpp.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/include/CMakeFiles/Database_server.dir/link.txt" beforeDir="false" afterPath="$PROJECT_DIR$/include/CMakeFiles/Database_server.dir/link.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/include/CMakeFiles/Database_server.dir/groupController.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/include/CMakeFiles/Database_server.dir/groupController.cpp.o" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/include/CMakeFiles/Database_server.dir/message.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/include/CMakeFiles/Database_server.dir/message.cpp.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/include/CMakeFiles/Database_server.dir/progress.make" beforeDir="false" afterPath="$PROJECT_DIR$/include/CMakeFiles/Database_server.dir/progress.make" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/include/CMakeFiles/Database_server.dir/section.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/include/CMakeFiles/Database_server.dir/section.cpp.o" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/include/CMakeFiles/Database_server.dir/user.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/include/CMakeFiles/Database_server.dir/user.cpp.o" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/include/CMakeFiles/Database_server.dir/userGroup.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/include/CMakeFiles/Database_server.dir/userGroup.cpp.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/include/CMakeFiles/progress.marks" beforeDir="false" afterPath="$PROJECT_DIR$/include/CMakeFiles/progress.marks" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/include/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/include/Makefile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/include/Command.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/include/Command.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/include/Init.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/include/Init.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/include/Login_out_register.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/include/Login_out_register.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/include/cmake_install.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/include/cmake_install.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/include/group.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/include/group.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/include/libDatabase_server.a" beforeDir="false" afterPath="$PROJECT_DIR$/include/libDatabase_server.a" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/main.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/seven_chat_server.cbp" beforeDir="false" afterPath="$PROJECT_DIR$/seven_chat_server.cbp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/include/server.h" beforeDir="false" afterPath="$PROJECT_DIR$/include/server.h" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -86,6 +89,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/include" />
+    <property name="nodejs_package_manager_path" value="npm" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -134,6 +138,10 @@
       <workItem from="1567482342424" duration="1183000" />
       <workItem from="1567487783293" duration="197000" />
       <workItem from="1567489005422" duration="2330000" />
+      <workItem from="1567524542610" duration="3985000" />
+      <workItem from="1567528848437" duration="4531000" />
+      <workItem from="1567533668633" duration="14634000" />
+      <workItem from="1567553708775" duration="7702000" />
     </task>
     <servers />
   </component>
@@ -152,5 +160,431 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/include/Command.cpp</url>
+          <line>30</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/include/Command.cpp</url>
+          <line>32</line>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/include/Command.cpp</url>
+          <line>34</line>
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/include/Command.cpp</url>
+          <line>36</line>
+          <option name="timeStamp" value="5" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/include/Command.cpp</url>
+          <line>39</line>
+          <option name="timeStamp" value="6" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/include/Command.cpp</url>
+          <line>42</line>
+          <option name="timeStamp" value="7" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/include/Command.cpp</url>
+          <line>43</line>
+          <option name="timeStamp" value="16" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/include/Command.cpp</url>
+          <line>24</line>
+          <option name="timeStamp" value="19" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/include/Command.cpp</url>
+          <line>25</line>
+          <option name="timeStamp" value="20" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/include/Init.cpp</url>
+          <line>454</line>
+          <option name="timeStamp" value="46" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/include/Init.cpp</url>
+          <line>465</line>
+          <option name="timeStamp" value="47" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/include/Init.cpp</url>
+          <line>466</line>
+          <option name="timeStamp" value="48" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/include/Init.cpp</url>
+          <line>467</line>
+          <option name="timeStamp" value="49" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/include/Init.cpp</url>
+          <line>469</line>
+          <option name="timeStamp" value="50" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/include/Init.cpp</url>
+          <line>462</line>
+          <option name="timeStamp" value="51" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/include/Init.cpp</url>
+          <line>461</line>
+          <option name="timeStamp" value="52" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/include/Init.cpp</url>
+          <line>460</line>
+          <option name="timeStamp" value="53" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/include/Init.cpp</url>
+          <line>458</line>
+          <option name="timeStamp" value="54" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/include/Init.cpp</url>
+          <line>456</line>
+          <option name="timeStamp" value="55" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/include/Command.cpp</url>
+          <line>152</line>
+          <option name="timeStamp" value="71" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/include/Init.cpp</url>
+          <line>363</line>
+          <option name="timeStamp" value="80" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/include/Init.cpp</url>
+          <line>364</line>
+          <option name="timeStamp" value="81" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/include/Init.cpp</url>
+          <line>365</line>
+          <option name="timeStamp" value="82" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/include/Init.cpp</url>
+          <line>367</line>
+          <option name="timeStamp" value="83" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/include/Init.cpp</url>
+          <line>369</line>
+          <option name="timeStamp" value="84" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/include/Init.cpp</url>
+          <line>366</line>
+          <option name="timeStamp" value="85" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/include/Command.cpp</url>
+          <line>134</line>
+          <option name="timeStamp" value="86" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/include/Command.cpp</url>
+          <line>136</line>
+          <option name="timeStamp" value="87" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/include/Init.cpp</url>
+          <line>292</line>
+          <option name="timeStamp" value="88" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/include/Init.cpp</url>
+          <line>293</line>
+          <option name="timeStamp" value="89" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/include/Init.cpp</url>
+          <line>294</line>
+          <option name="timeStamp" value="90" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/include/Init.cpp</url>
+          <line>295</line>
+          <option name="timeStamp" value="91" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/include/Init.cpp</url>
+          <line>271</line>
+          <option name="timeStamp" value="101" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/include/Init.cpp</url>
+          <line>272</line>
+          <option name="timeStamp" value="102" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/include/Init.cpp</url>
+          <line>275</line>
+          <option name="timeStamp" value="103" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/include/Init.cpp</url>
+          <line>276</line>
+          <option name="timeStamp" value="104" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/include/Init.cpp</url>
+          <line>277</line>
+          <option name="timeStamp" value="105" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/include/Init.cpp</url>
+          <line>278</line>
+          <option name="timeStamp" value="106" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/include/Init.cpp</url>
+          <line>279</line>
+          <option name="timeStamp" value="107" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/include/Command.cpp</url>
+          <line>115</line>
+          <option name="timeStamp" value="108" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/include/Command.cpp</url>
+          <line>116</line>
+          <option name="timeStamp" value="109" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/include/Command.cpp</url>
+          <line>117</line>
+          <option name="timeStamp" value="111" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/include/Init.cpp</url>
+          <line>218</line>
+          <option name="timeStamp" value="112" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/include/Init.cpp</url>
+          <line>219</line>
+          <option name="timeStamp" value="113" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/include/Init.cpp</url>
+          <line>220</line>
+          <option name="timeStamp" value="114" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/include/Command.cpp</url>
+          <line>77</line>
+          <option name="timeStamp" value="115" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/include/Command.cpp</url>
+          <line>78</line>
+          <option name="timeStamp" value="116" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/include/Command.cpp</url>
+          <line>79</line>
+          <option name="timeStamp" value="117" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/include/Command.cpp</url>
+          <line>80</line>
+          <option name="timeStamp" value="118" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/include/Init.cpp</url>
+          <line>170</line>
+          <option name="timeStamp" value="119" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/include/Init.cpp</url>
+          <line>171</line>
+          <option name="timeStamp" value="120" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/include/Init.cpp</url>
+          <line>172</line>
+          <option name="timeStamp" value="121" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/include/Init.cpp</url>
+          <line>173</line>
+          <option name="timeStamp" value="122" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/include/Init.cpp</url>
+          <line>128</line>
+          <option name="timeStamp" value="123" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/include/Init.cpp</url>
+          <line>129</line>
+          <option name="timeStamp" value="124" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/include/Init.cpp</url>
+          <line>131</line>
+          <option name="timeStamp" value="125" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/include/Init.cpp</url>
+          <line>132</line>
+          <option name="timeStamp" value="126" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/include/Init.cpp</url>
+          <line>133</line>
+          <option name="timeStamp" value="127" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/include/Init.cpp</url>
+          <line>134</line>
+          <option name="timeStamp" value="128" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/include/Init.cpp</url>
+          <line>135</line>
+          <option name="timeStamp" value="129" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/include/Init.cpp</url>
+          <line>137</line>
+          <option name="timeStamp" value="130" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/include/Init.cpp</url>
+          <line>138</line>
+          <option name="timeStamp" value="131" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/include/Init.cpp</url>
+          <line>139</line>
+          <option name="timeStamp" value="132" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/include/Init.cpp</url>
+          <line>140</line>
+          <option name="timeStamp" value="133" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/include/Init.cpp</url>
+          <line>142</line>
+          <option name="timeStamp" value="134" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/include/Init.cpp</url>
+          <line>141</line>
+          <option name="timeStamp" value="135" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/include/Init.cpp</url>
+          <line>143</line>
+          <option name="timeStamp" value="136" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/include/Init.cpp</url>
+          <line>144</line>
+          <option name="timeStamp" value="137" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/include/Init.cpp</url>
+          <line>145</line>
+          <option name="timeStamp" value="138" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/include/Init.cpp</url>
+          <line>146</line>
+          <option name="timeStamp" value="139" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/include/Init.cpp</url>
+          <line>148</line>
+          <option name="timeStamp" value="140" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/include/Init.cpp</url>
+          <line>149</line>
+          <option name="timeStamp" value="141" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/include/Init.cpp</url>
+          <line>150</line>
+          <option name="timeStamp" value="142" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/include/Init.cpp</url>
+          <line>88</line>
+          <option name="timeStamp" value="143" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/include/Init.cpp</url>
+          <line>89</line>
+          <option name="timeStamp" value="144" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/include/Init.cpp</url>
+          <line>91</line>
+          <option name="timeStamp" value="145" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/include/Init.cpp</url>
+          <line>95</line>
+          <option name="timeStamp" value="146" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/include/Init.cpp</url>
+          <line>96</line>
+          <option name="timeStamp" value="147" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/include/Init.cpp</url>
+          <line>98</line>
+          <option name="timeStamp" value="148" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/include/Init.cpp</url>
+          <line>99</line>
+          <option name="timeStamp" value="149" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/include/Init.cpp</url>
+          <line>97</line>
+          <option name="timeStamp" value="150" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/include/Init.cpp</url>
+          <line>273</line>
+          <option name="timeStamp" value="155" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+    <watches-manager>
+      <configuration name="CMakeRunConfiguration">
+        <watch expression="friends.friendslist[0]" language="ObjectiveC" />
+        <watch expression="friends.friendslist" />
+        <watch expression="client_prop" />
+        <watch expression="userid" />
+        <watch expression=" buffer" />
+        <watch expression="user_fd" />
+      </configuration>
+    </watches-manager>
   </component>
 </project>
