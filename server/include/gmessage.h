@@ -43,7 +43,8 @@ public:
     bool connectGmessageDatabase();
 
     // 描述：发送群消息记录
-    bool gmessageInsert(int gm_id,int g_id,int gm_type,char *detail,int owner);
+//    bool gmessageInsert(int gm_id,int g_id,int gm_type,char *detail,int owner);
+    bool gmessageInsert(int gm_id,int g_id,int gm_type, const char *detail);
 
     // 描述：删除群消息
     bool gmessageDelete(int gm_id,int g_id,char *gm_time);

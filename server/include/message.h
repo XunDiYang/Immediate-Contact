@@ -39,7 +39,7 @@ public:
     bool connectMessageDatabase();
 
     // 描述：记录发送消息
-    bool messageInsert(int u_id, int f_id, int m_status, int m_type, char *detail);
+    bool messageInsert(int u_id, int f_id,  int m_type, const char *detail);
 
     // 描述：删除消息
     bool messageDelete(int u_id, int f_id, char *m_time);

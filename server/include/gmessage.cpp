@@ -50,10 +50,10 @@ bool Gmessage::connectGmessageDatabase()
 /*返回值：BOOL、是否插入成功
 /*作者：李可
 /***************************************************/
-bool Gmessage::gmessageInsert(int gm_id, int g_id, int gm_type, char *detail,int owner)
+bool Gmessage::gmessageInsert(int gm_id, int g_id, int gm_type, const char *detail)
 {
     char sql_insert[2048];
-    sprintf(sql_insert, "insert into gmessage (gm_id,g_id,gm_type,detail,owner) values (\'%d\', \'%d\',\'%d\',\'%s\',\'%d\')", gm_id, g_id, gm_type, detail,owner);
+    sprintf(sql_insert, "insert into gmessage (gm_id,g_id,gm_type,detail,owner) values (\'%d\', \'%d\',\'%d\',\'%s\',\'%d\')", gm_id, g_id, gm_type, detail,gm_id);
     if (connectGmessageDatabase())
     {
         res = mysql_query(&conn_gmessage, sql_insert); //执行SQL语句

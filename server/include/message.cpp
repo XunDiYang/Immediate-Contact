@@ -53,12 +53,12 @@ bool Umessage::connectMessageDatabase()
 /*作者：李可
 /***************************************************/
 
-bool Umessage::messageInsert(int u_id, int f_id, int m_status, int m_type, char *detail)
+bool Umessage::messageInsert(int u_id, int f_id, int m_type, const char *detail)
 {
     char sql_insert1[2048];
     char sql_insert2[2048];
     sprintf(sql_insert1, "insert into message (u_id,f_id,owner,m_status,m_type,detail) values (\'%d\', \'%d\',\'%d\',\'%d\',\'%d\',\'%s\')", u_id, f_id, u_id, 1, m_type, detail);
-    sprintf(sql_insert2, "insert into message (u_id,f_id,owner,m_status,m_type,detail) values (\'%d\', \'%d\',\'%d\',\'%d\',\'%d\',\'%s\')", u_id, f_id, f_id, m_status, m_type, detail);
+    sprintf(sql_insert2, "insert into message (u_id,f_id,owner,m_status,m_type,detail) values (\'%d\', \'%d\',\'%d\',\'%d\',\'%d\',\'%s\')", u_id, f_id, f_id,1, m_type, detail);
     if (connectMessageDatabase())
     {
         res = mysql_query(&conn_message, sql_insert1); //执行SQL语句

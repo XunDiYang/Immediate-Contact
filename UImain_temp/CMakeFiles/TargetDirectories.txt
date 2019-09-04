@@ -1,3 +1,0 @@
-/home/xundi/github/UImain_temp/CMakeFiles/edit_cache.dir
-/home/xundi/github/UImain_temp/CMakeFiles/rebuild_cache.dir
-/home/xundi/github/UImain_temp/CMakeFiles/UImain_temp.dir

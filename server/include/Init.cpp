@@ -171,7 +171,7 @@ void send_single_message(char *message) {
     int sendfrom = cJSON_GetObjectItem(root, "sendfrom")->valueint;
     int sendto = cJSON_GetObjectItem(root, "sendto")->valueint;
     char *content = cJSON_GetObjectItem(root, "content")->valuestring;
-    send_message_by_userid(sendto, sendfrom, content);
+    send_message_by_userid(sendto, sendfrom, message);
 }
 
 
@@ -468,5 +468,69 @@ void send_friend_list(int userid) {
     cJSON_AddItemToObject(root, "list", list);
 
     send_message_to_local(get_user_fd(userid)->user_fd, cJSON_Print(root));
+}
+
+/**************************************************/
+/*名称：store_umessage
+/*描述：存储一人对一人的消息（一条）
+/*作成日期：2019.9.3
+/*参数：  参数1：参数名称 u_id、参数类型 int、输入参数、参数含义：发送消息id
+        参数2：参数名称 f_id、参数类型 int、输入参数、参数含义：接收者Id
+        参数3：参数名称 m_type、参数类型 int、输入参数、参数含义：类别
+        参数4：参数名称 detail、参数类型 const char* 、输入参数、参数含义：消息内容
+/*返回值：bool
+/*作者：杨训迪
+/***************************************************/
+
+bool store_umessage(int u_id, int f_id, int m_type, const char* detail)
+{
+    Umessage umessage;
+    if(umessage.messageInsert(u_id,f_id,0,detail))     //插入消息成功
+        return true;
+    else                                                               //插入消息失败
+        return false;
+}
+
+/**************************************************/
+/*名称：send_all_umessage
+/*描述：发送一人对一人的消息（全部）
+/*作成日期：2019.9.3
+/*参数：  参数1：参数名称 u_id、参数类型 int、输入参数、参数含义：发送消息id
+        参数2：参数名称 f_id、参数类型 int、输入参数、参数含义：接收者Id
+/*返回值：bool
+/*作者：杨训迪
+/***************************************************/
+bool send_all_umessage(int u_id, int f_id)
+{
+    cJSON *root = cJSON_CreateObject();
+    cJSON *list = cJSON_CreateArray();
+
+    Umessage umessage;
+    umessage.messageSelect(u_id,f_id);
+
+    for(int i = 1; i <= umessage.num; i++)
+    {
+        cJSON *item;
+
+    }
+
+}
+
+
+/**************************************************/
+/*名称：store_gmessage
+/*描述：存储群消息（一条）
+/*作成日期：2019.9.3
+/*参数：参数1：参数名称 userid、参数类型 int、输入参数、参数含义：用户ID
+/*返回值：VOID
+/*作者：杨训迪
+/***************************************************/
+bool store_gmessage(int gm_id, int g_id, int gm_type, const char* detail)
+{
+    Gmessage gmessage;
+    if( gmessage.gmessageInsert(gm_id, g_id, gm_type, detail))     //插入消息成功
+        return true;
+    else                                                               //插入消息失败
+        return false;
 }
 

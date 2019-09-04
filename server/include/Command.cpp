@@ -28,6 +28,8 @@ void handle_client_message(struct User *prop, char *message)
         return;
     char *type = cJSON_GetObjectItem(root, "type")->valuestring;
     char message_json[BUFFER_SIZE];
+
+//
     if (strcmp(type, "register-message") == 0)
     {
         char *username = cJSON_GetObjectItem(root, "username")->valuestring;
@@ -43,10 +45,13 @@ void handle_client_message(struct User *prop, char *message)
         send_message_to_local(prop->user_fd, cJSON_Print(sendroot));
         printf("register successful！\n");
     }
+
+//
     else if (strcmp(type, "login-message") == 0)
     {
         int userid = cJSON_GetObjectItem(root, "userid")->valueint;
         char *password = cJSON_GetObjectItem(root, "password")->valuestring;
+        //
         if (user_login(prop, userid, password)) {
             for(int i = 0; i < MAX_CONN; ++i){
                 if(client_prop[i].u_id == 0) {
@@ -57,6 +62,7 @@ void handle_client_message(struct User *prop, char *message)
 
             cJSON_AddNumberToObject(sendroot, "status", 1);
         }
+        //
         else
             cJSON_AddNumberToObject(sendroot, "status", 0);
         cJSON_AddStringToObject(sendroot, "type", "login-message");
@@ -64,6 +70,8 @@ void handle_client_message(struct User *prop, char *message)
         send_message_to_local(prop->user_fd, cJSON_Print(sendroot));
         printf("login-message successful！\n");
     }
+
+//
     else if (strcmp(type, "logout-message") == 0)
     {
         int userid = cJSON_GetObjectItem(root, "userid")->valueint;
@@ -73,6 +81,8 @@ void handle_client_message(struct User *prop, char *message)
         send_message_to_local(prop->user_fd, cJSON_Print(sendroot));
         printf("logout successful!\n");
     }
+
+//    发送单个的消息
     else if (strcmp(type, "message/text") == 0)
     {
         printf("message/text\n");
@@ -80,12 +90,23 @@ void handle_client_message(struct User *prop, char *message)
         strcpy(message_json, message);
         send_single_message(message_json);
     }
+
+//    获取整个消息盒子
+    else if(strcmp(type, "message/text/all") == 0)
+    {
+        printf("message/text/all");
+
+    }
+
+//
     else if (strcmp(type, "message/file") == 0)
     {
         memset(message_json, '\0', sizeof(message_json));
         strcpy(message_json, message);
         send_single_file(message_json);
     }
+
+//
     else if (strcmp(type, "group-create-request") == 0)
     {
         memset(message_json, '\0', sizeof(message_json));
@@ -98,6 +119,8 @@ void handle_client_message(struct User *prop, char *message)
         send_message_to_local(prop->user_fd, cJSON_Print(sendroot));
         printf("logout successful!\n");
     }
+
+//
     else if (strcmp(type, "group-join-request") == 0)
     {
         int userid = cJSON_GetObjectItem(root, "userid")->valueint;
@@ -111,12 +134,16 @@ void handle_client_message(struct User *prop, char *message)
         send_message_to_local(prop->user_fd, cJSON_Print(sendroot));
         printf("group-join-request!\n");
     }
+
+//
     else if (strcmp(type, "message/text/group") == 0)
     {
         memset(message_json, '\0', sizeof(message_json));
         strcpy(message_json, message);
         send_group_message(message_json);
     }
+
+//
     else if (strcmp(type, "group-quit-request") == 0)
     {
         int userid = cJSON_GetObjectItem(root, "username")->valueint;
@@ -130,12 +157,15 @@ void handle_client_message(struct User *prop, char *message)
         printf("group-quit-request!\n");
     }
 
+//    获取好友列表请求
     else if(strcmp(type, "friend-list-request") == 0)
     {
         int userid = cJSON_GetObjectItem(root, "userid")->valueint;
 
         send_friend_list(userid);
     }
+
+//
     else if(strcmp(type, "add-to-contact-request") == 0) {
         int userid = cJSON_GetObjectItem(root, "userid")->valueint;
         int contact = cJSON_GetObjectItem(root, "contact")->valueint;
