@@ -1,0 +1,1 @@
+/usr/bin/c++  -g  -rdynamic CMakeFiles/server_chat_server1.dir/main.cpp.o  -o server_chat_server1 include/libDatabase_server.a -lmysqlclient -lpthread -lpthread 

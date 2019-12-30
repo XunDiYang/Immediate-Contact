@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+   <FileVersion major="1" minor="6" />
+   <Project>
+      <Option title="seven_chat_server" />
+      <Option makefile_is_custom="1" />
+      <Option compiler="gcc" />
+      <Option virtualFolders="CMake Files\;CMake Files\include\;" />
+      <Build>
+      <Target title="all">
+         <Option working_dir="/home/xundi/github/Immediate-Contact/server" />
+         <Option type="4" />
+         <MakeCommands>
+            <Build command="/usr/bin/make -f &quot;/home/xundi/github/Immediate-Contact/server/Makefile&quot;  VERBOSE=1 all" />
+            <CompileFile command="/usr/bin/make -f &quot;/home/xundi/github/Immediate-Contact/server/Makefile&quot;  VERBOSE=1 &quot;$file&quot;" />
+            <Clean command="/usr/bin/make -f &quot;/home/xundi/github/Immediate-Contact/server/Makefile&quot;  VERBOSE=1 clean" />
+            <DistClean command="/usr/bin/make -f &quot;/home/xundi/github/Immediate-Contact/server/Makefile&quot;  VERBOSE=1 clean" />
+         </MakeCommands>
+      </Target>
+      <Target title="edit_cache">
+         <Option working_dir="/home/xundi/github/Immediate-Contact/server" />
+         <Option type="4" />
+         <MakeCommands>
+            <Build command="/usr/bin/make -f &quot;/home/xundi/github/Immediate-Contact/server/Makefile&quot;  VERBOSE=1 edit_cache" />
+            <CompileFile command="/usr/bin/make -f &quot;/home/xundi/github/Immediate-Contact/server/Makefile&quot;  VERBOSE=1 &quot;$file&quot;" />
+            <Clean command="/usr/bin/make -f &quot;/home/xundi/github/Immediate-Contact/server/Makefile&quot;  VERBOSE=1 clean" />
+            <DistClean command="/usr/bin/make -f &quot;/home/xundi/github/Immediate-Contact/server/Makefile&quot;  VERBOSE=1 clean" />
+         </MakeCommands>
+      </Target>
+      <Target title="rebuild_cache">
+         <Option working_dir="/home/xundi/github/Immediate-Contact/server" />
+         <Option type="4" />
+         <MakeCommands>
+            <Build command="/usr/bin/make -f &quot;/home/xundi/github/Immediate-Contact/server/Makefile&quot;  VERBOSE=1 rebuild_cache" />
+            <CompileFile command="/usr/bin/make -f &quot;/home/xundi/github/Immediate-Contact/server/Makefile&quot;  VERBOSE=1 &quot;$file&quot;" />
+            <Clean command="/usr/bin/make -f &quot;/home/xundi/github/Immediate-Contact/server/Makefile&quot;  VERBOSE=1 clean" />
+            <DistClean command="/usr/bin/make -f &quot;/home/xundi/github/Immediate-Contact/server/Makefile&quot;  VERBOSE=1 clean" />
+         </MakeCommands>
+      </Target>
+      <Target title="server">
+         <Option output="/home/xundi/github/Immediate-Contact/server/server" prefix_auto="0" extension_auto="0" />
+         <Option working_dir="/home/xundi/github/Immediate-Contact/server" />
+         <Option object_output="./" />
+         <Option type="1" />
+         <Option compiler="gcc" />
+         <Compiler>
+            <Add directory="/usr/include" />
+            <Add directory="/usr/include/c++/5" />
+            <Add directory="/usr/include/c++/5/backward" />
+            <Add directory="/usr/include/x86_64-linux-gnu" />
+            <Add directory="/usr/include/x86_64-linux-gnu/c++/5" />
+            <Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include" />
+            <Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed" />
+            <Add directory="/usr/local/include" />
+         </Compiler>
+         <MakeCommands>
+            <Build command="/usr/bin/make -f &quot;/home/xundi/github/Immediate-Contact/server/Makefile&quot;  VERBOSE=1 server" />
+            <CompileFile command="/usr/bin/make -f &quot;/home/xundi/github/Immediate-Contact/server/Makefile&quot;  VERBOSE=1 &quot;$file&quot;" />
+            <Clean command="/usr/bin/make -f &quot;/home/xundi/github/Immediate-Contact/server/Makefile&quot;  VERBOSE=1 clean" />
+            <DistClean command="/usr/bin/make -f &quot;/home/xundi/github/Immediate-Contact/server/Makefile&quot;  VERBOSE=1 clean" />
+         </MakeCommands>
+      </Target>
+      <Target title="server/fast">
+         <Option output="/home/xundi/github/Immediate-Contact/server/server" prefix_auto="0" extension_auto="0" />
+         <Option working_dir="/home/xundi/github/Immediate-Contact/server" />
+         <Option object_output="./" />
+         <Option type="1" />
+         <Option compiler="gcc" />
+         <Compiler>
+            <Add directory="/usr/include" />
+            <Add directory="/usr/include/c++/5" />
+            <Add directory="/usr/include/c++/5/backward" />
+            <Add directory="/usr/include/x86_64-linux-gnu" />
+            <Add directory="/usr/include/x86_64-linux-gnu/c++/5" />
+            <Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include" />
+            <Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed" />
+            <Add directory="/usr/local/include" />
+         </Compiler>
+         <MakeCommands>
+            <Build command="/usr/bin/make -f &quot;/home/xundi/github/Immediate-Contact/server/Makefile&quot;  VERBOSE=1 server/fast" />
+            <CompileFile command="/usr/bin/make -f &quot;/home/xundi/github/Immediate-Contact/server/Makefile&quot;  VERBOSE=1 &quot;$file&quot;" />
+            <Clean command="/usr/bin/make -f &quot;/home/xundi/github/Immediate-Contact/server/Makefile&quot;  VERBOSE=1 clean" />
+            <DistClean command="/usr/bin/make -f &quot;/home/xundi/github/Immediate-Contact/server/Makefile&quot;  VERBOSE=1 clean" />
+         </MakeCommands>
+      </Target>
+      <Target title="Database_server">
+         <Option output="/home/xundi/github/Immediate-Contact/server/include/libDatabase_server.a" prefix_auto="0" extension_auto="0" />
+         <Option working_dir="/home/xundi/github/Immediate-Contact/server/include" />
+         <Option object_output="./" />
+         <Option type="2" />
+         <Option compiler="gcc" />
+         <Compiler>
+            <Add directory="/usr/include" />
+            <Add directory="/usr/include/c++/5" />
+            <Add directory="/usr/include/c++/5/backward" />
+            <Add directory="/usr/include/x86_64-linux-gnu" />
+            <Add directory="/usr/include/x86_64-linux-gnu/c++/5" />
+            <Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include" />
+            <Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed" />
+            <Add directory="/usr/local/include" />
+         </Compiler>
+         <MakeCommands>
+            <Build command="/usr/bin/make -f &quot;/home/xundi/github/Immediate-Contact/server/include/Makefile&quot;  VERBOSE=1 Database_server" />
+            <CompileFile command="/usr/bin/make -f &quot;/home/xundi/github/Immediate-Contact/server/include/Makefile&quot;  VERBOSE=1 &quot;$file&quot;" />
+            <Clean command="/usr/bin/make -f &quot;/home/xundi/github/Immediate-Contact/server/include/Makefile&quot;  VERBOSE=1 clean" />
+            <DistClean command="/usr/bin/make -f &quot;/home/xundi/github/Immediate-Contact/server/include/Makefile&quot;  VERBOSE=1 clean" />
+         </MakeCommands>
+      </Target>
+      <Target title="Database_server/fast">
+         <Option output="/home/xundi/github/Immediate-Contact/server/include/libDatabase_server.a" prefix_auto="0" extension_auto="0" />
+         <Option working_dir="/home/xundi/github/Immediate-Contact/server/include" />
+         <Option object_output="./" />
+         <Option type="2" />
+         <Option compiler="gcc" />
+         <Compiler>
+            <Add directory="/usr/include" />
+            <Add directory="/usr/include/c++/5" />
+            <Add directory="/usr/include/c++/5/backward" />
+            <Add directory="/usr/include/x86_64-linux-gnu" />
+            <Add directory="/usr/include/x86_64-linux-gnu/c++/5" />
+            <Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include" />
+            <Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed" />
+            <Add directory="/usr/local/include" />
+         </Compiler>
+         <MakeCommands>
+            <Build command="/usr/bin/make -f &quot;/home/xundi/github/Immediate-Contact/server/include/Makefile&quot;  VERBOSE=1 Database_server/fast" />
+            <CompileFile command="/usr/bin/make -f &quot;/home/xundi/github/Immediate-Contact/server/include/Makefile&quot;  VERBOSE=1 &quot;$file&quot;" />
+            <Clean command="/usr/bin/make -f &quot;/home/xundi/github/Immediate-Contact/server/include/Makefile&quot;  VERBOSE=1 clean" />
+            <DistClean command="/usr/bin/make -f &quot;/home/xundi/github/Immediate-Contact/server/include/Makefile&quot;  VERBOSE=1 clean" />
+         </MakeCommands>
+      </Target>
+      </Build>
+      <Unit filename="/home/xundi/github/Immediate-Contact/server/include/Command.cpp">
+         <Option target="Database_server"/>
+      </Unit>
+      <Unit filename="/home/xundi/github/Immediate-Contact/server/include/Init.cpp">
+         <Option target="Database_server"/>
+      </Unit>
+      <Unit filename="/home/xundi/github/Immediate-Contact/server/include/Login_out_register.cpp">
+         <Option target="Database_server"/>
+      </Unit>
+      <Unit filename="/home/xundi/github/Immediate-Contact/server/include/cJSON.c">
+         <Option target="Database_server"/>
+      </Unit>
+      <Unit filename="/home/xundi/github/Immediate-Contact/server/include/cJSON.h">
+         <Option target="Database_server"/>
+      </Unit>
+      <Unit filename="/home/xundi/github/Immediate-Contact/server/include/friends.cpp">
+         <Option target="Database_server"/>
+      </Unit>
+      <Unit filename="/home/xundi/github/Immediate-Contact/server/include/friends.h">
+         <Option target="Database_server"/>
+      </Unit>
+      <Unit filename="/home/xundi/github/Immediate-Contact/server/include/gmessage.cpp">
+         <Option target="Database_server"/>
+      </Unit>
+      <Unit filename="/home/xundi/github/Immediate-Contact/server/include/gmessage.h">
+         <Option target="Database_server"/>
+      </Unit>
+      <Unit filename="/home/xundi/github/Immediate-Contact/server/include/group.cpp">
+         <Option target="Database_server"/>
+      </Unit>
+      <Unit filename="/home/xundi/github/Immediate-Contact/server/include/group.h">
+         <Option target="Database_server"/>
+      </Unit>
+      <Unit filename="/home/xundi/github/Immediate-Contact/server/include/groupController.cpp">
+         <Option target="Database_server"/>
+      </Unit>
+      <Unit filename="/home/xundi/github/Immediate-Contact/server/include/message.cpp">
+         <Option target="Database_server"/>
+      </Unit>
+      <Unit filename="/home/xundi/github/Immediate-Contact/server/include/message.h">
+         <Option target="Database_server"/>
+      </Unit>
+      <Unit filename="/home/xundi/github/Immediate-Contact/server/include/section.cpp">
+         <Option target="Database_server"/>
+      </Unit>
+      <Unit filename="/home/xundi/github/Immediate-Contact/server/include/section.h">
+         <Option target="Database_server"/>
+      </Unit>
+      <Unit filename="/home/xundi/github/Immediate-Contact/server/include/user.cpp">
+         <Option target="Database_server"/>
+      </Unit>
+      <Unit filename="/home/xundi/github/Immediate-Contact/server/include/user.h">
+         <Option target="Database_server"/>
+      </Unit>
+      <Unit filename="/home/xundi/github/Immediate-Contact/server/include/userGroup.cpp">
+         <Option target="Database_server"/>
+      </Unit>
+      <Unit filename="/home/xundi/github/Immediate-Contact/server/include/userGroup.h">
+         <Option target="Database_server"/>
+      </Unit>
+      <Unit filename="/home/xundi/github/Immediate-Contact/server/main.cpp">
+         <Option target="server"/>
+      </Unit>
+      <Unit filename="/home/xundi/github/Immediate-Contact/server/CMakeLists.txt">
+          <Option virtualFolder="CMake Files\" />
+      </Unit>
+      <Unit filename="/home/xundi/github/Immediate-Contact/server/include/CMakeLists.txt">
+          <Option virtualFolder="CMake Files\include\" />
+      </Unit>
+   </Project>
+</CodeBlocks_project_file>

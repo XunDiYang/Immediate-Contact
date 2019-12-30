@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6"/>
+	<Project>
+		<Option title="UImain_temp"/>
+		<Option makefile_is_custom="1"/>
+		<Option compiler="gcc"/>
+		<Option virtualFolders="CMake Files\;"/>
+		<Build>
+			<Target title="all">
+				<Option working_dir="/home/changxinyu/CLionProjects/UImain_temp1"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -f &quot;/home/changxinyu/CLionProjects/UImain_temp1/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -f &quot;/home/changxinyu/CLionProjects/UImain_temp1/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -f &quot;/home/changxinyu/CLionProjects/UImain_temp1/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -f &quot;/home/changxinyu/CLionProjects/UImain_temp1/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rebuild_cache">
+				<Option working_dir="/home/changxinyu/CLionProjects/UImain_temp1"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -f &quot;/home/changxinyu/CLionProjects/UImain_temp1/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -f &quot;/home/changxinyu/CLionProjects/UImain_temp1/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -f &quot;/home/changxinyu/CLionProjects/UImain_temp1/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -f &quot;/home/changxinyu/CLionProjects/UImain_temp1/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="UImain_temp">
+				<Option output="/home/changxinyu/CLionProjects/UImain_temp1/UImain_temp" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/changxinyu/CLionProjects/UImain_temp1"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/usr/include/gtk-3.0"/>
+					<Add directory="/usr/include/at-spi2-atk/2.0"/>
+					<Add directory="/usr/include/at-spi-2.0"/>
+					<Add directory="/usr/include/dbus-1.0"/>
+					<Add directory="/usr/lib/x86_64-linux-gnu/dbus-1.0/include"/>
+					<Add directory="/usr/include/gio-unix-2.0"/>
+					<Add directory="/usr/include/cairo"/>
+					<Add directory="/usr/include/pango-1.0"/>
+					<Add directory="/usr/include/harfbuzz"/>
+					<Add directory="/usr/include/atk-1.0"/>
+					<Add directory="/usr/include/pixman-1"/>
+					<Add directory="/usr/include/freetype2"/>
+					<Add directory="/usr/include/libpng16"/>
+					<Add directory="/usr/include/gdk-pixbuf-2.0"/>
+					<Add directory="/usr/include/glib-2.0"/>
+					<Add directory="/usr/lib/x86_64-linux-gnu/glib-2.0/include"/>
+					<Add directory="/usr/include/c++/7"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/7"/>
+					<Add directory="/usr/include/c++/7/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -f &quot;/home/changxinyu/CLionProjects/UImain_temp1/Makefile&quot;  VERBOSE=1 UImain_temp"/>
+					<CompileFile command="/usr/bin/make -f &quot;/home/changxinyu/CLionProjects/UImain_temp1/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -f &quot;/home/changxinyu/CLionProjects/UImain_temp1/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -f &quot;/home/changxinyu/CLionProjects/UImain_temp1/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="UImain_temp/fast">
+				<Option output="/home/changxinyu/CLionProjects/UImain_temp1/UImain_temp" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/changxinyu/CLionProjects/UImain_temp1"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/usr/include/gtk-3.0"/>
+					<Add directory="/usr/include/at-spi2-atk/2.0"/>
+					<Add directory="/usr/include/at-spi-2.0"/>
+					<Add directory="/usr/include/dbus-1.0"/>
+					<Add directory="/usr/lib/x86_64-linux-gnu/dbus-1.0/include"/>
+					<Add directory="/usr/include/gio-unix-2.0"/>
+					<Add directory="/usr/include/cairo"/>
+					<Add directory="/usr/include/pango-1.0"/>
+					<Add directory="/usr/include/harfbuzz"/>
+					<Add directory="/usr/include/atk-1.0"/>
+					<Add directory="/usr/include/pixman-1"/>
+					<Add directory="/usr/include/freetype2"/>
+					<Add directory="/usr/include/libpng16"/>
+					<Add directory="/usr/include/gdk-pixbuf-2.0"/>
+					<Add directory="/usr/include/glib-2.0"/>
+					<Add directory="/usr/lib/x86_64-linux-gnu/glib-2.0/include"/>
+					<Add directory="/usr/include/c++/7"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/7"/>
+					<Add directory="/usr/include/c++/7/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -f &quot;/home/changxinyu/CLionProjects/UImain_temp1/Makefile&quot;  VERBOSE=1 UImain_temp/fast"/>
+					<CompileFile command="/usr/bin/make -f &quot;/home/changxinyu/CLionProjects/UImain_temp1/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -f &quot;/home/changxinyu/CLionProjects/UImain_temp1/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -f &quot;/home/changxinyu/CLionProjects/UImain_temp1/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="/home/changxinyu/CLionProjects/UImain_temp1"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -f &quot;/home/changxinyu/CLionProjects/UImain_temp1/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -f &quot;/home/changxinyu/CLionProjects/UImain_temp1/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -f &quot;/home/changxinyu/CLionProjects/UImain_temp1/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -f &quot;/home/changxinyu/CLionProjects/UImain_temp1/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="/home/changxinyu/CLionProjects/UImain_temp1/LogSign.cpp">
+			<Option target="UImain_temp"/>
+		</Unit>
+		<Unit filename="/home/changxinyu/CLionProjects/UImain_temp1/LogSign.h">
+			<Option target="UImain_temp"/>
+		</Unit>
+		<Unit filename="/home/changxinyu/CLionProjects/UImain_temp1/UImain.cpp">
+			<Option target="UImain_temp"/>
+		</Unit>
+		<Unit filename="/home/changxinyu/CLionProjects/UImain_temp1/UImain.h">
+			<Option target="UImain_temp"/>
+		</Unit>
+		<Unit filename="/home/changxinyu/CLionProjects/UImain_temp1/actwithface.cpp">
+			<Option target="UImain_temp"/>
+		</Unit>
+		<Unit filename="/home/changxinyu/CLionProjects/UImain_temp1/client.h">
+			<Option target="UImain_temp"/>
+		</Unit>
+		<Unit filename="/home/changxinyu/CLionProjects/UImain_temp1/handle.cpp">
+			<Option target="UImain_temp"/>
+		</Unit>
+		<Unit filename="/home/changxinyu/CLionProjects/UImain_temp1/main.cpp">
+			<Option target="UImain_temp"/>
+		</Unit>
+		<Unit filename="/home/changxinyu/CLionProjects/UImain_temp1/setting.cpp">
+			<Option target="UImain_temp"/>
+		</Unit>
+		<Unit filename="/home/changxinyu/CLionProjects/UImain_temp1/setting.h">
+			<Option target="UImain_temp"/>
+		</Unit>
+		<Unit filename="/home/changxinyu/CLionProjects/UImain_temp1/util/cJSON.c">
+			<Option target="UImain_temp"/>
+		</Unit>
+		<Unit filename="/home/changxinyu/CLionProjects/UImain_temp1/util/cJSON.h">
+			<Option target="UImain_temp"/>
+		</Unit>
+		<Unit filename="/home/changxinyu/CLionProjects/UImain_temp1/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>

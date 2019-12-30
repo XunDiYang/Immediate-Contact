@@ -1,0 +1,3 @@
+/home/changxinyu/CLionProjects/UImain_temp1/CMakeFiles/rebuild_cache.dir
+/home/changxinyu/CLionProjects/UImain_temp1/CMakeFiles/UImain_temp1.dir
+/home/changxinyu/CLionProjects/UImain_temp1/CMakeFiles/edit_cache.dir

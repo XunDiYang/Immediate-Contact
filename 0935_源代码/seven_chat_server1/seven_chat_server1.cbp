@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6"/>
+	<Project>
+		<Option title="seven_chat_server1"/>
+		<Option makefile_is_custom="1"/>
+		<Option compiler="gcc"/>
+		<Option virtualFolders="CMake Files\;CMake Files\include\;"/>
+		<Build>
+			<Target title="all">
+				<Option working_dir="/home/changxinyu/CLionProjects/seven_chat_server1"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -f &quot;/home/changxinyu/CLionProjects/seven_chat_server1/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -f &quot;/home/changxinyu/CLionProjects/seven_chat_server1/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -f &quot;/home/changxinyu/CLionProjects/seven_chat_server1/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -f &quot;/home/changxinyu/CLionProjects/seven_chat_server1/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rebuild_cache">
+				<Option working_dir="/home/changxinyu/CLionProjects/seven_chat_server1"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -f &quot;/home/changxinyu/CLionProjects/seven_chat_server1/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -f &quot;/home/changxinyu/CLionProjects/seven_chat_server1/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -f &quot;/home/changxinyu/CLionProjects/seven_chat_server1/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -f &quot;/home/changxinyu/CLionProjects/seven_chat_server1/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="server_chat_server1">
+				<Option output="/home/changxinyu/CLionProjects/seven_chat_server1/server_chat_server1" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/changxinyu/CLionProjects/seven_chat_server1"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/usr/include/c++/7"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/7"/>
+					<Add directory="/usr/include/c++/7/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -f &quot;/home/changxinyu/CLionProjects/seven_chat_server1/Makefile&quot;  VERBOSE=1 server_chat_server1"/>
+					<CompileFile command="/usr/bin/make -f &quot;/home/changxinyu/CLionProjects/seven_chat_server1/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -f &quot;/home/changxinyu/CLionProjects/seven_chat_server1/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -f &quot;/home/changxinyu/CLionProjects/seven_chat_server1/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="server_chat_server1/fast">
+				<Option output="/home/changxinyu/CLionProjects/seven_chat_server1/server_chat_server1" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/changxinyu/CLionProjects/seven_chat_server1"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/usr/include/c++/7"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/7"/>
+					<Add directory="/usr/include/c++/7/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -f &quot;/home/changxinyu/CLionProjects/seven_chat_server1/Makefile&quot;  VERBOSE=1 server_chat_server1/fast"/>
+					<CompileFile command="/usr/bin/make -f &quot;/home/changxinyu/CLionProjects/seven_chat_server1/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -f &quot;/home/changxinyu/CLionProjects/seven_chat_server1/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -f &quot;/home/changxinyu/CLionProjects/seven_chat_server1/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="/home/changxinyu/CLionProjects/seven_chat_server1"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -f &quot;/home/changxinyu/CLionProjects/seven_chat_server1/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -f &quot;/home/changxinyu/CLionProjects/seven_chat_server1/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -f &quot;/home/changxinyu/CLionProjects/seven_chat_server1/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -f &quot;/home/changxinyu/CLionProjects/seven_chat_server1/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="Database_server">
+				<Option output="/home/changxinyu/CLionProjects/seven_chat_server1/include/libDatabase_server.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/changxinyu/CLionProjects/seven_chat_server1/include"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/usr/include/c++/7"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/7"/>
+					<Add directory="/usr/include/c++/7/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -f &quot;/home/changxinyu/CLionProjects/seven_chat_server1/include/Makefile&quot;  VERBOSE=1 Database_server"/>
+					<CompileFile command="/usr/bin/make -f &quot;/home/changxinyu/CLionProjects/seven_chat_server1/include/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -f &quot;/home/changxinyu/CLionProjects/seven_chat_server1/include/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -f &quot;/home/changxinyu/CLionProjects/seven_chat_server1/include/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="Database_server/fast">
+				<Option output="/home/changxinyu/CLionProjects/seven_chat_server1/include/libDatabase_server.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/changxinyu/CLionProjects/seven_chat_server1/include"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/usr/include/c++/7"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/7"/>
+					<Add directory="/usr/include/c++/7/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -f &quot;/home/changxinyu/CLionProjects/seven_chat_server1/include/Makefile&quot;  VERBOSE=1 Database_server/fast"/>
+					<CompileFile command="/usr/bin/make -f &quot;/home/changxinyu/CLionProjects/seven_chat_server1/include/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -f &quot;/home/changxinyu/CLionProjects/seven_chat_server1/include/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -f &quot;/home/changxinyu/CLionProjects/seven_chat_server1/include/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="/home/changxinyu/CLionProjects/seven_chat_server1/include/Command.cpp">
+			<Option target="Database_server"/>
+		</Unit>
+		<Unit filename="/home/changxinyu/CLionProjects/seven_chat_server1/include/Init.cpp">
+			<Option target="Database_server"/>
+		</Unit>
+		<Unit filename="/home/changxinyu/CLionProjects/seven_chat_server1/include/Login_out_register.cpp">
+			<Option target="Database_server"/>
+		</Unit>
+		<Unit filename="/home/changxinyu/CLionProjects/seven_chat_server1/include/cJSON.c">
+			<Option target="Database_server"/>
+		</Unit>
+		<Unit filename="/home/changxinyu/CLionProjects/seven_chat_server1/include/cJSON.h">
+			<Option target="Database_server"/>
+		</Unit>
+		<Unit filename="/home/changxinyu/CLionProjects/seven_chat_server1/include/friends.cpp">
+			<Option target="Database_server"/>
+		</Unit>
+		<Unit filename="/home/changxinyu/CLionProjects/seven_chat_server1/include/friends.h">
+			<Option target="Database_server"/>
+		</Unit>
+		<Unit filename="/home/changxinyu/CLionProjects/seven_chat_server1/include/gmessage.cpp">
+			<Option target="Database_server"/>
+		</Unit>
+		<Unit filename="/home/changxinyu/CLionProjects/seven_chat_server1/include/gmessage.h">
+			<Option target="Database_server"/>
+		</Unit>
+		<Unit filename="/home/changxinyu/CLionProjects/seven_chat_server1/include/group.cpp">
+			<Option target="Database_server"/>
+		</Unit>
+		<Unit filename="/home/changxinyu/CLionProjects/seven_chat_server1/include/group.h">
+			<Option target="Database_server"/>
+		</Unit>
+		<Unit filename="/home/changxinyu/CLionProjects/seven_chat_server1/include/groupController.cpp">
+			<Option target="Database_server"/>
+		</Unit>
+		<Unit filename="/home/changxinyu/CLionProjects/seven_chat_server1/include/message.cpp">
+			<Option target="Database_server"/>
+		</Unit>
+		<Unit filename="/home/changxinyu/CLionProjects/seven_chat_server1/include/message.h">
+			<Option target="Database_server"/>
+		</Unit>
+		<Unit filename="/home/changxinyu/CLionProjects/seven_chat_server1/include/section.cpp">
+			<Option target="Database_server"/>
+		</Unit>
+		<Unit filename="/home/changxinyu/CLionProjects/seven_chat_server1/include/section.h">
+			<Option target="Database_server"/>
+		</Unit>
+		<Unit filename="/home/changxinyu/CLionProjects/seven_chat_server1/include/user.cpp">
+			<Option target="Database_server"/>
+		</Unit>
+		<Unit filename="/home/changxinyu/CLionProjects/seven_chat_server1/include/user.h">
+			<Option target="Database_server"/>
+		</Unit>
+		<Unit filename="/home/changxinyu/CLionProjects/seven_chat_server1/include/userGroup.cpp">
+			<Option target="Database_server"/>
+		</Unit>
+		<Unit filename="/home/changxinyu/CLionProjects/seven_chat_server1/include/userGroup.h">
+			<Option target="Database_server"/>
+		</Unit>
+		<Unit filename="/home/changxinyu/CLionProjects/seven_chat_server1/main.cpp">
+			<Option target="server_chat_server1"/>
+		</Unit>
+		<Unit filename="/home/changxinyu/CLionProjects/seven_chat_server1/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+		<Unit filename="/home/changxinyu/CLionProjects/seven_chat_server1/include/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\include\"/>
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>
