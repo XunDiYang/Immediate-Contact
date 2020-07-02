@@ -1,5 +1,5 @@
 # Immediate-Contact
-the assignment of BIT / 8.26.2019
+the assignment of BIT / 8.26.2019 即时通讯软件
 
 平台：ubuntu18.04
 
